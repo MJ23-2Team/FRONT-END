@@ -1,27 +1,48 @@
-import { useState } from "react";
+import { useState, useEffect} from "react";
 import { createUser } from "../axios/user/User";
-
-const UserForm = ({ getUser }) => {
+  const UserInfo = ({ getUser }) => {
   const [data, setData] = useState({});
+  const [info, setinfo] = useState({});
+
+  const onHandleChangeinfo = (e) => {
+    setinfo(prevInfo => ({ ...prevInfo, [e.target.name]: e.target.value }));
+  };
+  
+  const onHandleChangeData = (e) => {
+    setData(prevData => ({ ...prevData, [e.target.name]: e.target.value }));
+  };
   const onSubmitHandle = () => {
-    createUser(data).then(() => alert("성공적으로 등록했습니다 !"));
+    createUser(data).then(() => alert("회원가입 완료"));
     getUser();
   };
-  const onHandleChange = (e) => {
-    setData({ ...data, [e.target.name]: e.target.value });
-  };
+      
+  useEffect(() => {
+    setData(prevData => ({ ...prevData, id: prevData.id,pw: prevData.pw, customerDto: info }));
+  }, [info]);
+
   return (
-    <>
-      <input type="text" name="name" onChange={(e) => onHandleChange(e)} />
-      <input type="text" name="age" onChange={(e) => onHandleChange(e)} />
-      <button
-        onClick={() => {
-          onSubmitHandle();
-        }}
-      >
+    <><div>회원가입</div>
+      <div>아이디</div>
+      <input type="text" name="id" placeholder="ID" onChange={(e) => onHandleChangeData(e)} />
+      <div>비밀번호</div>
+      <input type="text" name="pw" placeholder="PW" onChange={(e) => onHandleChangeData(e)} />
+      <div>고객 정보 등록</div>
+      <input type="text" name="address" placeholder="address" onChange={(e) => onHandleChangeinfo(e)} />
+      <input type="text" name="age" placeholder="age" onChange={(e) => onHandleChangeinfo(e)} />
+      <input type="text" name="sex" placeholder="sex" onChange={(e) => onHandleChangeinfo(e)} />
+      <input type="text" name="job" placeholder="job" onChange={(e) => onHandleChangeinfo(e)} />
+      <input type="text" name="name" placeholder="name" onChange={(e) => onHandleChangeinfo(e)} />
+      <div></div>
+      <input type="text" name="phoneNumber" placeholder="phoneNumber" onChange={(e) => onHandleChangeinfo(e)} />
+      <input type="text" name="registrationNumber" placeholder="registrationNumber" onChange={(e) => onHandleChangeinfo(e)} />
+      <input type="text" name="incomeLevel" placeholder="incomeLevel" onChange={(e) => onHandleChangeinfo(e)} />
+      <input type="text" name="accountNumber" placeholder="accountNumber" onChange={(e) => onHandleChangeinfo(e)} />
+      <input type="text" name="accountPassword" placeholder="accountPassword" onChange={(e) => onHandleChangeinfo(e)} />
+
+      <button onClick={() => {onSubmitHandle();}}>
         등록하기
       </button>
     </>
   );
 };
-export default UserForm;
+export default UserInfo;
