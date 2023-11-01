@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { getAllUsers } from "./axios/user/User";
-import UserItem from "./component/UserItem";
-import UserForm from "./component/UserForm";
-
+import UserItem from "./component/User/UserItem";
+import UserForm from "./component/User/UserForm";
+import UserLogin from "./component/User/UserLogin";
 const App = () => {
   const [users, setUsers] = useState([]);
 
@@ -19,7 +19,8 @@ const App = () => {
   
   return (
     <div>
-      <UserForm getUser={getUser} />
+      <UserLogin/>
+      <UserForm/>
       <div>모든 고객 정보 확인</div>
       {users?.map((user) => {
         return (
