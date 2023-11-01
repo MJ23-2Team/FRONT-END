@@ -1,7 +1,7 @@
 const UserItem = ({ customerID, address,age,sex,job,name,phoneNumber,registrationNumber,incomeLevel,accountNumber,accountPassword}) => {
   return (
     <div>
-      <div>===================================================</div>
+      <div>===============================================================================</div>
       <div>customerID : {customerID}</div>
       <div>address : {address}</div>
       <div>age : {age}</div>
