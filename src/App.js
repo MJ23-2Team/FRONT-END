@@ -1,15 +1,19 @@
-import {Routes, Route, BrowserRouter, Link} from "react-router-dom"
-import customerPage from "./user/customer/CustomerPage";
+import {Routes, Route} from "react-router-dom"
+
+import UserLogin from "./user/customer/Login";
+import Register from "./user/customer/Register";
+import GetAllCustomer from "./user/customer//GetAllCustomer";
+import HomePage from "./page/HomePage";
+
 const App = () => {
 return (
-    <>
-        <Link to="/CustomerPage">CustomerPage</Link>
-        <div>"dmdkdkdd"</div>
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<customerPage />} />
-            </Routes>
-        </BrowserRouter>
+    <>  
+        <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/UserLogin" element={<UserLogin />} />
+            <Route path="/Register" element={<Register />} />
+            <Route path="/GetAllCustomer" element={<GetAllCustomer />} />
+        </Routes>
       </>
     );
 };
