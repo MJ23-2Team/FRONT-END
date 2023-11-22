@@ -44,7 +44,6 @@ import { createUser } from "./Customer";
       <button onClick={() => {onSubmitHandle();}}>
         등록하기
       </button>
-      <div>===============================================================================</div>
     </>
   );
 };
