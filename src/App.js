@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
 import HomePage from "./component/page/HomePage";
-import WoongPage from "./component/page/WoongPage";
+import OperationPolicyPage from "./component/page/OperationPolicyPage";
 import GyuPage from "./component/page/GyuPage";
 import SeongPage from "./component/page/SeongPage";
 import HyunPage from "./component/page/HyunPage";
@@ -13,7 +13,7 @@ const App = () => {
     <>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/woong" element={<WoongPage />} />
+        <Route path="/operationPolicyPage" element={<OperationPolicyPage />} />
         <Route path="/gyu" element={<GyuPage />} />
         <Route path="/seong" element={<SeongPage />} />
         <Route path="/hyun" element={<HyunPage />} />
