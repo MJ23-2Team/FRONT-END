@@ -1,8 +1,4 @@
-import { Link, Routes, Route } from "react-router-dom";
-import WoongPage from "./WoongPage";
-import GyuPage from "./GyuPage";
-import SeongPage from "./SeongPage";
-import HyunPage from "./HyunPage";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   return (
@@ -22,12 +18,12 @@ const HomePage = () => {
           <button>임현우</button>
         </Link>
       </header>
-      {/* <Routes>
-        <Route path="/woong" element={<WoongPage />} />
-        <Route path="/gyu" element={<GyuPage />} />
-        <Route path="/seong" element={<SeongPage />} />
-        <Route path="/hyun" element={<HyunPage />} />
-      </Routes> */}
+      <Link to="/login">
+          <button>로그인</button>
+        </Link>
+        <Link to="/register">
+          <button>회원가입</button>
+        </Link>
     </div>
   );
 };

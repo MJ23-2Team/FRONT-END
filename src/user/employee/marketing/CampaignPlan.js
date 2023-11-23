@@ -1,5 +1,5 @@
 import { campaignplan } from "./Marketing";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const CampaignPlan = () => {
   const [data, setData] = useState({});
