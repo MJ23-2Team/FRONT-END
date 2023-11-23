@@ -5,8 +5,8 @@ const HomePage = () => {
     <div>
       <header>
         <div>홈페이지</div>
-        <Link to="/woong">
-          <button>황재웅</button>
+        <Link to="/operationPolicyPage">
+          <button>OperationPolicyPage</button>
         </Link>
         <Link to="/gyu">
           <button>심규창</button>
