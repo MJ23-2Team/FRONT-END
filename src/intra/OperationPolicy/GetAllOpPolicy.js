@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { getAll, pass,recommand } from "./OperationPolicy";
 const GetAllOpPolicy = () => {
-    
     const [policys, setPolicys] = useState([]);
 
     useEffect(() => {
