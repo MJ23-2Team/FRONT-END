@@ -7,7 +7,7 @@ const EstablishEducation = () => {
         setData( prevData => ( { ...prevData, [e.target.name]: e.target.value } ) );
     };
     const onSubmitHandle = () => {
-        if ( data.name && data.content ) {
+        if ( data.name && data.content && data.duration && data.place ) {
             save( data ).then( (res) =>
                 alert( res.data.message ) );
         } else {

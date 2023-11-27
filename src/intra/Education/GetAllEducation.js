@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getAll, pass, recommand } from "./Education";
+import { getAll, pass } from "./Education";
 
 const GetAllEducation = () => {
     const [educations, setEducations ] = useState( [] );
@@ -7,10 +7,6 @@ const GetAllEducation = () => {
     useEffect( () => {
         getAll().then( (res) => { setEducations( res.data.data ); } );
     }, [] );
-
-    const onSubmitHandleRate = (index) => {
-        recommand( index ).then( (res) => alert( res.data.message ) );
-    };
     const onSubmitHandlePass = ( index ) => {
         pass( index ).then( (res) => alert( res.data.message ) );
     };
