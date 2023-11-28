@@ -2,7 +2,7 @@ import EstablishEducation from "../../intra/Education/EstablishEducation";
 import GetAllEducation from "../../intra/Education/GetAllEducation";
 
 const EducationPage = () => {
-    return (
+    return ( 
         <div>
             <EstablishEducation />
             <GetAllEducation />

@@ -26,3 +26,4 @@ const EstablishEducationStudent = () => {
         </>
     );
 };
+export default EstablishEducationStudent;

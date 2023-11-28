@@ -13,5 +13,5 @@ export const pass = async (data) => {
 };
 
 export const getAll = async () => {
-    return await request.get( 'Education/getAll' );
+    return await request.get( 'education/getAll' );
 };
