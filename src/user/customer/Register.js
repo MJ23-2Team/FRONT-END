@@ -1,7 +1,11 @@
 import { useState, useEffect} from "react";
+import { useNavigate } from "react-router-dom";
 import { createUser } from "./Customer";
 
+
   const Register = () => {
+
+  const navigate = useNavigate();
   const [data, setData] = useState({});
   const [info, setinfo] = useState({});
 
@@ -15,6 +19,7 @@ import { createUser } from "./Customer";
   const onSubmitHandle = () => {
       if (data.id && data.pw) {
           createUser(data).then((res) => alert(res.data.message));
+          navigate("/");
       }else{
           alert("값을 입력해주세요");
       }
