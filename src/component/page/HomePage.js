@@ -8,6 +8,9 @@ const HomePage = () => {
         <Link to="/operationPolicyPage">
           <button>OperationPolicyPage</button>
         </Link>
+        <Link to="/getAllCustomer">
+          <button>GetAllCustomer</button>
+        </Link>
         <Link to="/gyu">
           <button>심규창</button>
         </Link>
