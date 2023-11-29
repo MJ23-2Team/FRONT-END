@@ -7,6 +7,8 @@ import SeongPage from "./component/page/SeongPage";
 import HyunPage from "./component/page/HyunPage";
 import Register from "./user/customer/Register";
 import Login from "./user/customer/Login";
+import ManageInsurancePlan from "./user/employee/insuranceDevelopment/ManageInsurancePlan";
+import DesignInsurance from "./user/employee/insuranceDevelopment/DesignInsurance";
 
 const App = () => {
   return (
@@ -19,6 +21,8 @@ const App = () => {
         <Route path="/hyun" element={<HyunPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/manageInsurancePlan" element={<ManageInsurancePlan />} />
+        <Route path="/designInsurances" element={<DesignInsurance />} />
       </Routes>
     </>
   );
