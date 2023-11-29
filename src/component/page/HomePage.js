@@ -5,8 +5,11 @@ const HomePage = () => {
     <div>
       <header>
         <div>홈페이지</div>
-        <Link to="/operationPolicyPage">
+        <Link to="/operationPolicy">
           <button>OperationPolicyPage</button>
+        </Link>
+        <Link to="/sellGroup">
+          <button>SellGroupPage</button>
         </Link>
         <Link to="/getAllCustomer">
           <button>GetAllCustomer</button>
