@@ -1,4 +1,4 @@
-import request from "../../component/common/axios";
+import request from "../../../component/common/axios";
 
 export const save = async (data) => {
     return await request.post( 'AdviceNote', data );

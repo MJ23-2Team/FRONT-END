@@ -6,6 +6,8 @@ import GyuPage from "./component/page/GyuPage";
 import HyunPage from "./component/page/HyunPage";
 import EducationPage from "./component/page/EducationPage";
 import EducationStudentPage from "./component/page/EducationStudentPage";
+import ContractManagementPolicyPage from "./component/page/ContractManagementPolicyPage";
+import AdviceNoteModal from "./component/page/AdviceNoteModal";
 import Register from "./user/customer/Register";
 import Login from "./user/customer/Login";
 
@@ -18,6 +20,8 @@ const App = () => {
         <Route path="/gyu" element={<GyuPage />} />
         <Route path="/educationPage" element={<EducationPage />} />
         <Route path="/educationStudentPage" element={<EducationStudentPage /> } />
+        <Route path="adviceNoteModal" element={<AdviceNoteModal /> } />
+        <Route path="/contractManagementPolicyPage" element={<ContractManagementPolicyPage /> } /> 
         <Route path="/hyun" element={<HyunPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />

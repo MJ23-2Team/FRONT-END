@@ -1,13 +1,13 @@
-import EstablishContractManagementPolicy from "../../intra/ContractManagementPolicy";
-import GetAllContractMangementPolicy from "../../intra/ContractManagementPolicy/GetAllContractManagementPolicy";;
+import EstablishContractManagementPolicy from "../../intra/ContractManagementPolicy/EstablishContractManagementPolicy";
+import GetAllContractManagementPolicy from "../../intra/ContractManagementPolicy/GetAllContractManagementPolicy";
 
-const ContractMnagementPolicyPage = () => {
+const ContractManagementPolicyPage = () => {
     return (
         <div>
             <EstablishContractManagementPolicy />
-            <GetAllContractMangementPolicy />
+            <GetAllContractManagementPolicy />
         </div>
     );
 };
 
-export default ContractMnagementPolicyPage;
+export default ContractManagementPolicyPage;

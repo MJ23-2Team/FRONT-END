@@ -26,4 +26,4 @@ const EstablishContractManagementPolicy = () => {
         </>
       );
 };
-
+export default EstablishContractManagementPolicy;
