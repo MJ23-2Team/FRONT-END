@@ -7,6 +7,10 @@ import SeongPage from "./component/page/SeongPage";
 import HyunPage from "./component/page/HyunPage";
 import Register from "./user/customer/Register";
 import Login from "./user/customer/Login";
+import CampaignPlan from "./user/employee/marketing/CampaignPlan";
+import GetPlanCampaign from "./user/employee/marketing/GetPlanCampaign";
+import GetRunCampaign from "./user/employee/marketing/GetRunCampaign";
+import GetEndCampaign from "./user/employee/marketing/GetEndCampaign";
 
 const App = () => {
   return (
@@ -19,6 +23,10 @@ const App = () => {
         <Route path="/hyun" element={<HyunPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/campaignPlan" element={<CampaignPlan />} />
+        <Route path="/getPlanCampaign" element={<GetPlanCampaign />} />
+        <Route path="/getRunCampaign" element={<GetRunCampaign />} />
+        <Route path="/getEndCampaign" element={<GetEndCampaign />} />
       </Routes>
     </>
   );
