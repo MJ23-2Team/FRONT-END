@@ -7,6 +7,10 @@ import SeongPage from "./component/page/SeongPage";
 import HyunPage from "./component/page/HyunPage";
 import Register from "./user/customer/Register";
 import Login from "./user/customer/Login";
+import ManageInsurancePlan from "./user/employee/insuranceDevelopment/ManageInsurancePlan";
+import DesignInsurance from "./user/employee/insuranceDevelopment/DesignInsurance";
+import LoginPage from "./component/page/LoginPage";
+import GetAllCustomer from "./user/customer/GetAllCustomer";
 import CampaignPlan from "./user/employee/marketing/CampaignPlan";
 import GetPlanCampaign from "./user/employee/marketing/GetPlanCampaign";
 import GetRunCampaign from "./user/employee/marketing/GetRunCampaign";
@@ -16,17 +20,14 @@ const App = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/home" element={<HomePage />} />
         <Route path="/operationPolicyPage" element={<OperationPolicyPage />} />
+        <Route path="/getAllCustomer" element={<GetAllCustomer />} />
         <Route path="/gyu" element={<GyuPage />} />
         <Route path="/seong" element={<SeongPage />} />
         <Route path="/hyun" element={<HyunPage />} />
-        <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/campaignPlan" element={<CampaignPlan />} />
-        <Route path="/getPlanCampaign" element={<GetPlanCampaign />} />
-        <Route path="/getRunCampaign" element={<GetRunCampaign />} />
-        <Route path="/getEndCampaign" element={<GetEndCampaign />} />
       </Routes>
     </>
   );

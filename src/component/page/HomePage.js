@@ -8,6 +8,9 @@ const HomePage = () => {
         <Link to="/operationPolicyPage">
           <button>OperationPolicyPage</button>
         </Link>
+        <Link to="/getAllCustomer">
+          <button>GetAllCustomer</button>
+        </Link>
         <Link to="/gyu">
           <button>심규창</button>
         </Link>
@@ -18,12 +21,6 @@ const HomePage = () => {
           <button>임현우</button>
         </Link>
       </header>
-      <Link to="/login">
-          <button>로그인</button>
-        </Link>
-        <Link to="/register">
-          <button>회원가입</button>
-        </Link>
     </div>
   );
 };
