@@ -6,6 +6,9 @@ import GyuPage from "./component/page/GyuPage";
 import SeongPage from "./component/page/SeongPage";
 import HyunPage from "./component/page/HyunPage";
 import Register from "./user/customer/Register";
+import Login from "./user/customer/Login";
+import ManageInsurancePlan from "./user/employee/insuranceDevelopment/ManageInsurancePlan";
+import DesignInsurance from "./user/employee/insuranceDevelopment/DesignInsurance";
 import LoginPage from "./component/page/LoginPage";
 import GetAllCustomer from "./user/customer/GetAllCustomer";
 
@@ -21,6 +24,8 @@ const App = () => {
         <Route path="/seong" element={<SeongPage />} />
         <Route path="/hyun" element={<HyunPage />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/manageInsurancePlan" element={<ManageInsurancePlan />} />
+        <Route path="/designInsurances" element={<DesignInsurance />} />
       </Routes>
     </>
   );
