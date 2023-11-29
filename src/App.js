@@ -11,21 +11,30 @@ import ManageInsurancePlan from "./user/employee/insuranceDevelopment/ManageInsu
 import DesignInsurance from "./user/employee/insuranceDevelopment/DesignInsurance";
 import LoginPage from "./component/page/LoginPage";
 import GetAllCustomer from "./user/customer/GetAllCustomer";
+import CampaignPlan from "./user/employee/marketing/CampaignPlan";
+import GetPlanCampaign from "./user/employee/marketing/GetPlanCampaign";
+import GetRunCampaign from "./user/employee/marketing/GetRunCampaign";
+import GetEndCampaign from "./user/employee/marketing/GetEndCampaign";
 
 const App = () => {
   return (
     <>
-      <Routes >
+      <Routes>
         <Route path="/" element={<LoginPage />} />
         <Route path="/home" element={<HomePage />} />
         <Route path="/operationPolicyPage" element={<OperationPolicyPage />} />
         <Route path="/getAllCustomer" element={<GetAllCustomer />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/gyu" element={<GyuPage />} />
         <Route path="/seong" element={<SeongPage />} />
         <Route path="/hyun" element={<HyunPage />} />
         <Route path="/register" element={<Register />} />
         <Route path="/manageInsurancePlan" element={<ManageInsurancePlan />} />
-        <Route path="/designInsurances" element={<DesignInsurance />} />
+        <Route path="/designInsurance" element={<DesignInsurance />} />
+        <Route path="/campaignPlan" element={<CampaignPlan />} />
+        <Route path="/getPlanCampaign" element={<GetPlanCampaign />} />
+        <Route path="/getRunCampaign" element={<GetRunCampaign />} />
+        <Route path="/getEndCampaign" element={<GetEndCampaign />} />
       </Routes>
     </>
   );
