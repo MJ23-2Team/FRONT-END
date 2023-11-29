@@ -24,10 +24,17 @@ const App = () => {
         <Route path="/home" element={<HomePage />} />
         <Route path="/operationPolicyPage" element={<OperationPolicyPage />} />
         <Route path="/getAllCustomer" element={<GetAllCustomer />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/gyu" element={<GyuPage />} />
         <Route path="/seong" element={<SeongPage />} />
         <Route path="/hyun" element={<HyunPage />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/manageInsurancePlan" element={<ManageInsurancePlan />} />
+        <Route path="/designInsurance" element={<DesignInsurance />} />
+        <Route path="/campaignPlan" element={<CampaignPlan />} />
+        <Route path="/getPlanCampaign" element={<GetPlanCampaign />} />
+        <Route path="/getRunCampaign" element={<GetRunCampaign />} />
+        <Route path="/getEndCampaign" element={<GetEndCampaign />} />
       </Routes>
     </>
   );
