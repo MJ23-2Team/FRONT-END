@@ -1,13 +1,13 @@
 import CreateInsurancePlan from "../../user/employee/insuranceDevelopment/CreateInsurancePlan";
 import GetReports from "../../user/employee/insuranceDevelopment/GetReports";
-import DesignInsurance from "../../user/employee/insuranceDevelopment/DesignInsurance";
+import GetPlannedInsurances from "../../user/employee/insuranceDevelopment/GetPlannedInsurances";
 
 const HyunPage = () => {
   return (
     <div>
       <CreateInsurancePlan />
       <GetReports />
-      <DesignInsurance />
+      <GetPlannedInsurances />
     </div>
   );
 };

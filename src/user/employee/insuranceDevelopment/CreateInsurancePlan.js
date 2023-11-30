@@ -1,5 +1,6 @@
 import { createInsurancePlan } from "./InsuranceDevelopment";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const CreateInsurancePlan = () => {
   const [data, setData] = useState({});
@@ -24,14 +25,15 @@ const CreateInsurancePlan = () => {
         placeholder="report"
         onChange={(e) => onHandleChangeData(e)}
       />
-
-      <button
-        onClick={() => {
-          onSubmitHandle();
-        }}
-      >
-        기획 저장
-      </button>
+      <Link to="/">
+        <button
+          onClick={() => {
+            onSubmitHandle();
+          }}
+        >
+          저장
+        </button>
+      </Link>
       <div>
         ===============================================================================
       </div>
