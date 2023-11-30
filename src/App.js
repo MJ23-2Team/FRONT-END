@@ -16,6 +16,9 @@ import CampaignPlan from "./user/employee/marketing/CampaignPlan";
 import GetPlanCampaign from "./user/employee/marketing/GetPlanCampaign";
 import GetRunCampaign from "./user/employee/marketing/GetRunCampaign";
 import GetEndCampaign from "./user/employee/marketing/GetEndCampaign";
+import EstimateProfit from "./user/employee/insuranceDevelopment/EstimateProfit";
+import AnalyzeInsuranceRate from "./user/employee/insuranceDevelopment/AnalyzeInsuranceRate";
+import AuthorizeInsurance from "./user/employee/insuranceDevelopment/AuthorizeInsurance";
 
 const App = () => {
   return (
@@ -41,6 +44,12 @@ const App = () => {
         <Route path="/getPlanCampaign" element={<GetPlanCampaign />} />
         <Route path="/getRunCampaign" element={<GetRunCampaign />} />
         <Route path="/getEndCampaign" element={<GetEndCampaign />} />
+        <Route path="/estimateProfit" element={<EstimateProfit />} />
+        <Route
+          path="/analyzeInsuranceRate"
+          element={<AnalyzeInsuranceRate />}
+        />
+        <Route path="/authorizeInsurance" element={<AuthorizeInsurance />} />
       </Routes>
     </>
   );
