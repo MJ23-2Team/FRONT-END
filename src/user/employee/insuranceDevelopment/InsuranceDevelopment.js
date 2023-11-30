@@ -21,5 +21,5 @@ export const deleteInsurancePlan = async (data) => {
 };
 
 export const designInsurance = async (data) => {
-  return await request.put(`insuranceDevelopment/plan`, data);
+  return await request.put(`insuranceDevelopment/design`, data);
 };

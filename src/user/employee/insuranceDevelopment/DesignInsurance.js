@@ -1,14 +1,16 @@
 import { designInsurance } from "./InsuranceDevelopment";
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 
 const DesignInsurance = () => {
+  const location = useLocation();
   const [data, setData] = useState({});
   const onHandleChangeData = (e) => {
     setData((prevData) => ({ ...prevData, [e.target.name]: e.target.value }));
   };
-  const onSubmitHandle = () => {
-    if (data) {
-      designInsurance(data).then((res) => alert(res.data.message));
+  const onSubmitHandle = (newData) => {
+    if (newData) {
+      designInsurance(newData).then((res) => alert(res.data.message));
     } else {
       alert("값을 입력해주세요");
     }
@@ -17,20 +19,23 @@ const DesignInsurance = () => {
   return (
     <>
       <div>설계할 보험 기획안</div>
-      <div>{data.planReport}</div> {/* 수정 요망 */}
-      <div>고객니즈 및 경쟁사의 동향 분석 보고서를 작성하세요 </div>
+      <div>{location.state.planReport}</div> {/* 수정 요망 */}
+      <div>
+        설계할 보험의 이름, 상품 종류, 판매 대상, 가입 조건, 보험료, 보장 내용,
+        개발 예상 비용을 / 로 구분하여 입력해주세요{" "}
+      </div>
       <input
         type="text"
         name="insuranceName"
         placeholder="보험 이름"
         onChange={(e) => onHandleChangeData(e)}
       />
-      <input
-        type="text"
-        name="insuranceType"
-        placeholder="보험 종류"
-        onChange={(e) => onHandleChangeData(e)}
-      />
+      <select name="insuranceType" onChange={(e) => onHandleChangeData(e)}>
+        <option value="none" selected disabled>
+          =선택=
+        </option>
+        <option value="FIRE">화재</option>
+      </select>
       <input
         type="text"
         name="salesTarget"
@@ -63,7 +68,12 @@ const DesignInsurance = () => {
       />
       <button
         onClick={() => {
-          onSubmitHandle();
+          const newData = {
+            insuranceID: location.state.insuranceID,
+            ...data,
+          };
+          setData(newData);
+          onSubmitHandle(newData);
         }}
       >
         저장
