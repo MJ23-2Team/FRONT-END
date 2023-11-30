@@ -1,8 +1,8 @@
-import { manageInsurancePlan } from "./InsuranceDevelopment";
+import { estimateProfit } from "./InsuranceDevelopment";
 import { useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 
-const ManageInsurancePlan = () => {
+const EstimateProfit = () => {
   const location = useLocation();
   const [data, setData] = useState({});
   const onHandleChangeData = (e) => {
@@ -10,7 +10,7 @@ const ManageInsurancePlan = () => {
   };
   const onSubmitHandle = (newData) => {
     if (newData) {
-      manageInsurancePlan(newData).then((res) => alert(res.data.message));
+      estimateProfit(newData).then((res) => alert(res.data.message));
     } else {
       alert("값을 입력해주세요");
     }
@@ -18,15 +18,18 @@ const ManageInsurancePlan = () => {
 
   return (
     <>
-      <div>기존 상품 기획</div>
-      <div>고객니즈 및 경쟁사의 동향 분석 보고서를 작성하세요 </div>
+      <div>예상 손익 분석</div>
+      <div>예상 손익률 분석값을 입력해주세요. </div>
       <input
-        type="text"
-        name="planReport"
-        placeholder="report"
+        type="number"
+        name="estimatedProfitRate"
+        placeholder="예상 손익률 분석값"
         onChange={(e) => onHandleChangeData(e)}
       />
-      <Link to={"/"}>
+      <Link
+        to={"/analyzeInsuranceRate"}
+        state={{ insuranceID: location.state.insuranceID }}
+      >
         <button
           onClick={() => {
             const newData = {
@@ -37,7 +40,14 @@ const ManageInsurancePlan = () => {
             onSubmitHandle(newData);
           }}
         >
-          기획 저장
+          저장
+        </button>
+        <button
+          onClick={() => {
+            alert("예상 손익 분석을 건너뛰었습니다.");
+          }}
+        >
+          건너뛰기
         </button>
       </Link>
       <div>
@@ -47,4 +57,4 @@ const ManageInsurancePlan = () => {
   );
 };
 
-export default ManageInsurancePlan;
+export default EstimateProfit;
