@@ -4,7 +4,11 @@ import { Link } from "react-router-dom";
 
 const GetPlannedInsurances = () => {
   const [insurances, setInsurances] = useState([]);
-  const [checked, setchecked] = useState([]);
+  const [checked, setChecked] = useState([]);
+  const handleRadioClick = () => {
+    const checkedRadio = document.querySelector('input[name="report"]:checked');
+    setChecked(checkedRadio);
+  };
 
   useEffect(() => {
     getPlannedInsurances().then((res) => {
@@ -23,25 +27,21 @@ const GetPlannedInsurances = () => {
                 <input
                   type="radio"
                   id={insurance.insuranceID}
+                  value={insurance.planReport}
                   name="report"
-                  // onClick={setchecked(insurance.insuranceID)}
+                  onClick={handleRadioClick}
                 />
                 {insurance.planReport}
               </div>
             </div>
           );
         })}
-      <Link to={"/manageInsurancePlan"} state={{ Insurance: checked }}>
-        {/* <Link to="/manageInsurancePlan"> */}
-        <button>수정</button>
-      </Link>
-      <button
-        onClick={() => {
-          //   deleteInsurancePlan(); //insurance id 던져주기
-        }}
+      <Link
+        to={"/designInsurance"}
+        state={{ insuranceID: checked.id, planReport: checked.value }}
       >
-        삭제
-      </button>
+        <button>선택</button>
+      </Link>
     </div>
   );
 };

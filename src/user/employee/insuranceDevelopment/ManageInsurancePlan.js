@@ -8,9 +8,9 @@ const ManageInsurancePlan = () => {
   const onHandleChangeData = (e) => {
     setData((prevData) => ({ ...prevData, [e.target.name]: e.target.value }));
   };
-  const onSubmitHandle = () => {
-    if (data) {
-      manageInsurancePlan(data).then((res) => alert(res.data.message));
+  const onSubmitHandle = (newData) => {
+    if (newData) {
+      manageInsurancePlan(newData).then((res) => alert(res.data.message));
     } else {
       alert("값을 입력해주세요");
     }
@@ -29,12 +29,12 @@ const ManageInsurancePlan = () => {
 
       <button
         onClick={() => {
-          setData((prevData) => ({
+          const newData = {
             insuranceID: location.state.insuranceID,
-            ...prevData,
-          }));
-          // console.log(data);
-          onSubmitHandle(data);
+            ...data,
+          };
+          setData(newData);
+          onSubmitHandle(newData);
         }}
       >
         기획 저장

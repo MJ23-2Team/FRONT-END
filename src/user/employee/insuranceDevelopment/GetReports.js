@@ -36,13 +36,12 @@ const GetReports = () => {
           );
         })}
       <Link to={"/manageInsurancePlan"} state={{ insuranceID: checked.id }}>
-        {/* <Link to="/manageInsurancePlan"> */}
         <button>수정</button>
       </Link>
       <button
         onClick={() => {
-          // deleteInsurancePlan();
-          console.log(document.querySelector('input[name="report"]:checked'));
+          deleteInsurancePlan(checked.id);
+          window.location.reload();
         }}
       >
         삭제
