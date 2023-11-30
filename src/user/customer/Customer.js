@@ -1,7 +1,7 @@
 import request from "../../component/common/axios";
 
 export const loginUser = async (data) => {
-  return await request.post(`login`, data);
+  return await request.post(`login`, data)
 };
 export const createUser = async (data) => {
   return await request.post(`register`, data);
