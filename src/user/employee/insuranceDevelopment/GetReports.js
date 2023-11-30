@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getReports } from "./InsuranceDevelopment";
+import { getReports, deleteInsurancePlan } from "./InsuranceDevelopment";
 import { Link } from "react-router-dom";
 
 const GetReports = () => {
