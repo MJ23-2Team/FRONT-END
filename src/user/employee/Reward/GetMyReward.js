@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getByCustomerId, pass } from "./Reward";
+import { getByCustomerId } from "./Reward";
 
 const GetMyRewards = () => {
     const [ rewards, setRewards ] = useState( [] );
@@ -7,10 +7,6 @@ const GetMyRewards = () => {
     useEffect( () => {
         getByCustomerId().then( (res) => { setRewards( res.data.data ); });
     }, [] );
-
-    const onSubmitHandlePass = (index) => {
-        pass(index).then((res) => alert(res.data.message));
-    };
 
     return (
         <div>

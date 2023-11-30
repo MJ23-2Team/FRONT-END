@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getById, pass } from "./AdviceNote";
+import { getById } from "./AdviceNote";
 
 const GetAdviceNote = () => {
     const [ adviceNotes, setAdviceNotes ] = useState( [] );
@@ -8,13 +8,9 @@ const GetAdviceNote = () => {
         getById().then( (res) => { setAdviceNotes( res.data.data ); });
     }, [] );
 
-    const onSubmitHandlePass = (index) => {
-        pass( index ).then( (res) => alert( res.data.data ) );
-    };
     return (
-        // Modal 만드는 방법 알아오기
         <div>
-
+            <div> 경고 알림 </div>
         </div>
     );
 };

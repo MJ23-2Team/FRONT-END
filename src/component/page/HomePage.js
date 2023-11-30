@@ -24,13 +24,16 @@ const HomePage = () => {
           <button>심규창</button>
         </Link>
         <Link to="/educationPage">
-          <button> 교육 </button>
+          <button> 교육 </button> 
         </Link>
         <Link to ="educationStudentPage">
           <button> 교육 학생 </button>
         </Link>
         <Link to="contractManagementPolicyPage">
           <button> 계약 관리 정책</button>
+        </Link>
+        <Link to="employeeRewardPage">
+          <button> 직원 보상 목록 </button>
         </Link>
         <Link to="/hyun">
           <button>임현우</button>

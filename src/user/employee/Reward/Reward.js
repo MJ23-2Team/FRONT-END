@@ -1,25 +1,17 @@
-import request from "../../component/common/axios";
+import request from "../../../component/common/axios";
 
 export const save = async (data) => {
-    return await request.post( 'Reward', data );
-};
-
-export const pass = async (data) => {
-    return await request.post( 'Reward/pass', JSON.stringify(data), {
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    } );
+    return await request.post( 'reward', data );
 };
 export const getAll = async () => {
-    return await request.get( 'Reward/getAll' );
+    return await request.get( 'reward/getAll' );
 };
-export const getByCustomerId = async ( customerId ) => {
-    return await request.get( 'Reward/getByCustomerId', customerId );
+export const getByContractId = async ( contractId ) => {
+    return await request.get( 'reward/getByContractId', contractId );
 };
 export const approve = async () => {
-    return await request.get( 'Reward/approve', true );
+    return await request.get( 'reward/approve', true );
 };
 export const deny = async () => {
-    return await request.get( 'Reward/approve', false );
+    return await request.get( 'reward/approve', false );
 }

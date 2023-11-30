@@ -9,7 +9,8 @@ const AdviceNoteModal = ( setAdviceModalOpen ) => {
     
       return (
         <div>
-            <p>모달창입니다.</p>
+            <CreateAdviceNote />
+            <GetAdviceNote />
         </div>
       );
 };
