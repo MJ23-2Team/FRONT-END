@@ -10,15 +10,19 @@ const Login = () => {
         setData(prevData => ({ ...prevData, [e.target.name]: e.target.value }));
   };
   const onSubmitHandle = () => {
-      if (data.id && data.pw) {
-          loginUser(data).then((res) =>
-              alert(res.data.message));
-              navigate("/home");
-      }else{
-          alert("값을 입력해주세요");
-      }
+    if (data.id && data.pw) {
+      loginUser(data)
+      .then((res) => {
+        alert(res.data.message);
+        localStorage.clear();
+        localStorage.setItem('id', res.data.data);
+        localStorage.getItem("id")
+        navigate("/home");
+      });
+    } else {
+      alert("값을 입력해주세요");
+    }
   };
-
   return (
     <>
       <div>로그인</div>
