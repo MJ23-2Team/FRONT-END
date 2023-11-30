@@ -1,5 +1,5 @@
-import EstablishOperationPolicy from "../../intra/OperationPolicy/EstablishOperationPolicy";
-import GetAllOperationPolicy from "../../intra/OperationPolicy/GetAllOperationPolicy";
+import EstablishOperationPolicy from "../../intra/operationPolicy/EstablishOperationPolicy";
+import GetAllOperationPolicy from "../../intra/operationPolicy/GetAllOperationPolicy";
 
 const OperationPolicyPage = () => {
   return (

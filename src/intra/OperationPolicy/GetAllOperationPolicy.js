@@ -24,8 +24,8 @@ const GetAllOperationPolicy = () => {
                             <div key={key}>{`${key} : ${value}`}</div>
 
                         ))} 
-                            <button onClick={() => {onSubmitHandleRate(user.policyId);}}>정책 추천</button>
-                            <button onClick={() => {onSubmitHandlePass(user.policyId);}}>정책 등록</button>
+                            <button onClick={() => {onSubmitHandleRate(user.policyID);}}>정책 추천</button>
+                            <button onClick={() => {onSubmitHandlePass(user.policyID);}}>정책 등록</button>
                     </div>
                 );
             })}
