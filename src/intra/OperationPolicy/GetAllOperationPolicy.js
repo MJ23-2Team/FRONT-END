@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { getAll, pass,recommand } from "./OperationPolicy";
-const GetAllOpPolicy = () => {
+const GetAllOperationPolicy = () => {
     const [policys, setPolicys] = useState([]);
 
     useEffect(() => {
@@ -15,7 +15,7 @@ const GetAllOpPolicy = () => {
     };
     return (
         <div>
-            <div>고객 정보 불러오기</div>
+            <div>정책 정보 불러오기</div>
             {policys && policys.map((user, index) => {
                 return (
                     <div key={index}>
@@ -23,13 +23,13 @@ const GetAllOpPolicy = () => {
                         {user && Object.entries(user).map(([key, value]) => (
                             <div key={key}>{`${key} : ${value}`}</div>
 
-                        ))}
-                            <button onClick={() => {onSubmitHandleRate(index+1);}}>정책 추천</button>
-                            <button onClick={() => {onSubmitHandlePass(index+1);}}>정책 등록</button>
+                        ))} 
+                            <button onClick={() => {onSubmitHandleRate(user.policyID);}}>정책 추천</button>
+                            <button onClick={() => {onSubmitHandlePass(user.policyID);}}>정책 등록</button>
                     </div>
                 );
             })}
         </div>
   );
 };
-export default GetAllOpPolicy;
+export default GetAllOperationPolicy;

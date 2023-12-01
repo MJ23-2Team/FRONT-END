@@ -11,7 +11,7 @@ const HomePage = () => {
     <div>
       <header>
         <div>홈페이지</div>
-        <Link to="/operationPolicyPage">
+        <Link to="/operationPolicy">
           <button>OperationPolicyPage</button>
         </Link>
         <input type="button" value="팝업" className="blueBtn" onClick={() => setAdviceModalOpen(!adviceModalOpen)}/>
@@ -20,6 +20,12 @@ const HomePage = () => {
             <AdviceNoteModal />
           </Modal>
         )}
+        <Link to="/sellGroup">
+          <button>SellGroupPage</button>
+        </Link>
+        <Link to="/getAllCustomer">
+          <button>GetAllCustomer</button>
+        </Link>
         <Link to="/gyu">
           <button>심규창</button>
         </Link>
@@ -39,12 +45,6 @@ const HomePage = () => {
           <button>임현우</button>
         </Link>
       </header>
-      <Link to="/login">
-          <button>로그인</button>
-        </Link>
-        <Link to="/register">
-          <button>회원가입</button>
-        </Link>
     </div>
   );
 };

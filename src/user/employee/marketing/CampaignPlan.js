@@ -7,7 +7,16 @@ const CampaignPlan = () => {
     setData((prevData) => ({ ...prevData, [e.target.name]: e.target.value }));
   };
   const onSubmitHandle = () => {
-    if (data.id && data.pw) {
+    if (
+      data.insuranceID &&
+      data.campaignName &&
+      data.campaignTarget &&
+      data.duration &&
+      data.place &&
+      data.campaignWay &&
+      data.budget &&
+      data.exResult
+    ) {
       campaignplan(data).then((res) => alert(res.data.message));
     } else {
       alert("값을 입력해주세요");
@@ -23,8 +32,8 @@ const CampaignPlan = () => {
       </div>
       <input
         type="number"
-        name="insuranceId"
-        placeholder="insuranceId"
+        name="insuranceID"
+        placeholder="insuranceID"
         onChange={(e) => onHandleChangeData(e)}
       />
       <input
@@ -35,8 +44,8 @@ const CampaignPlan = () => {
       />
       <input
         type="text"
-        name="target"
-        placeholder="target"
+        name="campaignTarget"
+        placeholder="campaignTarget"
         onChange={(e) => onHandleChangeData(e)}
       />
       <input
