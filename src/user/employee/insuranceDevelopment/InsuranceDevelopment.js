@@ -23,3 +23,19 @@ export const deleteInsurancePlan = async (data) => {
 export const designInsurance = async (data) => {
   return await request.put(`insuranceDevelopment/design`, data);
 };
+
+export const estimateProfit = async (data) => {
+  return await request.put(`insuranceDevelopment/profit`, data);
+};
+export const analyzeInsuranceRate = async (data) => {
+  return await request.put(`insuranceDevelopment/rate`, data);
+};
+export const getByInsuranceID = async (data) => {
+  return await request.get(`insuranceDevelopment/insurance?id=` + data);
+};
+export const getDesignedInsurances = async () => {
+  return await request.get(`insuranceDevelopment/designed`);
+};
+export const authorizeInsurance = async (data) => {
+  return await request.put(`insuranceDevelopment/authorize`, data);
+};

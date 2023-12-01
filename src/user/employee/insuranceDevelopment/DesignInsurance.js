@@ -1,6 +1,6 @@
 import { designInsurance } from "./InsuranceDevelopment";
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 
 const DesignInsurance = () => {
   const location = useLocation();
@@ -10,6 +10,7 @@ const DesignInsurance = () => {
   };
   const onSubmitHandle = (newData) => {
     if (newData) {
+      console.log(newData);
       designInsurance(newData).then((res) => alert(res.data.message));
     } else {
       alert("값을 입력해주세요");
@@ -66,18 +67,23 @@ const DesignInsurance = () => {
         placeholder="개발 예상 비용"
         onChange={(e) => onHandleChangeData(e)}
       />
-      <button
-        onClick={() => {
-          const newData = {
-            insuranceID: location.state.insuranceID,
-            ...data,
-          };
-          setData(newData);
-          onSubmitHandle(newData);
-        }}
+      <Link
+        to={"/estimateProfit"}
+        state={{ insuranceID: location.state.insuranceID }}
       >
-        저장
-      </button>
+        <button
+          onClick={() => {
+            const newData = {
+              insuranceID: location.state.insuranceID,
+              ...data,
+            };
+            setData(newData);
+            onSubmitHandle(newData);
+          }}
+        >
+          저장
+        </button>
+      </Link>
       <div>
         ===============================================================================
       </div>
