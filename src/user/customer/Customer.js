@@ -11,8 +11,5 @@ export const createUser = async (data) => {
   return await request.post(`register`, data)
 };
 export const getAllUsers = async () => {
-  return await request.get(`customer/getAll`).catch(e=>console.log(e.config.headers));
+  return await request.get(`customer/getAll`);
 };
-// export const getUser = async (data) => {
-//   return await request.get(`customer`, data);
-// };
