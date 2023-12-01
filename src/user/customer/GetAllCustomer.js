@@ -12,7 +12,7 @@ const GetAllCustomer = () => {
 
   return (
     <div>
-      <div>캠페인 전체 조회</div>
+      <div>고객 전체 조회</div>
       {users &&
         users.map((user, index) => {
           return (

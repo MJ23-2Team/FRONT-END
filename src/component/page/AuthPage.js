@@ -34,6 +34,7 @@ function AuthPage() {
   };
   const onLogoutSuccess = () => {
     console.log('SUCESS LOG OUT');
+    localStorage.clear();
   };
 
   return (
