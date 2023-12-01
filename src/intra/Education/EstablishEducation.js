@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { save } from "./Education";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const EstablishEducation = () => {
     const [ data, setData ] = useState( {} );
+    const navigate = useNavigate();
+
     const onHandleChangeData = (e) => {
         setData( prevData => ( { ...prevData, [e.target.name]: e.target.value } ) );
     };
@@ -11,6 +13,7 @@ const EstablishEducation = () => {
         if ( data.name && data.content && data.duration && data.place && data.budget ) {
             save( data ).then( (res) =>
                 alert( "Success" ) );
+                navigate( "/educationPage" );
                 
         } else {
             alert( "Input Data" );
@@ -31,11 +34,9 @@ const EstablishEducation = () => {
             <input type="hidden" name="exResult" value="NULL" onChange={ (e) => onHandleChangeData(e) } />
             <div> 교육 장소 </div>
             <input type="text" name="place" placeholder="장소" onChange={ (e) => onHandleChangeData(e) } />
-            <Link to="/education">
-                <button onClick={ () => {onSubmitHandle(); } }>
-                    등록
-                </button>
-            </Link>
+            <button onClick={ () => {onSubmitHandle(); } }>
+                등록
+            </button>
         </>
     );
 };

@@ -10,7 +10,7 @@ const Login = () => {
   const onHandleChangeData = (e) => {
         setData(prevData => ({ ...prevData, [e.target.name]: e.target.value }));
   };
-  const onSubmitHandle = () => {
+  const onSubmitHandle = () => { 
     if (data.id && data.pw) {
       loginUser(data)
       .then((res) => {
