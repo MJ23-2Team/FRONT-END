@@ -12,7 +12,6 @@ import ContractManagementPolicyPage from "./component/page/ContractManagementPol
 import AdviceNoteModal from "./component/page/AdviceNoteModal";
 import EmployeeRewardPage from "./component/page/EmployeeRewardPage";
 import Register from "./user/customer/Register";
-import Login from "./user/customer/Login";
 import AboutEducationPage from "./component/page/AboutEducationPage";
 import ManageInsurancePlan from "./user/employee/insuranceDevelopment/ManageInsurancePlan";
 import DesignInsurance from "./user/employee/insuranceDevelopment/DesignInsurance";
@@ -25,6 +24,7 @@ import GetEndCampaign from "./user/employee/marketing/GetEndCampaign";
 import EstimateProfit from "./user/employee/insuranceDevelopment/EstimateProfit";
 import AnalyzeInsuranceRate from "./user/employee/insuranceDevelopment/AnalyzeInsuranceRate";
 import AuthorizeInsurance from "./user/employee/insuranceDevelopment/AuthorizeInsurance";
+import RegisterPage from "./component/page/RegisterPage";
 
 
 const App = () => {
@@ -32,6 +32,7 @@ const App = () => {
     <>
       <Routes>
         <Route path="/" element={<LoginPage />} />
+        <Route path="/regsiter" element={<RegisterPage />} />
         <Route path="/home" element={<HomePage />} />
         
         <Route path="/operationPolicy" element={<OperationPolicyPage />} />
@@ -57,10 +58,7 @@ const App = () => {
         <Route path="/getRunCampaign" element={<GetRunCampaign />} />
         <Route path="/getEndCampaign" element={<GetEndCampaign />} />
         <Route path="/estimateProfit" element={<EstimateProfit />} />
-        <Route
-          path="/analyzeInsuranceRate"
-          element={<AnalyzeInsuranceRate />}
-        />
+        <Route path="/analyzeInsuranceRate"element={<AnalyzeInsuranceRate />}/>
         <Route path="/authorizeInsurance" element={<AuthorizeInsurance />} />
       </Routes>
     </>

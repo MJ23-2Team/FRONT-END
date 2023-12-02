@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { loginUser } from "./Customer";
-import AuthPage from "../../component/page/AuthPage";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -25,7 +24,6 @@ const Login = () => {
   };
   return (
     <>
-      <AuthPage/>
       <div>로그인</div>
       <div>아이디 / 비밀번호</div>
       <input type="text" name="id" placeholder="ID" onChange={(e) => onHandleChangeData(e)} />
