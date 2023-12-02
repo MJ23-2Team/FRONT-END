@@ -1,12 +1,11 @@
-import { useState, useEffect, useMemo } from 'react';
-import { getAll } from "/Payment";
-import { Link } from "react-router-dom";
+import { useState, useEffect, useMemo } from "react";
+import { getAllExpired } from "/Payment";
 
-const GetAllPayment = () => {
+const GetExpiredPayment = () => {
     const [ payments, setPayments ] = useState( [] );
 
     useEffect( () => {
-        getAll().then( (res) => { setPayments( res.data ); } );
+        getAllExpired().then( (res) => { setPayments( res.data ) } );
     }, [] );
 
     const headers = [
@@ -68,5 +67,4 @@ const GetAllPayment = () => {
           </tbody>
         </table>
     );
-};
-export default GetAllPayment;
+}
