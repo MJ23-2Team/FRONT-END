@@ -13,3 +13,10 @@ export const createUser = async (data) => {
 export const getAllUsers = async () => {
   return await request.get(`customer/getAll`);
 };
+export const getInfo = async (data) => {
+  return await request.get(`setInfo?id=${data}`);
+};
+
+export const setInfo = async (data) => {
+  return await request.post(`setInfo`,data);
+};
