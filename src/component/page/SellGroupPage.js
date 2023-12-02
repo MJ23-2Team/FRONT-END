@@ -6,7 +6,7 @@ const SellGroupPage = () => {
         <Link to="/sellGroup/getAll">
           <button>GetAllSellGroup</button>
         </Link>
-        <Link to="/sellGroup/recommendInsurance">
+        <Link to="/sellGroup/recommend">
           <button>RecommendInsurance</button>
         </Link>
         

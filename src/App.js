@@ -5,9 +5,14 @@ import OperationPolicyPage from "./component/page/OperationPolicyPage";
 import SellGroupPage from "./component/page/SellGroupPage";
 import GetAllSellGroup from "./intra/sellGroup/GetAllSellGroup";
 import GyuPage from "./component/page/GyuPage";
-import SeongPage from "./component/page/SeongPage";
 import HyunPage from "./component/page/HyunPage";
+import EducationPage from "./component/page/EducationPage";
+import EducationStudentPage from "./component/page/EducationStudentPage";
+import ContractManagementPolicyPage from "./component/page/ContractManagementPolicyPage";
+import AdviceNoteModal from "./component/page/AdviceNoteModal";
+import EmployeeRewardPage from "./component/page/EmployeeRewardPage";
 import Register from "./user/customer/Register";
+import AboutEducationPage from "./component/page/AboutEducationPage";
 import ManageInsurancePlan from "./user/employee/insuranceDevelopment/ManageInsurancePlan";
 import DesignInsurance from "./user/employee/insuranceDevelopment/DesignInsurance";
 import LoginPage from "./component/page/LoginPage";
@@ -22,12 +27,14 @@ import AuthorizeInsurance from "./user/employee/insuranceDevelopment/AuthorizeIn
 import GetUserPersonas from "./intra/sellGroup/GetUserPersonas";
 import AddUserPersona from "./intra/sellGroup/AddUserPersona";
 import PlanSalesPlan from "./intra/sellGroup/PlanSalesPlan";
+import RegisterPage from "./component/page/RegisterPage";
 
 const App = () => {
   return (
     <>
       <Routes>
         <Route path="/" element={<LoginPage />} />
+        <Route path="/regsiter" element={<RegisterPage />} />
         <Route path="/home" element={<HomePage />} />
 
         <Route path="/operationPolicy" element={<OperationPolicyPage />} />
@@ -38,7 +45,12 @@ const App = () => {
         <Route path="/sellGroup/recommend" element={<recommendInsurance />} />
 
         <Route path="/gyu" element={<GyuPage />} />
-        <Route path="/seong" element={<SeongPage />} />
+        <Route path="/educationPage" element={<EducationPage />} />
+        <Route path="/aboutEducationPage" element={<AboutEducationPage /> } />
+        <Route path="/educationStudentPage" element={<EducationStudentPage /> } />
+        <Route path="/adviceNoteModal" element={<AdviceNoteModal /> } />
+        <Route path="/employeeRewardPage" element={<EmployeeRewardPage /> } />
+        <Route path="/contractManagementPolicyPage" element={<ContractManagementPolicyPage /> } /> 
         <Route path="/hyun" element={<HyunPage />} />
 
         <Route path="/manageInsurancePlan" element={<ManageInsurancePlan />} />
@@ -48,10 +60,7 @@ const App = () => {
         <Route path="/getRunCampaign" element={<GetRunCampaign />} />
         <Route path="/getEndCampaign" element={<GetEndCampaign />} />
         <Route path="/estimateProfit" element={<EstimateProfit />} />
-        <Route
-          path="/analyzeInsuranceRate"
-          element={<AnalyzeInsuranceRate />}
-        />
+        <Route path="/analyzeInsuranceRate"element={<AnalyzeInsuranceRate />}/>
         <Route path="/authorizeInsurance" element={<AuthorizeInsurance />} />
         <Route path="/getUserPersonas" element={<GetUserPersonas />} />
         <Route path="/addUserPersona" element={<AddUserPersona />} />
