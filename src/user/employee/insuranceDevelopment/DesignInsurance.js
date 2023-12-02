@@ -10,7 +10,6 @@ const DesignInsurance = () => {
   };
   const onSubmitHandle = (newData) => {
     if (newData) {
-      console.log(newData);
       designInsurance(newData).then((res) => alert(res.data.message));
     } else {
       alert("값을 입력해주세요");
@@ -20,7 +19,7 @@ const DesignInsurance = () => {
   return (
     <>
       <div>설계할 보험 기획안</div>
-      <div>{location.state.planReport}</div> {/* 수정 요망 */}
+      <div>{location.state.planReport}</div>
       <div>
         설계할 보험의 이름, 상품 종류, 판매 대상, 가입 조건, 보험료, 보장 내용,
         개발 예상 비용을 / 로 구분하여 입력해주세요{" "}

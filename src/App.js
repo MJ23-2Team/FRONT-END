@@ -19,6 +19,9 @@ import GetEndCampaign from "./user/employee/marketing/GetEndCampaign";
 import EstimateProfit from "./user/employee/insuranceDevelopment/EstimateProfit";
 import AnalyzeInsuranceRate from "./user/employee/insuranceDevelopment/AnalyzeInsuranceRate";
 import AuthorizeInsurance from "./user/employee/insuranceDevelopment/AuthorizeInsurance";
+import GetUserPersonas from "./intra/sellGroup/GetUserPersonas";
+import AddUserPersona from "./intra/sellGroup/AddUserPersona";
+import PlanSalesPlan from "./intra/sellGroup/PlanSalesPlan";
 
 const App = () => {
   return (
@@ -26,18 +29,18 @@ const App = () => {
       <Routes>
         <Route path="/" element={<LoginPage />} />
         <Route path="/home" element={<HomePage />} />
-        
+
         <Route path="/operationPolicy" element={<OperationPolicyPage />} />
         <Route path="/register" element={<Register />} />
         <Route path="/getAllCustomer" element={<GetAllCustomer />} />
         <Route path="/sellGroup" element={<SellGroupPage />} />
-        <Route path="/sellGroup/getAll" element={<GetAllSellGroup/>} />
-        <Route path="/sellGroup/recommend" element={<recommendInsurance/>} />
+        <Route path="/sellGroup/getAll" element={<GetAllSellGroup />} />
+        <Route path="/sellGroup/recommend" element={<recommendInsurance />} />
 
         <Route path="/gyu" element={<GyuPage />} />
         <Route path="/seong" element={<SeongPage />} />
         <Route path="/hyun" element={<HyunPage />} />
-        
+
         <Route path="/manageInsurancePlan" element={<ManageInsurancePlan />} />
         <Route path="/designInsurance" element={<DesignInsurance />} />
         <Route path="/campaignPlan" element={<CampaignPlan />} />
@@ -50,6 +53,9 @@ const App = () => {
           element={<AnalyzeInsuranceRate />}
         />
         <Route path="/authorizeInsurance" element={<AuthorizeInsurance />} />
+        <Route path="/getUserPersonas" element={<GetUserPersonas />} />
+        <Route path="/addUserPersona" element={<AddUserPersona />} />
+        <Route path="/planSalesPlan" element={<PlanSalesPlan />} />
       </Routes>
     </>
   );

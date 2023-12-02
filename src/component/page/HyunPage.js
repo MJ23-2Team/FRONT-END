@@ -2,6 +2,7 @@ import CreateInsurancePlan from "../../user/employee/insuranceDevelopment/Create
 import GetReports from "../../user/employee/insuranceDevelopment/GetReports";
 import GetPlannedInsurances from "../../user/employee/insuranceDevelopment/GetPlannedInsurances";
 import AuthorizeInsurance from "../../user/employee/insuranceDevelopment/AuthorizeInsurance";
+import GetAuthorizedInsurances from "../../intra/sellGroup/GetAuthorizedInsurances";
 
 const HyunPage = () => {
   return (
@@ -10,6 +11,7 @@ const HyunPage = () => {
       <GetReports />
       <GetPlannedInsurances />
       <AuthorizeInsurance />
+      <GetAuthorizedInsurances />
     </div>
   );
 };

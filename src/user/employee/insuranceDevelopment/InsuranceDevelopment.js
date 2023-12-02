@@ -39,3 +39,6 @@ export const getDesignedInsurances = async () => {
 export const authorizeInsurance = async (data) => {
   return await request.put(`insuranceDevelopment/authorize`, data);
 };
+export const getAuthorizedInsurances = async () => {
+  return await request.get(`insuranceDevelopment/authorized`);
+};
