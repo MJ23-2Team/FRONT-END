@@ -1,14 +1,14 @@
 import request from "../../component/common/axios";
 
 export const login = async (data) => {
-  return await request.post(`login/oauth2/code/google`, data)
+  return await request.post(`login/oauth2/code/google`, data);
 };
 
-export const loginUser = async (data) => { 
-  return await request.post(`login`, data)
+export const loginUser = async (data) => {
+  return await request.post(`login`, data);
 };
 export const createUser = async (data) => {
-  return await request.post(`register`, data)
+  return await request.post(`register`, data);
 };
 export const getAllUsers = async () => {
   return await request.get(`customer/getAll`);
@@ -18,5 +18,9 @@ export const getInfo = async (data) => {
 };
 
 export const setInfo = async (data) => {
-  return await request.post(`setInfo`,data);
+  return await request.post(`setInfo`, data);
+};
+export const counselingApply = async (data) => {
+  console.log(data);
+  return await request.post(`customerCounseling`, data);
 };
