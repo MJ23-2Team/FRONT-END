@@ -12,7 +12,7 @@ const GetUserPersonas = () => {
     getUserPersonas(insuranceID).then((res) => {
       setInsurances(res.data);
     });
-  }, []);
+  });
 
   return (
     <div>
@@ -30,13 +30,7 @@ const GetUserPersonas = () => {
           );
         })}
       <Link to={"/addUserPersona"} state={{ insuranceID: insuranceID }}>
-        <button
-          onClick={() => {
-            console.log(insuranceID);
-          }}
-        >
-          추가
-        </button>
+        <button>추가</button>
       </Link>
       <Link to={"/planSalesPlan"} state={{ insuranceID: insuranceID }}>
         <button>계획 수립</button>

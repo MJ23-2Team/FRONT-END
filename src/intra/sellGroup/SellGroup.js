@@ -39,3 +39,12 @@ export const addUserPersona = async (data) => {
 export const planSalesPlan = async (data) => {
   return await request.put(`sellGroup/salesPlan`, data);
 };
+export const getAppliedCounselingCustomers = async () => {
+  return await request.get(`sellGroup/appliedCounselingCustomers`);
+};
+export const getCustomerCounselingsByCustomerID = async (data) => {
+  return await request.get(`sellGroup/appliedCounselings?customerID=` + data);
+};
+export const setConsultationSchedule = async (data) => {
+  return await request.put(`sellGroup/schedule?customerCounselingID=` + data);
+};
