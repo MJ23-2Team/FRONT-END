@@ -1,10 +1,9 @@
 import { analyzeInsuranceRate, getByInsuranceID } from "./InsuranceDevelopment";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useLocation } from "react-router-dom";
 
 const AnalyzeInsuranceRate = () => {
   const location = useLocation();
-  const [insurance, setInsurance] = useState([]);
   const [data, setData] = useState({});
   const onHandleChangeData = (e) => {
     setData((prevData) => ({ ...prevData, [e.target.name]: e.target.value }));
@@ -16,11 +15,6 @@ const AnalyzeInsuranceRate = () => {
       alert("값을 입력해주세요");
     }
   };
-  useEffect(() => {
-    getByInsuranceID(location.state.insuranceID).then((res) => {
-      setInsurance(res.data);
-    });
-  }, []);
   return (
     <>
       <div>요율 분석</div>

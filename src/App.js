@@ -24,8 +24,10 @@ import GetEndCampaign from "./user/employee/marketing/GetEndCampaign";
 import EstimateProfit from "./user/employee/insuranceDevelopment/EstimateProfit";
 import AnalyzeInsuranceRate from "./user/employee/insuranceDevelopment/AnalyzeInsuranceRate";
 import AuthorizeInsurance from "./user/employee/insuranceDevelopment/AuthorizeInsurance";
+import GetUserPersonas from "./intra/sellGroup/GetUserPersonas";
+import AddUserPersona from "./intra/sellGroup/AddUserPersona";
+import PlanSalesPlan from "./intra/sellGroup/PlanSalesPlan";
 import RegisterPage from "./component/page/RegisterPage";
-
 
 const App = () => {
   return (
@@ -34,13 +36,13 @@ const App = () => {
         <Route path="/" element={<LoginPage />} />
         <Route path="/regsiter" element={<RegisterPage />} />
         <Route path="/home" element={<HomePage />} />
-        
+
         <Route path="/operationPolicy" element={<OperationPolicyPage />} />
         <Route path="/register" element={<Register />} />
         <Route path="/getAllCustomer" element={<GetAllCustomer />} />
         <Route path="/sellGroup" element={<SellGroupPage />} />
-        <Route path="/sellGroup/getAll" element={<GetAllSellGroup/>} />
-        <Route path="/sellGroup/recommend" element={<recommendInsurance/>} />
+        <Route path="/sellGroup/getAll" element={<GetAllSellGroup />} />
+        <Route path="/sellGroup/recommend" element={<recommendInsurance />} />
 
         <Route path="/gyu" element={<GyuPage />} />
         <Route path="/educationPage" element={<EducationPage />} />
@@ -50,7 +52,7 @@ const App = () => {
         <Route path="/employeeRewardPage" element={<EmployeeRewardPage /> } />
         <Route path="/contractManagementPolicyPage" element={<ContractManagementPolicyPage /> } /> 
         <Route path="/hyun" element={<HyunPage />} />
-        
+
         <Route path="/manageInsurancePlan" element={<ManageInsurancePlan />} />
         <Route path="/designInsurance" element={<DesignInsurance />} />
         <Route path="/campaignPlan" element={<CampaignPlan />} />
@@ -60,6 +62,9 @@ const App = () => {
         <Route path="/estimateProfit" element={<EstimateProfit />} />
         <Route path="/analyzeInsuranceRate"element={<AnalyzeInsuranceRate />}/>
         <Route path="/authorizeInsurance" element={<AuthorizeInsurance />} />
+        <Route path="/getUserPersonas" element={<GetUserPersonas />} />
+        <Route path="/addUserPersona" element={<AddUserPersona />} />
+        <Route path="/planSalesPlan" element={<PlanSalesPlan />} />
       </Routes>
     </>
   );
