@@ -1,15 +1,18 @@
 import { useState } from 'react';
 import { save } from './ContractManagemetPolicy';
+import { useNavigate } from "react-router-dom";
 
 const EstablishContractManagementPolicy = () => {
     const [ data, setData ] = useState( {} );
+    const navigate = useNavigate();
     const onHandleChangeData = (e) => {
         setData( prevData => ( { ...prevData, [e.target.name]: e.target.value }));
     };
     const onSubmitHandle = () => {
         if( data.name && data.content ) {
             save( data ).then( (res) =>
-            alert( res.data.message) );
+              alert( res.data.message) );
+              navigate( "/contractManagementPolicyPage" );
         } else {}
             alert( "Input Data" );
     }
