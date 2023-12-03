@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import RecommendInsuranceReason from "../../intra/sellGroup/RecommendInsuranceReason";
+import CalculateInsuranceFee from "../../intra/sellGroup/CalculateInsuranceFee";
 
 const SellGroupPage = () => {
   return (
@@ -9,7 +11,9 @@ const SellGroupPage = () => {
         <Link to="/sellGroup/recommend">
           <button>RecommendInsurance</button>
         </Link>
-        
+        <RecommendInsuranceReason/>
+        <CalculateInsuranceFee/>
+
     </div>
   );
 };

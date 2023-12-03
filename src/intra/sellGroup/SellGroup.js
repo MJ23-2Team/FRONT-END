@@ -17,6 +17,12 @@ export const recommendInsurance = async (data) => {
     },
   });
 };
+export const recommendInsuranceReason = async (data) => {
+  return await request.get(`sellGroup/recommendReason?insuarnceId=${data}&customerId=${localStorage.getItem("id")}`);
+};
+export const calculateInsuranceFee = async (data) => {
+  return await request.get(`sellGroup/fee?insuarnceId=${data}&customerId=${localStorage.getItem("id")}`);
+};
 
 export const getAll = async () => {
   return await request.get(`sellGroup/getAll`);
