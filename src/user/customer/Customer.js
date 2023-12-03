@@ -4,7 +4,7 @@ export const login = async (data) => {
   return await request.post(`login/oauth2/code/google`, data)
 };
 
-export const loginUser = async (data) => {
+export const loginUser = async (data) => { 
   return await request.post(`login`, data)
 };
 export const createUser = async (data) => {

@@ -8,6 +8,10 @@ export const getAll = async () => {
     return await request.get( 'payment/getAll' );
 }
 
+export const getAllExpired = async () => {
+    return await request.get( 'payment/getAllExpired' );
+}
+
 export const getById = async (id) => {
     return await request.get( 'payment/getById', id );
 }

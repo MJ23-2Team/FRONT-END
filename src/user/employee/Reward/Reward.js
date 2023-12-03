@@ -6,9 +6,12 @@ export const save = async (data) => {
 export const getAll = async () => {
     return await request.get( 'reward/getAll' );
 };
-export const getByContractId = async ( contractId ) => {
-    return await request.get( 'reward/getByContractId', contractId );
+export const getByCustomerId = async ( customerId ) => {
+    return await request.get( 'reward/getByCustomerId', customerId );
 };
+export const getContractByCustomerId = async ( customerId ) => {
+    return await request.get( 'contract/getContractByCustomerId', customerId );
+}
 export const approve = async () => {
     return await request.get( 'reward/approve', true );
 };

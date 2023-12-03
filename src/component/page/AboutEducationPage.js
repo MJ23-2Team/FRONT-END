@@ -8,7 +8,7 @@ const AboutEducationPage = () => {
 
     return (
     <div>
-        { education.educationID }
+        { education.educationID } 
         <GetByEducationId /> {/* 이 부분을 불러올 때 education.educationID를 어떻게 넘겨줄 수 있는지 알아볼 것 */}
         <EducationStudentPage />
     </div>

@@ -1,32 +1,58 @@
-import { useState, useEffect } from "react";
-import { getAll, pass } from "./ContractManagemetPolicy";
+import { useState, useEffect, useMemo } from "react";
+import { getAll } from "./ContractManagemetPolicy";
 
 const GetAllContractMangementPolicy = () => {
     const [ policys, setPolicys ] = useState( [] );
 
     useEffect( () => {
-        getAll().then( (res) => {setPolicys( res.data.data ); } );
+        getAll().then( (res) => {setPolicys( res.data ); } );
     }, [] );
 
-    const onSubmitHandlePass = (index) => {
-        pass( index ).then( (res) => alert( res.data.message ) );
-    };
-    return (
-        <div>
-            <div>계약 관리 정책 불러오기</div>
-            {policys && policys.map((user, index) => {
-                return (
-                    <div key={index}>
-                        <div>===============================================================================</div>
-                        {user && Object.entries(user).map(([key, value]) => (
-                            <div key={key}>{`${key} : ${value}`}</div>
+    const headers = [
+        {
+            text: "정책 이름",
+            value: "name"
+        },
+        {
+            text: "정책 내용",
+            value: "content"
+        }
+    ];
+    const tableData = useMemo( () => policys, [policys] );
 
-                        ))}
-                            <button onClick={() => {onSubmitHandlePass(index+1);}}>정책 등록</button>
-                    </div>
-                );
-            })}
-        </div>
+    const headerKey = headers.map( (header) => header.value );
+
+    return (
+        <table>
+          <thead>
+            <tr>
+            {
+                headers.map((header) => 
+                <th key={header.text}>
+                    {header.text}
+                </th> 
+                )
+            }
+            </tr>
+          </thead>
+          <tbody>
+            {
+              tableData.map((item, index) => (
+                <tr key={index}>
+                  { 
+                    headerKey.map((key) => 
+                      <td key={key + index}>
+                        <Link to={`/aboutEducationPage`} state={{ education: item }}>
+                          {item[key]}
+                        </Link>
+                      </td>
+                    )
+                  }
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
     );
 };
 export default GetAllContractMangementPolicy;
