@@ -39,6 +39,9 @@ const HomePage = () => {
         <Link to ="/educationStudentPage">
           <button> 교육 학생 </button>
         </Link>
+        <Link to="/paymentPage">
+          <button> 납부 </button>
+        </Link>
         <Link to="/contractManagementPolicyPage">
           <button> 계약 관리 정책</button>
         </Link>
