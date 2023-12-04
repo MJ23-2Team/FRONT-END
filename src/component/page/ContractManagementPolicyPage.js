@@ -1,5 +1,5 @@
-import EstablishContractManagementPolicy from "../../intra/ContractManagementPolicy/EstablishContractManagementPolicy";
-import GetAllContractManagementPolicy from "../../intra/ContractManagementPolicy/GetAllContractManagementPolicy";
+import EstablishContractManagementPolicy from "../../intra/contractManagementPolicy/EstablishContractManagementPolicy";
+import GetAllContractManagementPolicy from "../../intra/contractManagementPolicy/GetAllContractManagementPolicy";
 import { useState } from "react";
 import Modal from "../common/Modal";
 

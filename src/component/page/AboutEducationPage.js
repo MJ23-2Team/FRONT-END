@@ -1,6 +1,6 @@
 import EducationStudentPage from "./EducationStudentPage";
 import { useLocation } from 'react-router-dom';
-import GetByEducationId from "../../intra/Education/GetByEducationId";
+import GetByEducationId from "../../intra/education/GetByEducationId";
 
 const AboutEducationPage = () => {
     const location = useLocation();

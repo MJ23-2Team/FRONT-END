@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 import { getAll } from "./ContractManagemetPolicy";
+import { Link } from "react-router-dom";
 
 const GetAllContractMangementPolicy = () => {
     const [ policys, setPolicys ] = useState( [] );

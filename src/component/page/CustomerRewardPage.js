@@ -1,5 +1,5 @@
-import GetMyRewards from "../../user/employee/Reward/GetMyReward";
-import ApplyRewards from "../../user/employee/Reward/GetMyReward";
+import GetMyRewards from "../../user/employee/reward/GetMyReward";
+import ApplyRewards from "../../user/employee/reward/GetMyReward";
 import { useState } from "react";
 import Modal from "../common/Modal";
 

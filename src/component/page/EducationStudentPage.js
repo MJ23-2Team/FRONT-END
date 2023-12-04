@@ -1,5 +1,5 @@
-import EstablishEducationStudent from "../../intra/EducationStudent/EstablishEducationStudent"; 
-import GetAllEducationStudent from "../../intra/EducationStudent/GetAllEducationStudent";
+import EstablishEducationStudent from "../../intra/educationStudent/EstablishEducationStudent"; 
+import GetAllEducationStudent from "../../intra/educationStudent/GetAllEducationStudent";
 import { useState } from "react";
 import Modal from "../common/Modal";
 
