@@ -1,4 +1,4 @@
-import GetAllRewards from "../../user/employee/Reward/GetAllReward";
+import GetAllRewards from "../../user/employee/reward/GetAllReward";
 import { useState } from "react";
 import Modal from "../common/Modal";
 
