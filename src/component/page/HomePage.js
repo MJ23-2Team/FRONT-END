@@ -3,9 +3,8 @@ import { useState } from "react";
 import Modal from "../common/Modal";
 import AdviceNoteModal from "./AdviceNoteModal";
 
-
 const HomePage = () => {
-  const [ adviceModalOpen, setAdviceModalOpen ] = useState( false );
+  const [adviceModalOpen, setAdviceModalOpen] = useState(false);
 
   return (
     <div>
@@ -14,7 +13,12 @@ const HomePage = () => {
         <Link to="/operationPolicy">
           <button>OperationPolicyPage</button>
         </Link>
-        <input type="button" value="팝업" className="blueBtn" onClick={() => setAdviceModalOpen(!adviceModalOpen)}/>
+        <input
+          type="button"
+          value="팝업"
+          className="blueBtn"
+          onClick={() => setAdviceModalOpen(!adviceModalOpen)}
+        />
         {adviceModalOpen && (
           <Modal closeModal={() => setAdviceModalOpen(!adviceModalOpen)}>
             <AdviceNoteModal />
@@ -30,7 +34,7 @@ const HomePage = () => {
           <button>심규창</button>
         </Link>
         <Link to="/educationPage">
-          <button> 교육 </button> 
+          <button> 교육 </button>
         </Link>
         <Link to ="/educationStudentPage">
           <button> 교육 학생 </button>
@@ -41,8 +45,8 @@ const HomePage = () => {
         <Link to="/employeeRewardPage">
           <button> 직원 보상 목록 </button>
         </Link>
-        <Link to="/hyun">
-          <button>임현우</button>
+        <Link to="/insuranceDevelopmentPage">
+          <button>보험 개발</button>
         </Link>
       </header>
     </div>
