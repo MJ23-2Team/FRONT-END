@@ -24,21 +24,24 @@ export const getAll = async () => {
 export const choiceCampaignProgram = async (data) => {
   return await request.get(`sellGroup/campaignProgram?id=` + data);
 };
-export const getUserPersonas = async (data) => {
+export const retrieveUserPersonas = async (data) => {
   return await request.get(`sellGroup/userPersonas?id=` + data);
 };
-export const addUserPersona = async (data) => {
+export const createUserPersona = async (data) => {
   return await request.post(`sellGroup/userPersona`, data);
 };
 export const planSalesPlan = async (data) => {
   return await request.put(`sellGroup/salesPlan`, data);
 };
-export const getAppliedCounselingCustomers = async () => {
+export const retrieveAppliedCounselingCustomers = async () => {
   return await request.get(`sellGroup/appliedCounselingCustomers`);
 };
-export const getCustomerCounselingsByCustomerID = async (data) => {
+export const retrieveCustomerCounselingsByCustomerID = async (data) => {
   return await request.get(`sellGroup/appliedCounselings?customerID=` + data);
 };
-export const setConsultationSchedule = async (data) => {
+export const updateConsultationSchedule = async (data) => {
   return await request.put(`sellGroup/schedule?customerCounselingID=` + data);
+};
+export const retrieveAcceptedApplyCounselingCustomers = async () => {
+  return await request.get(`sellGroup/acceptedApplyCounselingCustomers`);
 };

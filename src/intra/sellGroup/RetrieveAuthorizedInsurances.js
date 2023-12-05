@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { getAuthorizedInsurances } from "../../user/employee/insuranceDevelopment/InsuranceDevelopment";
+import { retrieveAuthorizedInsurances } from "../../user/employee/insuranceDevelopment/InsuranceDevelopment";
 import { choiceCampaignProgram } from "./SellGroup";
 
-const GetAuthorizedInsurances = () => {
+const RetrieveAuthorizedInsurances = () => {
   const [insurances, setInsurances] = useState([]);
   const [checked, setChecked] = useState([]);
 
   useEffect(() => {
-    getAuthorizedInsurances().then((res) => {
+    retrieveAuthorizedInsurances().then((res) => {
       setInsurances(res.data);
     });
   }, []);
@@ -38,7 +38,7 @@ const GetAuthorizedInsurances = () => {
           choiceCampaignProgram(checked.insuranceID).then((res) => {
             if (res.data) {
               alert("캠페인 이름: " + res.data.campaignName);
-              const newUrl = `/getUserPersonas?insuranceID=${checked.insuranceID}`;
+              const newUrl = `/retrieveUserPersonas?insuranceID=${checked.insuranceID}`;
               window.location.href = newUrl;
             } else {
               alert("해당 상품의 캠페인 프로그램이 종료되지 않았습니다.");
@@ -51,4 +51,4 @@ const GetAuthorizedInsurances = () => {
     </div>
   );
 };
-export default GetAuthorizedInsurances;
+export default RetrieveAuthorizedInsurances;

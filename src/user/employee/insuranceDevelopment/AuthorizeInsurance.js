@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {
-  getDesignedInsurances,
+  retrieveDesignedInsurances,
   authorizeInsurance,
 } from "./InsuranceDevelopment";
 import { Link } from "react-router-dom";
@@ -10,7 +10,7 @@ const AuthorizeInsurance = () => {
   const [checked, setChecked] = useState([]);
 
   useEffect(() => {
-    getDesignedInsurances().then((res) => {
+    retrieveDesignedInsurances().then((res) => {
       setInsurances(res.data);
     });
   }, []);

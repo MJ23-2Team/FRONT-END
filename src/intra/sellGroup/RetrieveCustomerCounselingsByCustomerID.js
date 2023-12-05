@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
 import {
-  getCustomerCounselingsByCustomerID,
-  setConsultationSchedule,
+  retrieveCustomerCounselingsByCustomerID,
+  updateConsultationSchedule,
 } from "./SellGroup";
 import { Link, useLocation } from "react-router-dom";
 
-const GetCustomerCounselingsByCustomerID = () => {
+const RetrieveCustomerCounselingsByCustomerID = () => {
   const [counselings, setCounselings] = useState([]);
   const [checked, setChecked] = useState([]);
   const location = useLocation();
 
   useEffect(() => {
-    getCustomerCounselingsByCustomerID(location.state.customerID).then(
+    retrieveCustomerCounselingsByCustomerID(location.state.customerID).then(
       (res) => {
         setCounselings(res.data);
       }
@@ -42,7 +42,7 @@ const GetCustomerCounselingsByCustomerID = () => {
       <Link to={"/processSalesPage"}>
         <button
           onClick={() => {
-            setConsultationSchedule(checked);
+            updateConsultationSchedule(checked);
             alert("상담 일정이 잡혔습니다");
           }}
         >
@@ -52,4 +52,4 @@ const GetCustomerCounselingsByCustomerID = () => {
     </div>
   );
 };
-export default GetCustomerCounselingsByCustomerID;
+export default RetrieveCustomerCounselingsByCustomerID;

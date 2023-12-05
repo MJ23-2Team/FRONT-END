@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { getAppliedCounselingCustomers } from "./SellGroup";
+import { retrieveAppliedCounselingCustomers } from "./SellGroup";
 import { Link } from "react-router-dom";
 
-const GetAppliedCounselingCustomers = () => {
+const RetrieveAppliedCounselingCustomers = () => {
   const [customers, setCustomers] = useState([]);
   const [checked, setChecked] = useState([]);
 
   useEffect(() => {
-    getAppliedCounselingCustomers().then((res) => {
+    retrieveAppliedCounselingCustomers().then((res) => {
       setCustomers(res.data);
     });
   }, []);
@@ -33,7 +33,7 @@ const GetAppliedCounselingCustomers = () => {
           );
         })}
       <Link
-        to={"/getCustomerCounselingsByCustomerID"}
+        to={"/retrieveCustomerCounselingsByCustomerID"}
         state={{ customerID: checked.customerID }}
       >
         <button>선택</button>
@@ -41,4 +41,4 @@ const GetAppliedCounselingCustomers = () => {
     </div>
   );
 };
-export default GetAppliedCounselingCustomers;
+export default RetrieveAppliedCounselingCustomers;

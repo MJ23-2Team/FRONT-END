@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { getPlannedInsurances } from "./InsuranceDevelopment";
+import { retrievePlannedInsurances } from "./InsuranceDevelopment";
 import { Link } from "react-router-dom";
 
-const GetPlannedInsurances = () => {
+const RetrievePlannedInsurances = () => {
   const [insurances, setInsurances] = useState([]);
   const [checked, setChecked] = useState([]);
   const handleRadioClick = () => {
@@ -11,7 +11,7 @@ const GetPlannedInsurances = () => {
   };
 
   useEffect(() => {
-    getPlannedInsurances().then((res) => {
+    retrievePlannedInsurances().then((res) => {
       setInsurances(res.data);
     });
   }, []);
@@ -45,4 +45,4 @@ const GetPlannedInsurances = () => {
     </div>
   );
 };
-export default GetPlannedInsurances;
+export default RetrievePlannedInsurances;
