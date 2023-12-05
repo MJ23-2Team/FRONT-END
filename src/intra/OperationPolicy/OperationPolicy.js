@@ -17,6 +17,12 @@ export const pass = async (data) => {
     }
 });
 };
-export const getAll = async () => {
-  return await request.get(`operationPolicy/getAll`);
+export const retriveSuggested = async () => {
+  return await request.get(`operationPolicy/suggested`);
 };
+
+export const retriveRecommanded = async () => {
+  return await request.get(`operationPolicy/recommanded`);
+};
+
+

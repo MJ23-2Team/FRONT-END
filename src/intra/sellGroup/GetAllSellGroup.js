@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import { getAll } from "./SellGroup";
+import { retrieveAll } from "./SellGroup";
 import EvaluateResult from "../../intra/sellGroup/EvaluateResult";
 
 const GetAllOperationPolicy = () => {
     const [sellGroups, setSellGroup] = useState([]);
 
     useEffect(() => {
-        getAll().then( (res) => {setSellGroup(res.data.data);});
+        retrieveAll().then( (res) => {setSellGroup(res.data.data);});
     }, []);
     return (
         <div>

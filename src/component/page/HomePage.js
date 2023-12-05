@@ -11,7 +11,7 @@ const HomePage = () => {
       <header>
         <div>홈페이지</div>
         <Link to="/operationPolicy">
-          <button>OperationPolicyPage</button>
+          <button>운영방침</button>
         </Link>
         <input
           type="button"
@@ -25,10 +25,10 @@ const HomePage = () => {
           </Modal>
         )}
         <Link to="/sellGroup">
-          <button>SellGroupPage</button>
+          <button>판매 그룹 페이지</button>
         </Link>
         <Link to="/getAllCustomer">
-          <button>GetAllCustomer</button>
+          <button>고객 정보 불러오기</button>
         </Link>
         <Link to="/gyu">
           <button>심규창</button>

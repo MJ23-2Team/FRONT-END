@@ -1,6 +1,6 @@
 import GetAllPayment from "../../user/employee/payment/GetAllPayment";
-import CheckPaymentValidate from "../../user/employee/payment/CheckPaymentValidate";
-import CreatePayment from "../../user/employee/payment/CreatePayment";
+// import CheckPaymentValidate from "../../user/employee/payment/CheckPaymentValidate";
+// import CreatePayment from "../../user/employee/payment/CreatePayment";
 import { useState } from "react";
 import Modal from "../common/Modal";
 

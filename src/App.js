@@ -36,6 +36,8 @@ import SalesPlanPage from "./component/page/SalesPlanPage";
 import ProcessSalesPage from "./component/page/ProcessSalesPage";
 import GetAppliedCounselingCustomers from "./intra/sellGroup/GetAppliedCounselingCustomers";
 import GetCustomerCounselingsByCustomerID from "./intra/sellGroup/GetCustomerCounselingsByCustomerID";
+import GetSuggestedOperationPolicy from "./intra/operationPolicy/GetSuggestedOperationPolicy";
+import RecommendInsurance from "./intra/sellGroup/RecommendInsurance";
 
 const App = () => {
   return (
@@ -46,11 +48,12 @@ const App = () => {
         <Route path="/home" element={<HomePage />} />
 
         <Route path="/operationPolicy" element={<OperationPolicyPage />} />
+        <Route path="/operationPolicy/suggested" element={<GetSuggestedOperationPolicy />} />
         <Route path="/register" element={<Register />} />
         <Route path="/getAllCustomer" element={<GetAllCustomer />} />
         <Route path="/sellGroup" element={<SellGroupPage />} />
         <Route path="/sellGroup/getAll" element={<GetAllSellGroup />} />
-        <Route path="/sellGroup/recommend" element={<recommendInsurance />} />
+        <Route path="/sellGroup/recommend" element={<RecommendInsurance />} />
 
         <Route path="/gyu" element={<GyuPage />} />
         <Route path="/educationPage" element={<EducationPage />} />
