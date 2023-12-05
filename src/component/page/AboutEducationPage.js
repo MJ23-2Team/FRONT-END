@@ -12,5 +12,5 @@ const AboutEducationPage = () => {
         <EducationStudentPage />
     </div>
     );
-}
+};
 export default AboutEducationPage;

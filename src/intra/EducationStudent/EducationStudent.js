@@ -5,5 +5,13 @@ export const save = async (data) => {
 };
 
 export const getAll = async () => {
-    return await request.get( 'educationStudent/getAll')
+    return await request.get( 'educationStudent/getAll');
 };
+
+export const getById = async (id) => {
+    return await request.get( 'educationStudent/getById?id='+id );
+}
+
+export const getEducationStudentByEducationID = async (id) => {
+    return await request.get( 'educationStudent/getByEducationId?id=' + id );
+}

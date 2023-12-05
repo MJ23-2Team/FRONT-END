@@ -5,7 +5,7 @@ const GetAllRewards = () => {
     const [ rewards, setRewards ] = useState( [] );
 
     useEffect( () => {
-        getAll().then( (res) => { setRewards( res.data.data )});
+        getAll().then( (res) => { setRewards( res.data )});
     }, [] );
 
     const headers = [
