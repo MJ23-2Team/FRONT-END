@@ -1,31 +1,67 @@
-import { useState, useEffect } from 'react';
-import { getAll, pass } from "./EducationStudent";
+import { useState, useEffect, useMemo } from 'react';
+import { getAll } from "./EducationStudent";
+import { Link } from "react-router-dom";
 
 const GetAllEducationStudent = () => {
     const [ students, setStudents ] = useState( [] );
 
     useEffect( () => {
-        getAll().then( (res) => { setStudents( res.data.data ); });
+        getAll().then( (res) => { setStudents( res.data ); });
     }, [] );
 
-    const onSubmitHandlePass = (index) => {
-        pass( index ).then( (res) => alert( res.data.message ) );
-    };
+    const headers = [
+        {
+            text: "이름",
+            value: "name"
+        },
+        {
+            text: "성별",
+            value: "gender"
+        },
+        {
+            text: "나이",
+            value: "age"
+        },
+        {
+            text: "전화번호",
+            value: "phone"
+        }
+    ];
+
+    const tableData = useMemo( () => students, [students] );
+    const headerKey = headers.map( (header) => header.value );
 
     return (
-        <div>
-            <div> 학생 정보 불러오기 </div>
-            { students && students.map( (user, index ) => {
-                return (
-                    <div key={index}>
-                        <div> ======================================= </div>
-                        { user && Object.entries( user ).map( ([key, value] ) => (
-                            <div key={key}>{`${key} : ${value}`}</div>
-                        ))}
-                    </div>
-                );
-            })}
-        </div>
+        <table>
+          <thead>
+            <tr>
+            {
+                headers.map((header) => 
+                <th key={header.text}>
+                    {header.text}
+                </th> 
+                )
+            }
+            </tr>
+          </thead>
+          <tbody>
+            {
+              tableData.map((item, index) => (
+                <tr key={index}>
+                  { 
+                    headerKey.map((key) => 
+                      <td key={key + index}>
+                        <Link to={`/aboutEducationPage`} state={{ education: item }}>
+                          {item[key]}
+                        </Link>
+                      </td>
+                    )
+                  }
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
     );
 };
 export default GetAllEducationStudent;

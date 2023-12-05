@@ -7,6 +7,7 @@ import GetAllSellGroup from "./intra/sellGroup/GetAllSellGroup";
 import GyuPage from "./component/page/GyuPage";
 import EducationPage from "./component/page/EducationPage";
 import EducationStudentPage from "./component/page/EducationStudentPage";
+import PaymentPage from "./component/page/PaymentPage";
 import ContractManagementPolicyPage from "./component/page/ContractManagementPolicyPage";
 import AdviceNoteModal from "./component/page/AdviceNoteModal";
 import EmployeeRewardPage from "./component/page/EmployeeRewardPage";
@@ -62,6 +63,7 @@ const App = () => {
           path="/educationStudentPage"
           element={<EducationStudentPage />}
         />
+        <Route path="/paymentPage" element={<PaymentPage /> } />
         <Route path="/adviceNoteModal" element={<AdviceNoteModal />} />
         <Route path="/employeeRewardPage" element={<EmployeeRewardPage />} />
         <Route

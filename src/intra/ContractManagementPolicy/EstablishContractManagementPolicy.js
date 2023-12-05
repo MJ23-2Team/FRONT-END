@@ -10,9 +10,8 @@ const EstablishContractManagementPolicy = () => {
     };
     const onSubmitHandle = () => {
         if( data.name && data.content ) {
-            save( data ).then( (res) =>
-              alert( res.data.message) );
-              navigate( "/contractManagementPolicyPage" );
+            save( data );
+            navigate( "/contractManagementPolicyPage" );
         } else {}
             alert( "Input Data" );
     }

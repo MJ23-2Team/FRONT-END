@@ -13,5 +13,7 @@ const CreateAdviceNote = () => {
         }else{
             alert("값을 입력해주세요");
         }
-    }
-};export default CreateAdviceNote;
+    };
+
+};
+export default CreateAdviceNote;

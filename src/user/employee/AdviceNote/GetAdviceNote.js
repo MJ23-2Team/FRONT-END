@@ -1,17 +1,16 @@
 import { useState, useEffect } from "react";
 import { getById } from "./AdviceNote";
+import { useNavigate } from "react-router-dom";
 
 const GetAdviceNote = () => {
     const [ adviceNotes, setAdviceNotes ] = useState( [] );
+    const customerid = parseInt( localStorage.getItem("id") );
 
+    const navigate = useNavigate();
     useEffect( () => {
-        getById().then( (res) => { setAdviceNotes( res.data.data ); });
+        getById( customerid ).then( (res) => { setAdviceNotes( res.data ); });
     }, [] );
 
-    return (
-        <div>
-            <div> 경고 알림 </div>
-        </div>
-    );
+    return adviceNotes;
 };
 export default GetAdviceNote;
