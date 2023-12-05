@@ -1,5 +1,5 @@
-import CreateAdviceNote from "../../user/employee/AdviceNote/CreateAdviceNote";
-import GetAdviceNote from "../../user/employee/AdviceNote/GetAdviceNote";
+import CreateAdviceNote from "../../user/employee/adviceNote/CreateAdviceNote";
+import GetAdviceNote from "../../user/employee/adviceNote/GetAdviceNote";
 
 
 const AdviceNoteModal = ( setAdviceModalOpen ) => {
@@ -9,7 +9,7 @@ const AdviceNoteModal = ( setAdviceModalOpen ) => {
     
       return (
         <div>
-            <CreateAdviceNote />
+            tmp
             <GetAdviceNote />
         </div>
       );

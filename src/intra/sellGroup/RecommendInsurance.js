@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
-import { recommendInsurance } from "./SellGroup";
+import { retrieveRecommendInsurance } from "./SellGroup";
 
 const RecommendInsurance = () => {
     const [insurances, setInsurances] = useState([]);
 
     useEffect(() => {
-        recommendInsurance().then( (res) => {setInsurances(res.data.data);});
+        retrieveRecommendInsurance().then((res) => {setInsurances(res.data);});
     }, []);
+
     return (
         <div>
             <div>추천된 보험 정보 불러오기</div>

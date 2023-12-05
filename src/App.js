@@ -7,6 +7,7 @@ import GetAllSellGroup from "./intra/sellGroup/GetAllSellGroup";
 import GyuPage from "./component/page/GyuPage";
 import EducationPage from "./component/page/EducationPage";
 import EducationStudentPage from "./component/page/EducationStudentPage";
+import PaymentPage from "./component/page/PaymentPage";
 import ContractManagementPolicyPage from "./component/page/ContractManagementPolicyPage";
 import AdviceNoteModal from "./component/page/AdviceNoteModal";
 import EmployeeRewardPage from "./component/page/EmployeeRewardPage";
@@ -38,6 +39,10 @@ import RetrieveAppliedCounselingCustomers from "./intra/sellGroup/RetrieveApplie
 import RetrieveCustomerCounselingsByCustomerID from "./intra/sellGroup/RetrieveCustomerCounselingsByCustomerID";
 import RetrieveAcceptedApplyCounselingCustomers from "./intra/sellGroup/RetrieveAcceptedApplyCounselingCustomers";
 import UpdateCustomerInformation from "./intra/sellGroup/UpdateCustomerInformation";
+import GetAppliedCounselingCustomers from "./intra/sellGroup/GetAppliedCounselingCustomers";
+import GetCustomerCounselingsByCustomerID from "./intra/sellGroup/GetCustomerCounselingsByCustomerID";
+import GetSuggestedOperationPolicy from "./intra/operationPolicy/GetSuggestedOperationPolicy";
+import RecommendInsurance from "./intra/sellGroup/RecommendInsurance";
 
 const App = () => {
   return (
@@ -48,11 +53,15 @@ const App = () => {
         <Route path="/home" element={<HomePage />} />
 
         <Route path="/operationPolicy" element={<OperationPolicyPage />} />
+        <Route
+          path="/operationPolicy/suggested"
+          element={<GetSuggestedOperationPolicy />}
+        />
         <Route path="/register" element={<Register />} />
         <Route path="/getAllCustomer" element={<GetAllCustomer />} />
         <Route path="/sellGroup" element={<SellGroupPage />} />
         <Route path="/sellGroup/getAll" element={<GetAllSellGroup />} />
-        <Route path="/sellGroup/recommend" element={<recommendInsurance />} />
+        <Route path="/sellGroup/recommend" element={<RecommendInsurance />} />
 
         <Route path="/gyu" element={<GyuPage />} />
         <Route path="/educationPage" element={<EducationPage />} />
@@ -61,6 +70,7 @@ const App = () => {
           path="/educationStudentPage"
           element={<EducationStudentPage />}
         />
+        <Route path="/paymentPage" element={<PaymentPage />} />
         <Route path="/adviceNoteModal" element={<AdviceNoteModal />} />
         <Route path="/employeeRewardPage" element={<EmployeeRewardPage />} />
         <Route

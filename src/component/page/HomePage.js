@@ -3,6 +3,9 @@ import { useState } from "react";
 import Modal from "../common/Modal";
 import AdviceNoteModal from "./AdviceNoteModal";
 
+import "../common/TableStyle.css";
+import "../common/ButtonStyle.css";
+
 const HomePage = () => {
   const [adviceModalOpen, setAdviceModalOpen] = useState(false);
 
@@ -11,7 +14,7 @@ const HomePage = () => {
       <header>
         <div>홈페이지</div>
         <Link to="/operationPolicy">
-          <button>OperationPolicyPage</button>
+          <button>운영방침</button>
         </Link>
         <input
           type="button"
@@ -25,10 +28,10 @@ const HomePage = () => {
           </Modal>
         )}
         <Link to="/sellGroup">
-          <button>SellGroupPage</button>
+          <button>판매 그룹 페이지</button>
         </Link>
         <Link to="/getAllCustomer">
-          <button>GetAllCustomer</button>
+          <button>고객 정보 불러오기</button>
         </Link>
         <Link to="/gyu">
           <button>심규창</button>
@@ -36,13 +39,16 @@ const HomePage = () => {
         <Link to="/educationPage">
           <button> 교육 </button>
         </Link>
-        <Link to="educationStudentPage">
+        <Link to ="/educationStudentPage">
           <button> 교육 학생 </button>
         </Link>
-        <Link to="contractManagementPolicyPage">
+        <Link to="/paymentPage">
+          <button> 납부 </button>
+        </Link>
+        <Link to="/contractManagementPolicyPage">
           <button> 계약 관리 정책</button>
         </Link>
-        <Link to="employeeRewardPage">
+        <Link to="/employeeRewardPage">
           <button> 직원 보상 목록 </button>
         </Link>
         <Link to="/insuranceDevelopmentPage">

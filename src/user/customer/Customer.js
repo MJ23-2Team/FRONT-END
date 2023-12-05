@@ -14,11 +14,11 @@ export const getAllUsers = async () => {
   return await request.get(`customer/getAll`);
 };
 export const getInfo = async (data) => {
-  return await request.get(`setInfo?id=${data}`);
+  return await request.get(`customermanage/Info?id=${data}`);
 };
 
 export const setInfo = async (data) => {
-  return await request.post(`setInfo`, data);
+  return await request.post(`customermanage/Info`, data);
 };
 export const counselingApply = async (data) => {
   console.log(data);

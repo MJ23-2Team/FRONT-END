@@ -13,6 +13,7 @@ const CreateAdviceNote = () => {
         }else{
             alert("값을 입력해주세요");
         }
-    }
-    // return이 없이 시스템에서 자동으로 값을 입력받아 전송
-};export default CreateAdviceNote;
+    };
+
+};
+export default CreateAdviceNote;

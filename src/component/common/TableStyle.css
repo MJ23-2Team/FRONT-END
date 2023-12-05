@@ -1,0 +1,14 @@
+th {
+    padding: 7px; 
+    border: 1px solid black;
+    background: lightgray;
+ }
+ td {
+    padding: 7px;
+    border: 1px solid black;
+ }
+ table {
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+ }

@@ -1,18 +1,11 @@
 import { useState, useEffect } from "react";
-import { getAll, pass,recommand } from "./OperationPolicy";
-const GetAllOperationPolicy = () => {
+import { retriveRecommanded } from "./OperationPolicy";
+const GetRecommandOperationPolicy = () => {
     const [policys, setPolicys] = useState([]);
 
     useEffect(() => {
-        getAll().then( (res) => {setPolicys(res.data.data);});
+        retriveRecommanded().then( (res) => {setPolicys(res.data.data);});
     }, []);
-
-    const onSubmitHandleRate = (index) => {
-        recommand(index).then((res) => alert(res.data.message));
-    };
-    const onSubmitHandlePass = (index) => {
-        pass(index).then((res) => alert(res.data.message));
-    };
     return (
         <div>
             <div>정책 정보 불러오기</div>
@@ -24,12 +17,10 @@ const GetAllOperationPolicy = () => {
                             <div key={key}>{`${key} : ${value}`}</div>
 
                         ))} 
-                            <button onClick={() => {onSubmitHandleRate(user.policyID);}}>정책 추천</button>
-                            <button onClick={() => {onSubmitHandlePass(user.policyID);}}>정책 등록</button>
                     </div>
                 );
             })}
         </div>
   );
 };
-export default GetAllOperationPolicy;
+export default GetRecommandOperationPolicy;
