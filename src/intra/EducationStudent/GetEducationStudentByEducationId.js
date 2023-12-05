@@ -1,31 +1,29 @@
-import { useState, useEffect, useMemo } from 'react';
-import { getAll } from "./EducationStudent";
-import { Link } from "react-router-dom";
+import { useState, useEffect, useMemo } from "react";
+import { getEducationStudentByEducationID } from "./EducationStudent";
+import { Link, useLocation } from "react-router-dom";
 
-const GetAllEducationStudent = () => {
+const GetEducationStudentByEducationId = () => {
     const [ students, setStudents ] = useState( [] );
+    const location = useLocation();
+    const education = location.state.education;
 
     useEffect( () => {
-        getAll().then( (res) => { setStudents( res.data ); });
+        getEducationStudentByEducationID( education.educationID ).then( (res) => { setStudents( res.data ); });
     }, [] );
 
     const headers = [
-        {
-            text: "이름",
-            value: "name"
-        },
-        {
-            text: "성별",
-            value: "gender"
-        },
-        {
-            text: "나이",
-            value: "age"
-        },
-        {
-            text: "전화번호",
-            value: "phone"
-        }
+      {
+        text: "이름",
+        value: "name"
+      },
+      {
+        text: "성별",
+        value: "gender"
+      },
+      {
+        text: "나이",
+        value: "age"
+      }
     ];
 
     const tableData = useMemo( () => students, [students] );
@@ -51,7 +49,7 @@ const GetAllEducationStudent = () => {
                   { 
                     headerKey.map((key) => 
                       <td key={key + index}>
-                        <Link to={`/aboutEducationStudentPage`} state={{ student: item }}>
+                        <Link to={`/aboutEducationStudentPage`} state={{student: item}}>
                           {item[key]}
                         </Link>
                       </td>
@@ -64,4 +62,4 @@ const GetAllEducationStudent = () => {
         </table>
     );
 };
-export default GetAllEducationStudent;
+export default GetEducationStudentByEducationId;

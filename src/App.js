@@ -13,6 +13,7 @@ import AdviceNoteModal from "./component/page/AdviceNoteModal";
 import EmployeeRewardPage from "./component/page/EmployeeRewardPage";
 import Register from "./user/customer/Register";
 import AboutEducationPage from "./component/page/AboutEducationPage";
+import AboutEducationStudentPage from "./component/page/AboutEducationStudentPage";
 import ManageInsurancePlan from "./user/employee/insuranceDevelopment/ManageInsurancePlan";
 import DesignInsurance from "./user/employee/insuranceDevelopment/DesignInsurance";
 import LoginPage from "./component/page/LoginPage";
@@ -59,6 +60,7 @@ const App = () => {
         <Route path="/gyu" element={<GyuPage />} />
         <Route path="/educationPage" element={<EducationPage />} />
         <Route path="/aboutEducationPage" element={<AboutEducationPage />} />
+        <Route path="/aboutEducationStudentPage" element={ <AboutEducationStudentPage /> } />
         <Route
           path="/educationStudentPage"
           element={<EducationStudentPage />}
