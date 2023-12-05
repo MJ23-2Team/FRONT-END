@@ -3,6 +3,9 @@ import { useState } from "react";
 import Modal from "../common/Modal";
 import AdviceNoteModal from "./AdviceNoteModal";
 
+import "../common/TableStyle.css";
+import "../common/ButtonStyle.css";
+
 const HomePage = () => {
   const [adviceModalOpen, setAdviceModalOpen] = useState(false);
 
