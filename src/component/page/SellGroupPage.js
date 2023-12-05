@@ -13,11 +13,6 @@ const SellGroupPage = () => {
       </Link>
       <Link to="/processSalesPage">
         <button>영업 활동</button>
-        <Link to="/sellGroup/getAll">
-          <button>GetAllSellGroup</button>
-        </Link>
-        <Link to="/sellGroup/recommend">
-          <button>RecommendInsurance</button>
         </Link>
         <RecommendInsuranceReason/>
         <CalculateInsuranceFee/>

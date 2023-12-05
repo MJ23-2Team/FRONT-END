@@ -1,7 +1,7 @@
 import { addUserPersona } from "./SellGroup";
 import { getByInsuranceID } from "../../user/employee/insuranceDevelopment/InsuranceDevelopment";
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const AddUserPersona = () => {
   const [data, setData] = useState({});
