@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { loginUser } from "./Customer";
+import { getById } from "../employee/adviceNote/AdviceNote";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -9,13 +10,14 @@ const Login = () => {
   const onHandleChangeData = (e) => {
         setData(prevData => ({ ...prevData, [e.target.name]: e.target.value }));
   };
+  
   const onSubmitHandle = () => { 
     if (data.id && data.pw) {
       loginUser(data)
       .then((res) => {
         alert(res.data.message);
         localStorage.clear();
-        localStorage.setItem('id', res.data.data);
+        localStorage.setItem('id', res.data.data);;
         navigate("/home");
       });
     } else {

@@ -16,7 +16,7 @@ const SellGroupPage = () => {
         </Link>
         <RecommendInsuranceReason/>
         <CalculateInsuranceFee/>
-
+      </Link>
     </div>
   );
 };

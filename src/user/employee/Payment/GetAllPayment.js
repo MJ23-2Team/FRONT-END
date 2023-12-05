@@ -1,6 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
-import { getAll } from "/Payment";
-import { Link } from "react-router-dom";
+import { getAll } from "./Payment";
 
 const GetAllPayment = () => {
     const [ payments, setPayments ] = useState( [] );
