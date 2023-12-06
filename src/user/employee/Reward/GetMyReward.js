@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { getByCustomerId } from "./Reward";
 
 const GetMyRewards = () => {
@@ -28,7 +28,7 @@ const GetMyRewards = () => {
         }
     ];
     const tableData = useMemo( () => rewards, [rewards] );
-    const headerKey = header.map( (header) => header.value );
+    const headerKey = headers.map( (header) => header.value );
 
     return (
         <table>

@@ -1,7 +1,7 @@
 import request from "../../component/common/axios";
 
 export const save = async (data) => {
-    return await request.post( 'educationStudent', data );
+    return await request.post( 'educationStudent/add', data );
 };
 
 export const getAll = async () => {

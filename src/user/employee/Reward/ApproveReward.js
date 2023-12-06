@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { save, approve, deny } from "./Reward";
+import GetReward from "./GetReward";
 
-const ApproveRewards = () => {
+const ApproveRewards = (req) => {
     const [ data, setData ] = useState( {} );
     const onHandleChangeData = (e) => {
         setData( prevData => ( { ...prevData, [e.target.name]: e.target.value }));
@@ -15,10 +16,15 @@ const ApproveRewards = () => {
         }
     };
     
-
     return (
         <>
-        
+            <GetReward id={req.id}/>
+            <button onClick={ () => approve( req.id ) }>
+                승인
+            </button>
+            <button onClick={ () => deny( req.id ) }>
+                거절
+            </button>
         </>
     );
 };

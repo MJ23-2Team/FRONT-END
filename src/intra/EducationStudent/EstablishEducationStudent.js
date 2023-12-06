@@ -1,9 +1,14 @@
 import { useState } from "react";
 import { save } from "./EducationStudent";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const EstablishEducationStudent = () => {
+    const location = useLocation();
+    const education = location.state.education;
     const [ data, setData ] = useState( {} );
+
+    data.educationid = education.educationID;
+
     const onHandleChangeData = (e) => {
         setData( prevData => ( { ...prevData, [e.target.name]: e.target.value }));
     };
@@ -15,6 +20,10 @@ const EstablishEducationStudent = () => {
             alert( "Input Data" );
         }
     };
+    const debug = () => {
+        console.log( data );
+    }
+    
 
     return (
         <>
@@ -29,6 +38,7 @@ const EstablishEducationStudent = () => {
                     등록
                 </button>
             </Link>
+            <button onClick={ () => debug()}> DEBUG </button>
         </>
     );
 };

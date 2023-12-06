@@ -11,6 +11,7 @@ import PaymentPage from "./component/page/PaymentPage";
 import ContractManagementPolicyPage from "./component/page/ContractManagementPolicyPage";
 import AdviceNoteModal from "./component/page/AdviceNoteModal";
 import EmployeeRewardPage from "./component/page/EmployeeRewardPage";
+import CustomerRewardPage from "./component/page/CustomerRewardPage";
 import Register from "./user/customer/Register";
 import AboutEducationPage from "./component/page/AboutEducationPage";
 import AboutEducationStudentPage from "./component/page/AboutEducationStudentPage";
@@ -65,6 +66,7 @@ const App = () => {
         <Route path="/paymentPage" element={<PaymentPage /> } />
         <Route path="/adviceNoteModal" element={<AdviceNoteModal />} />
         <Route path="/employeeRewardPage" element={<EmployeeRewardPage />} />
+        <Route path="/customerRewardPage" element={<CustomerRewardPage /> } />
         <Route
           path="/contractManagementPolicyPage"
           element={<ContractManagementPolicyPage />}
