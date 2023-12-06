@@ -10,7 +10,7 @@ const PlanSalesPlan = () => {
   };
   const onSubmitHandle = (newData) => {
     if (newData) {
-      planSalesPlan(newData).then((res) => alert(res.data.message));
+      planSalesPlan(newData);
     } else {
       alert("값을 입력해주세요");
     }

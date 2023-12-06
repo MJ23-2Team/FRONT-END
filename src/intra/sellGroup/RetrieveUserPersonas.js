@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { getUserPersonas } from "./SellGroup";
+import { retrieveUserPersonas } from "./SellGroup";
 import { Link, useLocation } from "react-router-dom";
 
-const GetUserPersonas = () => {
+const RetrieveUserPersonas = () => {
   const [insurances, setInsurances] = useState([]);
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const insuranceID = searchParams.get("insuranceID");
 
   useEffect(() => {
-    getUserPersonas(insuranceID).then((res) => {
+    retrieveUserPersonas(insuranceID).then((res) => {
       setInsurances(res.data);
     });
   });
@@ -29,7 +29,7 @@ const GetUserPersonas = () => {
             </div>
           );
         })}
-      <Link to={"/addUserPersona"} state={{ insuranceID: insuranceID }}>
+      <Link to={"/createUserPersona"} state={{ insuranceID: insuranceID }}>
         <button>추가</button>
       </Link>
       <Link to={"/planSalesPlan"} state={{ insuranceID: insuranceID }}>
@@ -38,4 +38,4 @@ const GetUserPersonas = () => {
     </div>
   );
 };
-export default GetUserPersonas;
+export default RetrieveUserPersonas;

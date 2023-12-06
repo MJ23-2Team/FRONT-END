@@ -6,7 +6,7 @@ const InsuranceDevelopmentPage = () => {
       <Link to="/planProductPage">
         <button>상품 기획</button>
       </Link>
-      <Link to="/getPlannedInsurances">
+      <Link to="/retrievePlannedInsurances">
         <button>상품 개발</button>
       </Link>
       <Link to="/authorizeInsurance">

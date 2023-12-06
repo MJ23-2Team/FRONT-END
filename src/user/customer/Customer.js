@@ -21,8 +21,11 @@ export const setInfo = async (data) => {
   return await request.post(`customermanage/Info`, data);
 };
 export const counselingApply = async (data) => {
-  console.log(data);
   return await request.post(`customerCounseling`, data);
+};
+export const updateCustomerInformation = async (data) => {
+  console.log(data);
+  return await request.put(`customer/information`, data);
 };
 export const registerInsurance = async (customerID, insuranceID) => {
   return await request.post(

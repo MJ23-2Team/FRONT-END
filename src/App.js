@@ -30,19 +30,21 @@ import DoCollaborativeUnderWriting from "./intra/underwriting/DoCollaborativeUnd
 import EstimateProfit from "./user/employee/insuranceDevelopment/EstimateProfit";
 import AnalyzeInsuranceRate from "./user/employee/insuranceDevelopment/AnalyzeInsuranceRate";
 import AuthorizeInsurance from "./user/employee/insuranceDevelopment/AuthorizeInsurance";
-import GetUserPersonas from "./intra/sellGroup/GetUserPersonas";
-import AddUserPersona from "./intra/sellGroup/AddUserPersona";
+import RetrieveUserPersonas from "./intra/sellGroup/RetrieveUserPersonas";
+import CreateUserPersona from "./intra/sellGroup/CreateUserPersona";
 import PlanSalesPlan from "./intra/sellGroup/PlanSalesPlan";
 import RegisterPage from "./component/page/RegisterPage";
 import InsuranceDevelopmentPage from "./component/page/InsuranceDevelopmentPage";
 import CreateInsurancePlan from "./user/employee/insuranceDevelopment/CreateInsurancePlan";
 import PlanProductPage from "./component/page/PlanProductPage";
-import GetReports from "./user/employee/insuranceDevelopment/GetReports";
-import GetPlannedInsurances from "./user/employee/insuranceDevelopment/GetPlannedInsurances";
+import RetrieveReports from "./user/employee/insuranceDevelopment/RetrieveReports";
+import RetrievePlannedInsurances from "./user/employee/insuranceDevelopment/RetrievePlannedInsurances";
 import SalesPlanPage from "./component/page/SalesPlanPage";
 import ProcessSalesPage from "./component/page/ProcessSalesPage";
-import GetAppliedCounselingCustomers from "./intra/sellGroup/GetAppliedCounselingCustomers";
-import GetCustomerCounselingsByCustomerID from "./intra/sellGroup/GetCustomerCounselingsByCustomerID";
+import RetrieveAppliedCounselingCustomers from "./intra/sellGroup/RetrieveAppliedCounselingCustomers";
+import RetrieveCustomerCounselingsByCustomerID from "./intra/sellGroup/RetrieveCustomerCounselingsByCustomerID";
+import RetrieveAcceptedApplyCounselingCustomers from "./intra/sellGroup/RetrieveAcceptedApplyCounselingCustomers";
+import UpdateCustomerInformation from "./intra/sellGroup/UpdateCustomerInformation";
 import GetSuggestedOperationPolicy from "./intra/operationPolicy/GetSuggestedOperationPolicy";
 import RecommendInsurance from "./intra/sellGroup/RecommendInsurance";
 
@@ -121,23 +123,35 @@ const App = () => {
           element={<AnalyzeInsuranceRate />}
         />
         <Route path="/authorizeInsurance" element={<AuthorizeInsurance />} />
-        <Route path="/getUserPersonas" element={<GetUserPersonas />} />
-        <Route path="/addUserPersona" element={<AddUserPersona />} />
+        <Route
+          path="/retrieveUserPersonas"
+          element={<RetrieveUserPersonas />}
+        />
+        <Route path="/createUserPersona" element={<CreateUserPersona />} />
         <Route path="/planSalesPlan" element={<PlanSalesPlan />} />
         <Route path="/createInsurancePlan" element={<CreateInsurancePlan />} />
-        <Route path="/getReports" element={<GetReports />} />
+        <Route path="/retrieveReports" element={<RetrieveReports />} />
         <Route
-          path="/getPlannedInsurances"
-          element={<GetPlannedInsurances />}
+          path="/retrievePlannedInsurances"
+          element={<RetrievePlannedInsurances />}
         />
         <Route
-          path="/getAppliedCounselingCustomers"
-          element={<GetAppliedCounselingCustomers />}
+          path="/retrieveAppliedCounselingCustomers"
+          element={<RetrieveAppliedCounselingCustomers />}
         />
         <Route
-          path="/getCustomerCounselingsByCustomerID"
-          element={<GetCustomerCounselingsByCustomerID />}
+          path="/retrieveCustomerCounselingsByCustomerID"
+          element={<RetrieveCustomerCounselingsByCustomerID />}
         />
+        <Route
+          path="/retrieveAcceptedApplyCounselingCustomers"
+          element={<RetrieveAcceptedApplyCounselingCustomers />}
+        />
+        <Route
+          path="/updateCustomerInformation"
+          element={<UpdateCustomerInformation />}
+        />
+        <Route path="/recommendInsurance" element={<RecommendInsurance />} />
       </Routes>
     </>
   );
