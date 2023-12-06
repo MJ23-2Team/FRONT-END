@@ -1,4 +1,4 @@
-import RegisterGoogle from "../../user/customer/RegisterGoogle";
+import RegisterGoogle from "../../user/customer/RegisterCustomer";
 
 const RegisterPage = () => {
   return (

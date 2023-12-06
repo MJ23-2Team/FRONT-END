@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
-import { GoogleLogin, GoogleLogout } from 'react-google-login';
+import { GoogleLogin } from 'react-google-login';
 import { gapi } from 'gapi-script';
 import { login, getInfo } from "../../user/customer/Customer";
 import { useNavigate } from 'react-router-dom';
 
 const clientId ="535321350238-hah6c37spl3eua2bujvvoug3ql237nns.apps.googleusercontent.com";
   
-function AuthPage() {  
+function AuthCustomerPage() {  
   const navigate = useNavigate()
   useEffect(() => {
     function start() {
@@ -28,9 +28,9 @@ function AuthPage() {
     })
     getInfo(localStorage.getItem('id')).then((res) => {
       if(res.data){
-        navigate("/regsiter")
+        navigate("/customer/register")
       }else{
-        navigate("/home");
+        navigate("/customer/home");
       }
       
     });
@@ -38,10 +38,6 @@ function AuthPage() {
   
   const onFailure = response => {
     console.log('FAILED', response);
-  };
-  const onLogoutSuccess = () => {
-    console.log('SUCESS LOG OUT');
-    localStorage.clear();
   };
 
   return (
@@ -51,12 +47,8 @@ function AuthPage() {
         onSuccess={onSuccess}
         onFailure={onFailure}
       />
-      <GoogleLogout
-        clientId={clientId}
-        onLogoutSuccess={onLogoutSuccess}
-      />
     </div>
   );
 }
 
-export default AuthPage;
+export default AuthCustomerPage;

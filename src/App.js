@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router-dom";
 
-import HomePage from "./component/page/HomePage";
 import OperationPolicyPage from "./component/page/OperationPolicyPage";
 import SellGroupPage from "./component/page/SellGroupPage";
 import GetAllSellGroup from "./intra/sellGroup/GetAllSellGroup";
@@ -10,12 +9,11 @@ import PaymentPage from "./component/page/PaymentPage";
 import ContractManagementPolicyPage from "./component/page/ContractManagementPolicyPage";
 import AdviceNoteModal from "./component/page/AdviceNoteModal";
 import EmployeeRewardPage from "./component/page/EmployeeRewardPage";
-import Register from "./user/customer/Register";
+import Register from "./user/customer/RegisterCustomer";
 import AboutEducationPage from "./component/page/AboutEducationPage";
 import AboutEducationStudentPage from "./component/page/AboutEducationStudentPage";
 import ManageInsurancePlan from "./user/employee/insuranceDevelopment/ManageInsurancePlan";
 import DesignInsurance from "./user/employee/insuranceDevelopment/DesignInsurance";
-import LoginPage from "./component/page/LoginPage";
 import GetAllCustomer from "./user/customer/GetAllCustomer";
 import CreateCampaignPlan from "./user/employee/marketing/CreateCampaignPlan";
 import RetrievePlanCampaign from "./user/employee/marketing/RetrievePlanCampaign";
@@ -32,7 +30,6 @@ import AuthorizeInsurance from "./user/employee/insuranceDevelopment/AuthorizeIn
 import RetrieveUserPersonas from "./intra/sellGroup/RetrieveUserPersonas";
 import CreateUserPersona from "./intra/sellGroup/CreateUserPersona";
 import PlanSalesPlan from "./intra/sellGroup/PlanSalesPlan";
-import RegisterPage from "./component/page/RegisterPage";
 import InsuranceDevelopmentPage from "./component/page/InsuranceDevelopmentPage";
 import CreateInsurancePlan from "./user/employee/insuranceDevelopment/CreateInsurancePlan";
 import PlanProductPage from "./component/page/PlanProductPage";
@@ -46,19 +43,34 @@ import RetrieveAcceptedApplyCounselingCustomers from "./intra/sellGroup/Retrieve
 import UpdateCustomerInformation from "./intra/sellGroup/UpdateCustomerInformation";
 import GetSuggestedOperationPolicy from "./intra/operationPolicy/GetSuggestedOperationPolicy";
 import RecommendInsurance from "./intra/sellGroup/RecommendInsurance";
+
+import EmployeeHomePage from "./component/page/EmployeeHomePage";
+import CustomerHomePage from "./component/page/CustomerHomePage";
+import AuthCustomerPage from "./component/page/AuthCustomerPage";
+import AuthEmployeePage from "./component/page/AuthEmployeePage";
+import RegisterCustomer from "./user/customer/RegisterCustomer";
+import RegisterEmployee from "./user/employee/RegisterEmployee";
+
 import CampaignPage from "./component/page/CampaignPage";
 import RetrieveCampaignPage from "./component/page/RetrieveCampaignPage";
 import UnderWritingPage from "./component/page/UnderWritingPage";
 import UnderWritingPolicyPage from "./component/page/UnderWritingPolicyPage";
 import RecommendInsurances from "./intra/sellGroup/RecommendInsurances";
 
+
 const App = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<LoginPage />} />
-        <Route path="/regsiter" element={<RegisterPage />} />
-        <Route path="/home" element={<HomePage />} />
+        <Route path="/customer" element={<AuthCustomerPage />} />
+        <Route path="/" element={<AuthEmployeePage />} />
+
+        
+        <Route path="/customer/register" element={<RegisterCustomer />} />
+        <Route path="/register" element={<RegisterEmployee />} />
+        
+        <Route path="/customer/home" element={<CustomerHomePage />} />
+        <Route path="/home" element={<EmployeeHomePage />} />
 
         <Route path="/operationPolicy" element={<OperationPolicyPage />} />
         <Route
