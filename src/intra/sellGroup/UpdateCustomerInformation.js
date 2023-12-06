@@ -72,7 +72,6 @@ const UpdateCustomerInformation = () => {
             customerID: location.state.customerID,
             ...data,
           };
-          setData(newData);
           onSubmitHandle(newData);
         }}
       >
