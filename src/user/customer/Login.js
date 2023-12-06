@@ -1,7 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { loginUser } from "./Customer";
-import { getById } from "../employee/adviceNote/AdviceNote";
 
 const Login = () => {
   const navigate = useNavigate();
