@@ -20,7 +20,6 @@ const UpdateCustomerInformation = () => {
       accountPassword: newData.accountPassword,
     };
     if (newData) {
-      console.log(customerInformationRequest);
       updateCustomerInformation(customerInformationRequest);
     } else {
       alert("값을 입력해주세요");
@@ -76,7 +75,7 @@ const UpdateCustomerInformation = () => {
         placeholder="계좌 비밀번호"
         onChange={(e) => onHandleChangeData(e)}
       />
-      <Link to={"/recommendInsurance"}>
+      <Link to={"/recommendInsurances"}>
         <button
           onClick={() => {
             const newData = {

@@ -46,7 +46,7 @@ const PlanSalesPlan = () => {
         placeholder="판매 방식"
         onChange={(e) => onHandleChangeData(e)}
       />
-      <Link to={"/"}>
+      <Link to={"/home"}>
         <button
           onClick={() => {
             const newData = {
