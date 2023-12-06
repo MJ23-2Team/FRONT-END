@@ -4,7 +4,6 @@ import HomePage from "./component/page/HomePage";
 import OperationPolicyPage from "./component/page/OperationPolicyPage";
 import SellGroupPage from "./component/page/SellGroupPage";
 import GetAllSellGroup from "./intra/sellGroup/GetAllSellGroup";
-import GyuPage from "./component/page/GyuPage";
 import EducationPage from "./component/page/EducationPage";
 import EducationStudentPage from "./component/page/EducationStudentPage";
 import PaymentPage from "./component/page/PaymentPage";
@@ -47,6 +46,10 @@ import RetrieveAcceptedApplyCounselingCustomers from "./intra/sellGroup/Retrieve
 import UpdateCustomerInformation from "./intra/sellGroup/UpdateCustomerInformation";
 import GetSuggestedOperationPolicy from "./intra/operationPolicy/GetSuggestedOperationPolicy";
 import RecommendInsurance from "./intra/sellGroup/RecommendInsurance";
+import CampaignPage from "./component/page/CampaignPage";
+import RetrieveCampaignPage from "./component/page/RetrieveCampaignPage";
+import UnderWritingPage from "./component/page/UnderWritingPage";
+import UnderWritingPolicyPage from "./component/page/UnderWritingPolicyPage";
 
 const App = () => {
   return (
@@ -94,7 +97,11 @@ const App = () => {
 
         <Route path="/manageInsurancePlan" element={<ManageInsurancePlan />} />
         <Route path="/designInsurance" element={<DesignInsurance />} />
-        <Route path="/gyu" element={<GyuPage />} />
+        <Route path="/campaignPage" element={<CampaignPage />} />
+        <Route
+          path="/retrieveCampaignPage"
+          element={<RetrieveCampaignPage />}
+        />
         <Route path="/createCampaignPlan" element={<CreateCampaignPlan />} />
         <Route
           path="/retrievePlanCampaign"
@@ -103,6 +110,11 @@ const App = () => {
         <Route path="/retrieveRunCampaign" element={<RetrieveRunCampaign />} />
         <Route path="/retrieveEndCampaign" element={<RetrieveEndCampaign />} />
         <Route path="/registerInsurance" element={<RegisterInsurance />} />
+        <Route path="/underwritingPage" element={<UnderWritingPage />} />
+        <Route
+          path="/underwritingPolicyPage"
+          element={<UnderWritingPolicyPage />}
+        />
         <Route path="/basic" element={<DoBasicUnderWriting />} />
         <Route
           path="/collaborative"

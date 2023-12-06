@@ -33,13 +33,22 @@ const HomePage = () => {
         <Link to="/getAllCustomer">
           <button>고객 정보 불러오기</button>
         </Link>
-        <Link to="/gyu">
-          <button>심규창</button>
+        <Link to="/registerInsurance">
+          <button>보험 가입</button>
+        </Link>
+        <Link to="/campaignPage">
+          <button>캠페인</button>
+        </Link>
+        <Link to="/underwritingPage">
+          <button>인수 심사</button>
+        </Link>
+        <Link to="/underwritingpolicyPage">
+          <button>인수 정책</button>
         </Link>
         <Link to="/educationPage">
           <button> 교육 </button>
         </Link>
-        <Link to ="/educationStudentPage">
+        <Link to="/educationStudentPage">
           <button> 교육 학생 </button>
         </Link>
         <Link to="/paymentPage">
