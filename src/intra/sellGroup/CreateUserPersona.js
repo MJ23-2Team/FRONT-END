@@ -1,7 +1,7 @@
 import { createUserPersona } from "./SellGroup";
 import { retrieveByInsuranceID } from "../../user/employee/insuranceDevelopment/InsuranceDevelopment";
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const CreateUserPersona = () => {
   const [data, setData] = useState({});
@@ -39,24 +39,27 @@ const CreateUserPersona = () => {
         placeholder="소득수준"
         onChange={(e) => onHandleChangeData(e)}
       />
-      {/* <Link to="/"> */}
-      <button
-        onClick={() => {
-          console.log(location.state.insuranceID);
-          retrieveByInsuranceID(location.state.insuranceID).then((res) => {
-            const newData = { insurance: res.data, ...data };
-            console.log(newData);
-            if (newData) {
-              createUserPersona(newData).then((res) => alert(res.data.message));
-            } else {
-              alert("값을 입력해주세요");
-            }
-          });
-        }}
-      >
-        저장
-      </button>
-      {/* </Link> */}
+      <Link to="/">
+        <button
+          onClick={() => {
+            retrieveByInsuranceID(location.state.insuranceID).then((res) => {
+              const newData = { insurance: res.data, ...data };
+              console.log(newData);
+              if (newData) {
+                createUserPersona(newData).then((res) =>
+                  alert(res.data.message)
+                );
+                const newUrl = `/retrieveUserPersonas?insuranceID=${location.state.insuranceID}`;
+                window.location.href = newUrl;
+              } else {
+                alert("값을 입력해주세요");
+              }
+            });
+          }}
+        >
+          저장
+        </button>
+      </Link>
       <div>
         ===============================================================================
       </div>

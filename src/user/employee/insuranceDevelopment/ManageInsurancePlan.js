@@ -10,7 +10,7 @@ const ManageInsurancePlan = () => {
   };
   const onSubmitHandle = (newData) => {
     if (newData) {
-      manageInsurancePlan(newData).then((res) => alert(res.data.message));
+      manageInsurancePlan(newData);
     } else {
       alert("값을 입력해주세요");
     }
@@ -26,7 +26,7 @@ const ManageInsurancePlan = () => {
         placeholder="report"
         onChange={(e) => onHandleChangeData(e)}
       />
-      <Link to={"/"}>
+      <Link to={"/home"}>
         <button
           onClick={() => {
             const newData = {

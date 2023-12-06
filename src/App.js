@@ -3,7 +3,6 @@ import { Routes, Route } from "react-router-dom";
 import OperationPolicyPage from "./component/page/OperationPolicyPage";
 import SellGroupPage from "./component/page/SellGroupPage";
 import GetAllSellGroup from "./intra/sellGroup/GetAllSellGroup";
-import GyuPage from "./component/page/GyuPage";
 import EducationPage from "./component/page/EducationPage";
 import EducationStudentPage from "./component/page/EducationStudentPage";
 import PaymentPage from "./component/page/PaymentPage";
@@ -44,12 +43,20 @@ import RetrieveAcceptedApplyCounselingCustomers from "./intra/sellGroup/Retrieve
 import UpdateCustomerInformation from "./intra/sellGroup/UpdateCustomerInformation";
 import GetSuggestedOperationPolicy from "./intra/operationPolicy/GetSuggestedOperationPolicy";
 import RecommendInsurance from "./intra/sellGroup/RecommendInsurance";
+
 import EmployeeHomePage from "./component/page/EmployeeHomePage";
 import CustomerHomePage from "./component/page/CustomerHomePage";
 import AuthCustomerPage from "./component/page/AuthCustomerPage";
 import AuthEmployeePage from "./component/page/AuthEmployeePage";
 import RegisterCustomer from "./user/customer/RegisterCustomer";
 import RegisterEmployee from "./user/employee/RegisterEmployee";
+
+import CampaignPage from "./component/page/CampaignPage";
+import RetrieveCampaignPage from "./component/page/RetrieveCampaignPage";
+import UnderWritingPage from "./component/page/UnderWritingPage";
+import UnderWritingPolicyPage from "./component/page/UnderWritingPolicyPage";
+import RecommendInsurances from "./intra/sellGroup/RecommendInsurances";
+
 
 const App = () => {
   return (
@@ -103,7 +110,11 @@ const App = () => {
 
         <Route path="/manageInsurancePlan" element={<ManageInsurancePlan />} />
         <Route path="/designInsurance" element={<DesignInsurance />} />
-        <Route path="/gyu" element={<GyuPage />} />
+        <Route path="/campaignPage" element={<CampaignPage />} />
+        <Route
+          path="/retrieveCampaignPage"
+          element={<RetrieveCampaignPage />}
+        />
         <Route path="/createCampaignPlan" element={<CreateCampaignPlan />} />
         <Route
           path="/retrievePlanCampaign"
@@ -112,6 +123,11 @@ const App = () => {
         <Route path="/retrieveRunCampaign" element={<RetrieveRunCampaign />} />
         <Route path="/retrieveEndCampaign" element={<RetrieveEndCampaign />} />
         <Route path="/registerInsurance" element={<RegisterInsurance />} />
+        <Route path="/underwritingPage" element={<UnderWritingPage />} />
+        <Route
+          path="/underwritingPolicyPage"
+          element={<UnderWritingPolicyPage />}
+        />
         <Route path="/basic" element={<DoBasicUnderWriting />} />
         <Route
           path="/collaborative"
@@ -160,7 +176,7 @@ const App = () => {
           path="/updateCustomerInformation"
           element={<UpdateCustomerInformation />}
         />
-        <Route path="/recommendInsurance" element={<RecommendInsurance />} />
+        <Route path="/recommendInsurances" element={<RecommendInsurances />} />
       </Routes>
     </>
   );

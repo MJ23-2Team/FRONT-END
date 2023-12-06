@@ -10,7 +10,7 @@ const EstimateProfit = () => {
   };
   const onSubmitHandle = (newData) => {
     if (newData) {
-      estimateProfit(newData).then((res) => alert(res.data.message));
+      estimateProfit(newData);
     } else {
       alert("값을 입력해주세요");
     }
