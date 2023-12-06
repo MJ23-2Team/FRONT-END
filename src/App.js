@@ -13,14 +13,20 @@ import AdviceNoteModal from "./component/page/AdviceNoteModal";
 import EmployeeRewardPage from "./component/page/EmployeeRewardPage";
 import Register from "./user/customer/Register";
 import AboutEducationPage from "./component/page/AboutEducationPage";
+import AboutEducationStudentPage from "./component/page/AboutEducationStudentPage";
 import ManageInsurancePlan from "./user/employee/insuranceDevelopment/ManageInsurancePlan";
 import DesignInsurance from "./user/employee/insuranceDevelopment/DesignInsurance";
 import LoginPage from "./component/page/LoginPage";
 import GetAllCustomer from "./user/customer/GetAllCustomer";
-import CampaignPlan from "./user/employee/marketing/CampaignPlan";
-import GetPlanCampaign from "./user/employee/marketing/GetPlanCampaign";
-import GetRunCampaign from "./user/employee/marketing/GetRunCampaign";
-import GetEndCampaign from "./user/employee/marketing/GetEndCampaign";
+import CreateCampaignPlan from "./user/employee/marketing/CreateCampaignPlan";
+import RetrievePlanCampaign from "./user/employee/marketing/RetrievePlanCampaign";
+import RetrieveRunCampaign from "./user/employee/marketing/RetrieveRunCampaign";
+import RetrieveEndCampaign from "./user/employee/marketing/RetrieveEndCampaign";
+import RetrieveUnderWritingPolicy from "./intra/underwriting/RetrieveUnderWritingPolicy";
+import CreateUnderWritingPolicy from "./intra/underwriting/CreateUnderWritingPolicy";
+import RegisterInsurance from "./user/customer/RegisterInsurance";
+import DoBasicUnderWriting from "./intra/underwriting/DoBasicUnderWriting";
+import DoCollaborativeUnderWriting from "./intra/underwriting/DoCollaborativeUnderWriting";
 import EstimateProfit from "./user/employee/insuranceDevelopment/EstimateProfit";
 import AnalyzeInsuranceRate from "./user/employee/insuranceDevelopment/AnalyzeInsuranceRate";
 import AuthorizeInsurance from "./user/employee/insuranceDevelopment/AuthorizeInsurance";
@@ -62,9 +68,12 @@ const App = () => {
         <Route path="/sellGroup/getAll" element={<GetAllSellGroup />} />
         <Route path="/sellGroup/recommend" element={<RecommendInsurance />} />
 
-        <Route path="/gyu" element={<GyuPage />} />
         <Route path="/educationPage" element={<EducationPage />} />
         <Route path="/aboutEducationPage" element={<AboutEducationPage />} />
+        <Route
+          path="/aboutEducationStudentPage"
+          element={<AboutEducationStudentPage />}
+        />
         <Route
           path="/educationStudentPage"
           element={<EducationStudentPage />}
@@ -86,10 +95,29 @@ const App = () => {
 
         <Route path="/manageInsurancePlan" element={<ManageInsurancePlan />} />
         <Route path="/designInsurance" element={<DesignInsurance />} />
-        <Route path="/campaignPlan" element={<CampaignPlan />} />
-        <Route path="/getPlanCampaign" element={<GetPlanCampaign />} />
-        <Route path="/getRunCampaign" element={<GetRunCampaign />} />
-        <Route path="/getEndCampaign" element={<GetEndCampaign />} />
+        <Route path="/gyu" element={<GyuPage />} />
+        <Route path="/createCampaignPlan" element={<CreateCampaignPlan />} />
+        <Route
+          path="/retrievePlanCampaign"
+          element={<RetrievePlanCampaign />}
+        />
+        <Route path="/retrieveRunCampaign" element={<RetrieveRunCampaign />} />
+        <Route path="/retrieveEndCampaign" element={<RetrieveEndCampaign />} />
+        <Route path="/registerInsurance" element={<RegisterInsurance />} />
+        <Route path="/basic" element={<DoBasicUnderWriting />} />
+        <Route
+          path="/collaborative"
+          element={<DoCollaborativeUnderWriting />}
+        />
+        <Route
+          path="/createUnderWritingPolicy"
+          element={<CreateUnderWritingPolicy />}
+        />
+        <Route
+          path="/retrieveUnderWritingPolicy"
+          element={<RetrieveUnderWritingPolicy />}
+        />
+
         <Route path="/estimateProfit" element={<EstimateProfit />} />
         <Route
           path="/analyzeInsuranceRate"

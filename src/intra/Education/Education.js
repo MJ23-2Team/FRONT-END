@@ -5,7 +5,7 @@ export const save = async (data) => {
 };
 
 export const getByEducationId = async (id) => {
-    return await request.get( 'education/getById', id );
+    return await request.get( 'education/getById?id='+id );
 }
  
 export const getAll = async () => {

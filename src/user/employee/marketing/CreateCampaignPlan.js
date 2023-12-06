@@ -1,7 +1,7 @@
-import { campaignplan } from "./Marketing";
+import { createCampaignPlan } from "./Marketing";
 import { useState } from "react";
 
-const CampaignPlan = () => {
+const CreateCampaignPlan = () => {
   const [data, setData] = useState({});
   const onHandleChangeData = (e) => {
     setData((prevData) => ({ ...prevData, [e.target.name]: e.target.value }));
@@ -17,7 +17,7 @@ const CampaignPlan = () => {
       data.budget &&
       data.exResult
     ) {
-      campaignplan(data).then((res) => alert(res.data.message));
+      createCampaignPlan(data).then((res) => alert(res.data.message));
     } else {
       alert("값을 입력해주세요");
     }
@@ -92,4 +92,4 @@ const CampaignPlan = () => {
   );
 };
 
-export default CampaignPlan;
+export default CreateCampaignPlan;

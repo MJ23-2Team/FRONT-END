@@ -27,3 +27,8 @@ export const updateCustomerInformation = async (data) => {
   console.log(data);
   return await request.put(`customer/information`, data);
 };
+export const registerInsurance = async (customerID, insuranceID) => {
+  return await request.post(
+    "customer?customerID=" + customerID + "&insuranceID=" + insuranceID
+  );
+};
