@@ -1,8 +1,8 @@
-import GetAuthorizedInsurances from "../../intra/sellGroup/GetAuthorizedInsurances";
+import RetrieveAuthorizedInsurances from "../../intra/sellGroup/RetrieveAuthorizedInsurances";
 const SalesPlanPage = () => {
   return (
     <div>
-      <GetAuthorizedInsurances />
+      <RetrieveAuthorizedInsurances />
     </div>
   );
 };

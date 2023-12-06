@@ -1,17 +1,17 @@
-import { getEndCampaign, setCampaignResult } from "./Marketing";
+import { retrieveEndCampaign, createCampaignResult } from "./Marketing";
 import React, { useState, useEffect } from "react";
 
-const GetEndCampaign = () => {
+const RetrieveEndCampaign = () => {
   const [campaigns, setCampaigns] = useState([]);
 
   useEffect(() => {
-    getEndCampaign().then((res) => {
-      setCampaigns(res.data.data);
+    retrieveEndCampaign().then((res) => {
+      setCampaigns(res.data);
     });
   }, []);
 
   const onSubmitHandleRun = (campaignID) => {
-    setCampaignResult(campaignID).then(() => {
+    createCampaignResult(campaignID).then(() => {
       alert("캠페인 종료 성공");
     });
   };
@@ -37,4 +37,4 @@ const GetEndCampaign = () => {
     </div>
   );
 };
-export default GetEndCampaign;
+export default RetrieveEndCampaign;

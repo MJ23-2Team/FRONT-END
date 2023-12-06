@@ -1,39 +1,39 @@
 import React, { useEffect, useState } from "react";
-import { getAppliedCounselingCustomers } from "./SellGroup";
+import { recommendInsurance } from "./SellGroup";
 import { Link } from "react-router-dom";
 
-const GetAppliedCounselingCustomers = () => {
-  const [customers, setCustomers] = useState([]);
+const RecommendInsurances = () => {
+  const [insurances, setInsurances] = useState([]);
   const [checked, setChecked] = useState([]);
 
   useEffect(() => {
-    getAppliedCounselingCustomers().then((res) => {
-      setCustomers(res.data);
+    recommendInsurance().then((res) => {
+      setInsurances(res.data);
     });
   }, []);
 
   return (
     <div>
-      <div>*************** 상담 일정 ***************</div>
-      {customers &&
-        customers.map((customer, index) => {
+      <div>추천 보험 리스트</div>
+      {insurances &&
+        insurances.map((insurance, index) => {
           return (
             <div key={index}>
               <div>===============================</div>
               <input
                 type="radio"
-                id={customer.insuranceID}
+                id={insurance.insuranceID}
                 name="report"
                 onClick={() => {
-                  setChecked(customer);
+                  setChecked(insurance);
                 }}
               />
-              {customer.name}
+              {insurance.name}
             </div>
           );
         })}
       <Link
-        to={"/getCustomerCounselingsByCustomerID"}
+        to={"/updateCustomerInformation"}
         state={{ customerID: checked.customerID }}
       >
         <button>선택</button>
@@ -41,4 +41,4 @@ const GetAppliedCounselingCustomers = () => {
     </div>
   );
 };
-export default GetAppliedCounselingCustomers;
+export default RecommendInsurances;

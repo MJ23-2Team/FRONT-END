@@ -1,9 +1,9 @@
-import { addUserPersona } from "./SellGroup";
-import { getByInsuranceID } from "../../user/employee/insuranceDevelopment/InsuranceDevelopment";
+import { createUserPersona } from "./SellGroup";
+import { retrieveByInsuranceID } from "../../user/employee/insuranceDevelopment/InsuranceDevelopment";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 
-const AddUserPersona = () => {
+const CreateUserPersona = () => {
   const [data, setData] = useState({});
   const location = useLocation();
   const onHandleChangeData = (e) => {
@@ -43,11 +43,11 @@ const AddUserPersona = () => {
       <button
         onClick={() => {
           console.log(location.state.insuranceID);
-          getByInsuranceID(location.state.insuranceID).then((res) => {
+          retrieveByInsuranceID(location.state.insuranceID).then((res) => {
             const newData = { insurance: res.data, ...data };
             console.log(newData);
             if (newData) {
-              addUserPersona(newData).then((res) => alert(res.data.message));
+              createUserPersona(newData).then((res) => alert(res.data.message));
             } else {
               alert("값을 입력해주세요");
             }
@@ -64,4 +64,4 @@ const AddUserPersona = () => {
   );
 };
 
-export default AddUserPersona;
+export default CreateUserPersona;

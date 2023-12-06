@@ -1,24 +1,24 @@
-import { getPlanCampaign, doCampaignRun } from "./Marketing";
+import { retrieveRunCampaign, doCampaignEnd } from "./Marketing";
 import React, { useState, useEffect } from "react";
 
-const GetPlanCampaign = () => {
+const RetrieveRunCampaign = () => {
   const [campaigns, setCampaigns] = useState([]);
 
   useEffect(() => {
-    getPlanCampaign().then((res) => {
-      setCampaigns(res.data.data);
+    retrieveRunCampaign().then((res) => {
+      setCampaigns(res.data);
     });
   }, []);
 
   const onSubmitHandleRun = (campaignID) => {
-    doCampaignRun(campaignID).then(() => {
-      alert("캠페인 실행 성공");
+    doCampaignEnd(campaignID).then(() => {
+      alert("캠페인 종료 성공");
     });
   };
 
   return (
     <div>
-      <div>기획된 캠페인 전체 조회</div>
+      <div>진행중인 캠페인 전체 조회</div>
       {campaigns.map((campaign) => {
         return (
           <>
@@ -29,7 +29,7 @@ const GetPlanCampaign = () => {
             <div>place: {campaign.place}</div>
             <div>outTeam: {campaign.outTeam}</div>
             <button onClick={() => onSubmitHandleRun(campaign.campaignID)}>
-              실행
+              종료
             </button>
           </>
         );
@@ -37,5 +37,4 @@ const GetPlanCampaign = () => {
     </div>
   );
 };
-
-export default GetPlanCampaign;
+export default RetrieveRunCampaign;

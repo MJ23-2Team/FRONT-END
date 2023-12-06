@@ -1,4 +1,7 @@
-import { analyzeInsuranceRate, getByInsuranceID } from "./InsuranceDevelopment";
+import {
+  analyzeInsuranceRate,
+  retrieveByInsuranceID,
+} from "./InsuranceDevelopment";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -40,7 +43,7 @@ const AnalyzeInsuranceRate = () => {
 
       <button
         onClick={() => {
-          getByInsuranceID(location.state.insuranceID).then((res) => {
+          retrieveByInsuranceID(location.state.insuranceID).then((res) => {
             if (res.data.rate === 0) {
               alert(
                 "아직 요율검증결과 합격되지 않은 상품입니다. 요율검증을 시도하세요!"

@@ -8,11 +8,11 @@ export const manageInsurancePlan = async (data) => {
   return await request.put(`insuranceDevelopment/plan`, data);
 };
 
-export const getReports = async () => {
+export const retrieveReports = async () => {
   return await request.get(`insuranceDevelopment/reports`);
 };
 
-export const getPlannedInsurances = async () => {
+export const retrievePlannedInsurances = async () => {
   return await request.get(`insuranceDevelopment/planned`);
 };
 
@@ -30,15 +30,15 @@ export const estimateProfit = async (data) => {
 export const analyzeInsuranceRate = async (data) => {
   return await request.put(`insuranceDevelopment/rate`, data);
 };
-export const getByInsuranceID = async (data) => {
+export const retrieveByInsuranceID = async (data) => {
   return await request.get(`insuranceDevelopment/insurance?id=` + data);
 };
-export const getDesignedInsurances = async () => {
+export const retrieveDesignedInsurances = async () => {
   return await request.get(`insuranceDevelopment/designed`);
 };
 export const authorizeInsurance = async (data) => {
   return await request.put(`insuranceDevelopment/authorize`, data);
 };
-export const getAuthorizedInsurances = async () => {
+export const retrieveAuthorizedInsurances = async () => {
   return await request.get(`insuranceDevelopment/authorized`);
 };

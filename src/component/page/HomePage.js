@@ -3,6 +3,9 @@ import { useState } from "react";
 import Modal from "../common/Modal";
 import AdviceNoteModal from "./AdviceNoteModal";
 
+import "../common/TableStyle.css";
+import "../common/ButtonStyle.css";
+
 const HomePage = () => {
   const [adviceModalOpen, setAdviceModalOpen] = useState(false);
 
@@ -38,6 +41,9 @@ const HomePage = () => {
         </Link>
         <Link to ="/educationStudentPage">
           <button> 교육 학생 </button>
+        </Link>
+        <Link to="/paymentPage">
+          <button> 납부 </button>
         </Link>
         <Link to="/contractManagementPolicyPage">
           <button> 계약 관리 정책</button>

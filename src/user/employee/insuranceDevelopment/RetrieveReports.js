@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { getReports, deleteInsurancePlan } from "./InsuranceDevelopment";
+import { retrieveReports, deleteInsurancePlan } from "./InsuranceDevelopment";
 import { Link } from "react-router-dom";
 
-const GetReports = () => {
+const RetrieveReports = () => {
   const [insurances, setInsurances] = useState([]);
   const [checked, setchecked] = useState([]);
 
   useEffect(() => {
-    getReports().then((res) => {
+    retrieveReports().then((res) => {
       setInsurances(res.data);
     });
   }, []);
@@ -49,4 +49,4 @@ const GetReports = () => {
     </div>
   );
 };
-export default GetReports;
+export default RetrieveReports;

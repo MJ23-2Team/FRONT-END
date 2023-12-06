@@ -9,7 +9,7 @@ const AdviceNoteModal = ( setAdviceModalOpen ) => {
     
       return (
         <div>
-            <CreateAdviceNote />
+            tmp
             <GetAdviceNote />
         </div>
       );

@@ -13,10 +13,9 @@ const SellGroupPage = () => {
       </Link>
       <Link to="/processSalesPage">
         <button>영업 활동</button>
-        </Link>
-        <RecommendInsuranceReason/>
-        <CalculateInsuranceFee/>
-
+      </Link>
+      <RecommendInsuranceReason />
+      <CalculateInsuranceFee />
     </div>
   );
 };
