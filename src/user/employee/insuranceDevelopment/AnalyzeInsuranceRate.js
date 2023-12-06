@@ -13,7 +13,7 @@ const AnalyzeInsuranceRate = () => {
   };
   const onSubmitHandle = (newData) => {
     if (newData) {
-      analyzeInsuranceRate(newData).then((res) => alert(res.data.message));
+      analyzeInsuranceRate(newData);
     } else {
       alert("값을 입력해주세요");
     }
@@ -49,7 +49,7 @@ const AnalyzeInsuranceRate = () => {
                 "아직 요율검증결과 합격되지 않은 상품입니다. 요율검증을 시도하세요!"
               );
             } else {
-              window.location.href = "/";
+              window.location.href = "/home";
             }
           });
         }}

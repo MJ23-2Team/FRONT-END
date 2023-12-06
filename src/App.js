@@ -47,6 +47,7 @@ import RetrieveAcceptedApplyCounselingCustomers from "./intra/sellGroup/Retrieve
 import UpdateCustomerInformation from "./intra/sellGroup/UpdateCustomerInformation";
 import GetSuggestedOperationPolicy from "./intra/operationPolicy/GetSuggestedOperationPolicy";
 import RecommendInsurance from "./intra/sellGroup/RecommendInsurance";
+import RecommendInsurances from "./intra/sellGroup/RecommendInsurances";
 
 const App = () => {
   return (
@@ -151,7 +152,7 @@ const App = () => {
           path="/updateCustomerInformation"
           element={<UpdateCustomerInformation />}
         />
-        <Route path="/recommendInsurance" element={<RecommendInsurance />} />
+        <Route path="/recommendInsurances" element={<RecommendInsurances />} />
       </Routes>
     </>
   );

@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { recommendInsurance } from "./SellGroup";
 import { Link } from "react-router-dom";
+import Modal from "../../component/common/Modal";
+import RecommendInfoPage from "../../component/page/RecommendInfoPage";
 
 const RecommendInsurances = () => {
   const [insurances, setInsurances] = useState([]);
-  const [checked, setChecked] = useState([]);
+  const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
     recommendInsurance().then((res) => {
@@ -20,23 +22,24 @@ const RecommendInsurances = () => {
           return (
             <div key={index}>
               <div>===============================</div>
-              <input
-                type="radio"
-                id={insurance.insuranceID}
-                name="report"
+              <div>{"추천 보험 상품: " + insurance.insuranceName}</div>
+              <button
                 onClick={() => {
-                  setChecked(insurance);
+                  setModalOpen(!modalOpen);
                 }}
-              />
-              {insurance.name}
+              >
+                상세 정보
+              </button>
+              {modalOpen && (
+                <Modal closeModal={() => setModalOpen(!modalOpen)}>
+                  <RecommendInfoPage id={insurance.insuranceID} />
+                </Modal>
+              )}
             </div>
           );
         })}
-      <Link
-        to={"/updateCustomerInformation"}
-        state={{ customerID: checked.customerID }}
-      >
-        <button>선택</button>
+      <Link to={"/home"}>
+        <button>완료</button>
       </Link>
     </div>
   );

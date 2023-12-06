@@ -9,7 +9,7 @@ const CreateInsurancePlan = () => {
   };
   const onSubmitHandle = () => {
     if (data) {
-      createInsurancePlan(data).then((res) => alert(res.data.message));
+      createInsurancePlan(data);
     } else {
       alert("값을 입력해주세요");
     }
@@ -25,7 +25,7 @@ const CreateInsurancePlan = () => {
         placeholder="report"
         onChange={(e) => onHandleChangeData(e)}
       />
-      <Link to="/">
+      <Link to="/home">
         <button
           onClick={() => {
             onSubmitHandle();
