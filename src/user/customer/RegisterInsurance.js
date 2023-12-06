@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import { getAuthorizedInsurances } from "../employee/insuranceDevelopment/InsuranceDevelopment";
+import { retrieveAuthorizedInsurances } from "../employee/insuranceDevelopment/InsuranceDevelopment";
 import { registerInsurance } from "./Customer";
 
 const RegisterInsurance = () => {
   const [insurances, setInsurances] = useState([]);
 
   useEffect(() => {
-    getAuthorizedInsurances().then((res) => {
+    retrieveAuthorizedInsurances().then((res) => {
       setInsurances(res.data);
     });
   }, []);

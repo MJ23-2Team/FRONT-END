@@ -6,7 +6,7 @@ const OperationPolicyPage = () => {
   return (
     <div>
       <EstablishOperationPolicy />
-      <Link to="/OperationPolicy/suggested">
+      <Link to="/operationPolicy/suggested">
         <button>건의된 정책 목록</button>
       </Link>
       <GetRecommandOperationPolicy />
