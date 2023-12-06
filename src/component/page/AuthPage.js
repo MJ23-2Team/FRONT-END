@@ -22,13 +22,12 @@ function AuthPage() {
   const onSuccess = response => {
     console.log('SUCCESS', response.accessToken);
     login(response.accessToken).then((res) => {
-      alert(res.data.message);
       localStorage.clear();
-      localStorage.setItem('id', res.data.data.userId);
-      localStorage.setItem('accessToken', res.data.data.accessToken);
+      localStorage.setItem('id', res.data.userId);
+      localStorage.setItem('accessToken', res.data.accessToken);
     })
     getInfo(localStorage.getItem('id')).then((res) => {
-      if(res.data.data){
+      if(res.data){
         navigate("/regsiter")
       }else{
         navigate("/home");

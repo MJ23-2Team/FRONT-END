@@ -4,14 +4,14 @@ const GetSuggestedOperationPolicy = () => {
     const [policys, setPolicys] = useState([]);
 
     useEffect(() => {
-        retriveSuggested().then( (res) => {setPolicys(res.data.data);});
+        retriveSuggested().then( (res) => {setPolicys(res.data);});
     }, []);
 
     const onSubmitHandleRate = (index) => {
-        recommand(index).then((res) => alert(res.data.message));
+        recommand(index);
     };
     const onSubmitHandlePass = (index) => {
-        pass(index).then((res) => alert(res.data.message));
+        pass(index);
     };
     return (
         <div>

@@ -8,8 +8,7 @@ const EstablishOpPolicy = () => {
     };
     const onSubmitHandle = () => {
         if (data.name && data.content) {
-            save(data).then((res) =>
-                alert(res.data.message));
+            save(data)
         }else{
             alert("값을 입력해주세요");
         }

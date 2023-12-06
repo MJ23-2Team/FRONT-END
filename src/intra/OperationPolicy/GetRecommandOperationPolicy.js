@@ -4,7 +4,7 @@ const GetRecommandOperationPolicy = () => {
     const [policys, setPolicys] = useState([]);
 
     useEffect(() => {
-        retriveRecommanded().then( (res) => {setPolicys(res.data.data);});
+        retriveRecommanded().then( (res) => {setPolicys(res.data);});
     }, []);
     return (
         <div>

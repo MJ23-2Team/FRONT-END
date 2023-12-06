@@ -4,7 +4,7 @@ export const save = async (data) => {
   return await request.post(`operationPolicy`, data);
 };
 export const recommand = async (data) => {
-  return await request.post(`operationPolicy/recommand`, JSON.stringify(data), {
+  return await request.post(`operationPolicy/recommend`, JSON.stringify(data), {
       headers: {
           'Content-Type': 'application/json'
       }
@@ -22,7 +22,7 @@ export const retriveSuggested = async () => {
 };
 
 export const retriveRecommanded = async () => {
-  return await request.get(`operationPolicy/recommanded`);
+  return await request.get(`operationPolicy/recommended`);
 };
 
 
