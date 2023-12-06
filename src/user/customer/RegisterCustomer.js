@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { setInfo } from "./Customer";
-  const RegisterGoogle = () => {
+  const RegisterCustomer = () => {
 
   const navigate = useNavigate();
   const [data, setdata] = useState({});
@@ -11,13 +11,13 @@ import { setInfo } from "./Customer";
     setdata(prevInfo => ({...prevInfo, [e.target.name]: e.target.value}));
   };
   useEffect(() => {
-    setinfo(() => ({id: localStorage.getItem('id'), customerDto: data }));
+    setinfo(() => ({id: localStorage.getItem('id'), role:"Customer", customerDto: data }));
   }, [data]);
   
   const onSubmitHandle = () => {
       if (data.address && data.age) {
         setInfo(info);
-        navigate("/home");
+        navigate("/customer/home");
       }else{
           alert("값을 입력해주세요");
       }
@@ -44,4 +44,4 @@ import { setInfo } from "./Customer";
     </>
   );
 };
-export default RegisterGoogle;
+export default RegisterCustomer;

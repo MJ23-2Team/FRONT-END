@@ -6,7 +6,7 @@ import AdviceNoteModal from "./AdviceNoteModal";
 import "../common/TableStyle.css";
 import "../common/ButtonStyle.css";
 
-const HomePage = () => {
+const CustomerHomePage = () => {
   const [adviceModalOpen, setAdviceModalOpen] = useState(false);
 
   return (
@@ -58,4 +58,4 @@ const HomePage = () => {
     </div>
   );
 };
-export default HomePage;
+export default CustomerHomePage;
