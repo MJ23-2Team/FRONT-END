@@ -18,7 +18,7 @@ import { createUser } from "./Customer";
   };
   const onSubmitHandle = () => {
       if (data.id && data.pw) {
-          createUser(data).then((res) => alert(res.data.message));
+          createUser(data);
           navigate("/");
       }else{
           alert("값을 입력해주세요");

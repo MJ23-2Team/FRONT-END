@@ -50,6 +50,7 @@ import CampaignPage from "./component/page/CampaignPage";
 import RetrieveCampaignPage from "./component/page/RetrieveCampaignPage";
 import UnderWritingPage from "./component/page/UnderWritingPage";
 import UnderWritingPolicyPage from "./component/page/UnderWritingPolicyPage";
+import RecommendInsurances from "./intra/sellGroup/RecommendInsurances";
 
 const App = () => {
   return (
@@ -163,7 +164,7 @@ const App = () => {
           path="/updateCustomerInformation"
           element={<UpdateCustomerInformation />}
         />
-        <Route path="/recommendInsurance" element={<RecommendInsurance />} />
+        <Route path="/recommendInsurances" element={<RecommendInsurances />} />
       </Routes>
     </>
   );

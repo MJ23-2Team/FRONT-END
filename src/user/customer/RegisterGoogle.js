@@ -16,7 +16,7 @@ import { setInfo } from "./Customer";
   
   const onSubmitHandle = () => {
       if (data.address && data.age) {
-        setInfo(info).then((res) => alert(res.data.message));
+        setInfo(info);
         navigate("/home");
       }else{
           alert("값을 입력해주세요");

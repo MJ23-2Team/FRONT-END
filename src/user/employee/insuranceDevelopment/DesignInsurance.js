@@ -10,7 +10,7 @@ const DesignInsurance = () => {
   };
   const onSubmitHandle = (newData) => {
     if (newData) {
-      designInsurance(newData).then((res) => alert(res.data.message));
+      designInsurance(newData);
     } else {
       alert("값을 입력해주세요");
     }
