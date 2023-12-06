@@ -6,7 +6,7 @@ const GetAllCustomer = () => {
 
   useEffect(() => {
     getAllUsers().then((res) => {
-      setUsers(res.data.data);
+      setUsers(res.data);
     });
   }, []);
 

@@ -13,9 +13,8 @@ const Login = () => {
     if (data.id && data.pw) {
       loginUser(data)
       .then((res) => {
-        alert(res.data.message);
         localStorage.clear();
-        localStorage.setItem('id', res.data.data);
+        localStorage.setItem('id', res.data);
         navigate("/home");
       });
     } else {
