@@ -4,13 +4,21 @@ export const evaluateResult = async (data) => {
   return await request.post(`sellGroup/evaluateResult`, data);
 };
 export const retrieveRecommendInsurance = async () => {
-  return await request.get('sellGroup/recommend');
+  return await request.get("sellGroup/recommend");
 };
 export const recommendInsuranceReason = async (data) => {
-  return await request.get(`sellGroup/recommendReason?insuarnceId=${data}&customerId=${localStorage.getItem("id")}`);
+  return await request.get(
+    `sellGroup/recommendReason?insuarnceId=${data}&customerId=${localStorage.getItem(
+      "id"
+    )}`
+  );
 };
 export const calculateInsuranceFee = async (data) => {
-  return await request.get(`sellGroup/calculateFee?insuarnceId=${data}&customerId=${localStorage.getItem("id")}`);
+  return await request.get(
+    `sellGroup/calculateFee?insuarnceId=${data}&customerId=${localStorage.getItem(
+      "id"
+    )}`
+  );
 };
 
 export const retrieveAll = async () => {
@@ -39,4 +47,7 @@ export const updateConsultationSchedule = async (data) => {
 };
 export const retrieveAcceptedApplyCounselingCustomers = async () => {
   return await request.get(`sellGroup/acceptedApplyCounselingCustomers`);
+};
+export const recommendInsurance = async () => {
+  return await request.get(`sellGroup/recommend`);
 };

@@ -9,7 +9,6 @@ const RetrieveAcceptedApplyCounselingCustomers = () => {
   useEffect(() => {
     retrieveAcceptedApplyCounselingCustomers().then((res) => {
       setCustomers(res.data);
-      console.log(res.data);
     });
   }, []);
 

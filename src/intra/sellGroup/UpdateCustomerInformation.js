@@ -9,8 +9,19 @@ const UpdateCustomerInformation = () => {
     setData((prevData) => ({ ...prevData, [e.target.name]: e.target.value }));
   };
   const onSubmitHandle = (newData) => {
+    const customerInformationRequest = {
+      customerID: newData.customerID,
+      name: newData.name,
+      age: newData.age,
+      sex: newData.sex,
+      phoneNumber: newData.phoneNumber,
+      incomeLevel: newData.incomeLevel,
+      accountNumber: newData.accountNumber,
+      accountPassword: newData.accountPassword,
+    };
     if (newData) {
-      updateCustomerInformation(newData);
+      console.log(customerInformationRequest);
+      updateCustomerInformation(customerInformationRequest);
     } else {
       alert("값을 입력해주세요");
     }
@@ -29,7 +40,7 @@ const UpdateCustomerInformation = () => {
         onChange={(e) => onHandleChangeData(e)}
       />
       <input
-        type="date"
+        type="number"
         name="age"
         placeholder="나이"
         onChange={(e) => onHandleChangeData(e)}
@@ -42,7 +53,7 @@ const UpdateCustomerInformation = () => {
         <option value="FEMALE">여성</option>
       </select>
       <input
-        type="date"
+        type="text"
         name="phoneNumber"
         placeholder="연락처"
         onChange={(e) => onHandleChangeData(e)}
@@ -65,19 +76,19 @@ const UpdateCustomerInformation = () => {
         placeholder="계좌 비밀번호"
         onChange={(e) => onHandleChangeData(e)}
       />
-      {/* <Link to={"/"}> //추천 보험 */}
-      <button
-        onClick={() => {
-          const newData = {
-            customerID: location.state.customerID,
-            ...data,
-          };
-          onSubmitHandle(newData);
-        }}
-      >
-        저장
-      </button>
-      {/* </Link> */}
+      <Link to={"/recommendInsurance"}>
+        <button
+          onClick={() => {
+            const newData = {
+              customerID: location.state.customerID,
+              ...data,
+            };
+            onSubmitHandle(newData);
+          }}
+        >
+          저장
+        </button>
+      </Link>
       <div>
         ===============================================================================
       </div>

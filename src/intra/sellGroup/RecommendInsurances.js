@@ -1,34 +1,34 @@
 import React, { useEffect, useState } from "react";
-import { retrieveAcceptedApplyCounselingCustomers } from "./SellGroup";
+import { recommendInsurance } from "./SellGroup";
 import { Link } from "react-router-dom";
 
 const RecommendInsurances = () => {
-  const [customers, setCustomers] = useState([]);
+  const [insurances, setInsurances] = useState([]);
   const [checked, setChecked] = useState([]);
 
   useEffect(() => {
-    retrieveAcceptedApplyCounselingCustomers().then((res) => {
-      setCustomers(res.data);
+    recommendInsurance().then((res) => {
+      setInsurances(res.data);
     });
   }, []);
 
   return (
     <div>
-      <div>*************** 대면 상담 ***************</div>
-      {customers &&
-        customers.map((customer, index) => {
+      <div>추천 보험 리스트</div>
+      {insurances &&
+        insurances.map((insurance, index) => {
           return (
             <div key={index}>
               <div>===============================</div>
               <input
                 type="radio"
-                id={customer.insuranceID}
+                id={insurance.insuranceID}
                 name="report"
                 onClick={() => {
-                  setChecked(customer);
+                  setChecked(insurance);
                 }}
               />
-              {customer.name}
+              {insurance.name}
             </div>
           );
         })}

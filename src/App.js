@@ -39,8 +39,6 @@ import RetrieveAppliedCounselingCustomers from "./intra/sellGroup/RetrieveApplie
 import RetrieveCustomerCounselingsByCustomerID from "./intra/sellGroup/RetrieveCustomerCounselingsByCustomerID";
 import RetrieveAcceptedApplyCounselingCustomers from "./intra/sellGroup/RetrieveAcceptedApplyCounselingCustomers";
 import UpdateCustomerInformation from "./intra/sellGroup/UpdateCustomerInformation";
-import GetAppliedCounselingCustomers from "./intra/sellGroup/GetAppliedCounselingCustomers";
-import GetCustomerCounselingsByCustomerID from "./intra/sellGroup/GetCustomerCounselingsByCustomerID";
 import GetSuggestedOperationPolicy from "./intra/operationPolicy/GetSuggestedOperationPolicy";
 import RecommendInsurance from "./intra/sellGroup/RecommendInsurance";
 
@@ -125,6 +123,7 @@ const App = () => {
           path="/updateCustomerInformation"
           element={<UpdateCustomerInformation />}
         />
+        <Route path="/recommendInsurance" element={<RecommendInsurance />} />
       </Routes>
     </>
   );
