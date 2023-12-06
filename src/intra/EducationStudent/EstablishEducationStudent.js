@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { save } from "./EducationStudent";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const EstablishEducationStudent = () => {
     const location = useLocation();
     const education = location.state.education;
+    const navigate = useNavigate();
     const [ data, setData ] = useState( {} );
 
-    data.educationid = education.educationID;
+    data.educationID = education.educationID;
 
     const onHandleChangeData = (e) => {
         setData( prevData => ( { ...prevData, [e.target.name]: e.target.value }));
@@ -15,7 +16,7 @@ const EstablishEducationStudent = () => {
     const onSubmitHandle = () => {
         if( data.name && data.phone && data.age ) {
             save( data ).then( (res) => 
-                alert( res.data.message ));
+                navigate( "/home" ));
         } else {
             alert( "Input Data" );
         }
@@ -23,7 +24,6 @@ const EstablishEducationStudent = () => {
     const debug = () => {
         console.log( data );
     }
-    
 
     return (
         <>

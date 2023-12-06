@@ -11,11 +11,11 @@ const GetAllPayment = () => {
     const headers = [
         {
             text: "고객 이름",
-            value: "customer_name"
+            value: "customerName"
         },
         {
             text: "가입 상품",
-            value: "contract_insurance"
+            value: "contractInsurance"
         },
         {
             text: "납부 금액",
@@ -27,7 +27,7 @@ const GetAllPayment = () => {
         },
         {
             text: "만료 날짜",
-            value: "expire_date"
+            value: "expireDate"
         },
         {
             text: "납부 여부",

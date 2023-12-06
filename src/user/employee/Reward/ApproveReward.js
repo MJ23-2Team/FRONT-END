@@ -22,7 +22,8 @@ const ApproveRewards = (req) => {
             <button onClick={ () => approve( req.id ) }>
                 승인
             </button>
-            <button onClick={ () => deny( req.id ) }>
+            <button onClick={ () => 
+            deny( req.id ) }>
                 거절
             </button>
         </>

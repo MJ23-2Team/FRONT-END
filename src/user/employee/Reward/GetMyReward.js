@@ -16,7 +16,7 @@ const GetMyRewards = () => {
         },
         {
             text: "상태",
-            value: "appli_result"
+            value: "appliResult"
         },
         {
             text: "내용",
@@ -24,7 +24,7 @@ const GetMyRewards = () => {
         },
         {
             text: "보상 금액",
-            value: "reward_amount"
+            value: "rewardAmount"
         }
     ];
     const tableData = useMemo( () => rewards, [rewards] );

@@ -1,6 +1,7 @@
 import request from "../../component/common/axios";
 
 export const save = async (data) => {
+    console.log( data );
     return await request.post( 'educationStudent/add', data );
 };
 
