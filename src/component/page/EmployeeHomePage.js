@@ -51,6 +51,9 @@ const EmployeeHomePage = () => {
         <Link to="/employeeRewardPage">
           <button> 직원 보상 목록 </button>
         </Link>
+        <Link to="/customerRewardPage">
+          <button> 고객 보상 목록 </button>
+        </Link>
         <Link to="/insuranceDevelopmentPage">
           <button>보험 개발</button>
         </Link>

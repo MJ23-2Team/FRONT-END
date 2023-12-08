@@ -7,10 +7,10 @@ export const getAll = async () => {
     return await request.get( 'reward/getAll' );
 };
 export const getByCustomerId = async ( customerId ) => {
-    return await request.get( 'reward/getByCustomerId', customerId );
+    return await request.get( 'reward/getByCustomerId?id='+customerId );
 };
 export const getContractByCustomerId = async ( customerId ) => {
-    return await request.get( 'contract/getContractByCustomerId', customerId );
+    return await request.get( 'contract/getContractByCustomerId?customerId='+customerId );
 }
 export const approve = async () => {
     return await request.get( 'reward/approve', true );

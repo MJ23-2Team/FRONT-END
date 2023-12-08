@@ -2,8 +2,11 @@ import { useState, useEffect } from "react";
 import { save } from "./Reward";
 import { useNavigate } from "react-router-dom";
 
-const ApplyReward = () => {
+
+const ApplyReward = (res) => {
     const [ data, setData ] = useState( {} );
+    const userID = localStorage.getItem( "id" );
+
     const onHandleChangeData = (e) => {
         setData( prevData => ({ ...prevData, [e.target.neame]: e.target.value }));
     };
@@ -16,32 +19,32 @@ const ApplyReward = () => {
         }
     };
 
-    const [ rewards, setRewards ] = useState( {} );
-    useEffect( () => {
-        getContractByCustomerId( userID ).then( (res) => { setRewards( res.data ); });
-    }, [] )
-
+    console.log( res.data );
+    
     const SelectBox = (props) => {
         return (
             <select>
-                {props.options.map( (option) => {
-                    <option
-                        key={option.contractid}
-                        value={option.contractid}
-                    >
-                        {option.contract}
-                    </option>
-                })}
+                { 
+                    props.option.data.map((option) => (
+                        <option
+                            key={option.contractID}
+                            value={option.insuranceID}
+                        >
+                            {option.customerID}
+                        </option>
+                    ))
+                }
             </select>
-        )
-    }
+        );
+    };
+    
 
     return (
         // Modal창 띄우기 알아보기
         <>
             <div> 보상 신청 </div>
             <div> 상품 선택 </div>
-                <SelectBox option={rewards}></SelectBox>
+                <SelectBox option={res}></SelectBox>
             <div> 사고 내용 </div>    
             <input type="text" name="content" placeholder="내용" onChange={ (e) => onHandleChangeData(e) } />
             <div> 사고 증빙 자료 </div>
@@ -52,5 +55,6 @@ const ApplyReward = () => {
                 등록
             </button>
         </>
-    )
-}
+    );
+};
+export default ApplyReward;

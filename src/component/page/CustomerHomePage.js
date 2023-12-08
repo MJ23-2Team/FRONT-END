@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Modal from "../common/Modal";
 import AdviceNoteModal from "./AdviceNoteModal";
 
@@ -8,6 +8,9 @@ import "../common/ButtonStyle.css";
 
 const CustomerHomePage = () => {
   const [adviceModalOpen, setAdviceModalOpen] = useState(false);
+  useEffect( () => {
+    localStorage.setItem( "id", 1 );
+  });
 
   return (
     <div>
@@ -59,6 +62,9 @@ const CustomerHomePage = () => {
         </Link>
         <Link to="/employeeRewardPage">
           <button> 직원 보상 목록 </button>
+        </Link>
+        <Link to="/customerRewardPage">
+          <button> 고객 보상 목록 </button>
         </Link>
         <Link to="/insuranceDevelopmentPage">
           <button>보험 개발</button>
