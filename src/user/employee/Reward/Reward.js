@@ -1,7 +1,7 @@
 import request from "../../../component/common/axios";
 
 export const save = async (data) => {
-    return await request.post( 'reward', data );
+    return await request.post( 'reward/add', data );
 };
 export const getAll = async () => {
     return await request.get( 'reward/getAll' );
