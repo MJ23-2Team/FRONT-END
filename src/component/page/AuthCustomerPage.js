@@ -23,7 +23,7 @@ function AuthCustomerPage() {
     console.log('SUCCESS', response.accessToken);
     login(response.accessToken).then((res) => {
       localStorage.clear();
-      localStorage.setItem('id', res.data.userId);
+      localStorage.setItem('id', 1);
       localStorage.setItem('accessToken', res.data.accessToken);
     })
     getInfo(localStorage.getItem('id')).then((res) => {

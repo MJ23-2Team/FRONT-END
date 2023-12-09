@@ -1,13 +1,26 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Modal from "../common/Modal";
 import AdviceNoteModal from "./AdviceNoteModal";
+import { getById } from "../../user/employee/adviceNote/AdviceNote";
 
 import "../common/TableStyle.css";
 import "../common/ButtonStyle.css";
 
 const CustomerHomePage = () => {
-  const [adviceModalOpen, setAdviceModalOpen] = useState(false);
+  let existAdviceNote = false;
+  const [ adviceNote, setAdviceNote ] = useState( [] );
+  
+  useEffect( () => {
+    localStorage.setItem( "id", 1 );
+    getById( localStorage.getItem( "id" ) ).then( (res) => setAdviceNote( res.data ) );
+    if( adviceNote.length != 0 ){
+      existAdviceNote = true;
+    }
+    console.log( adviceNote );
+  }, [] );
+
+  const [adviceModalOpen, setAdviceModalOpen] = useState(existAdviceNote);
 
   return (
     <div>
@@ -24,7 +37,7 @@ const CustomerHomePage = () => {
         />
         {adviceModalOpen && (
           <Modal closeModal={() => setAdviceModalOpen(!adviceModalOpen)}>
-            <AdviceNoteModal />
+            만기된 계약이 있습니다.
           </Modal>
         )}
         <Link to="/sellGroup">
@@ -59,6 +72,9 @@ const CustomerHomePage = () => {
         </Link>
         <Link to="/employeeRewardPage">
           <button> 직원 보상 목록 </button>
+        </Link>
+        <Link to="/customerRewardPage">
+          <button> 고객 보상 목록 </button>
         </Link>
         <Link to="/insuranceDevelopmentPage">
           <button>보험 개발</button>

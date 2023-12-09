@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { getByCustomerId } from "./Reward";
 
 const GetMyRewards = () => {
@@ -12,11 +12,11 @@ const GetMyRewards = () => {
     const headers = [
         {
             text: "신청 날짜",
-            value: "appli_date"
+            value: "appliDate"
         },
         {
             text: "상태",
-            value: "appli_result"
+            value: "appliResult"
         },
         {
             text: "내용",
@@ -24,11 +24,11 @@ const GetMyRewards = () => {
         },
         {
             text: "보상 금액",
-            value: "reward_amount"
+            value: "rewardAmount"
         }
     ];
     const tableData = useMemo( () => rewards, [rewards] );
-    const headerKey = header.map( (header) => header.value );
+    const headerKey = headers.map( (header) => header.value );
 
     return (
         <table>
