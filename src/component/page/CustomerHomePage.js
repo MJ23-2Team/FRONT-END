@@ -9,16 +9,16 @@ import "../common/ButtonStyle.css";
 
 const CustomerHomePage = () => {
   let existAdviceNote = false;
-  const [ adviceNote, setAdviceNote ] = useState( [] );
-  
-  useEffect( () => {
-    localStorage.setItem( "id", 1 );
-    getById( localStorage.getItem( "id" ) ).then( (res) => setAdviceNote( res.data ) );
-    if( adviceNote.length != 0 ){
+  const [adviceNote, setAdviceNote] = useState([]);
+
+  useEffect(() => {
+    localStorage.setItem("id", 1);
+    getById(localStorage.getItem("id")).then((res) => setAdviceNote(res.data));
+    if (adviceNote.length != 0) {
       existAdviceNote = true;
     }
-    console.log( adviceNote );
-  }, [] );
+    console.log(adviceNote);
+  }, []);
 
   const [adviceModalOpen, setAdviceModalOpen] = useState(existAdviceNote);
 
@@ -28,6 +28,9 @@ const CustomerHomePage = () => {
         <div>홈페이지</div>
         <Link to="/operationPolicy">
           <button>운영방침</button>
+        </Link>
+        <Link to="/counselingApply">
+          <button>상담신청</button>
         </Link>
         <input
           type="button"

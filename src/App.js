@@ -57,7 +57,7 @@ import RetrieveCampaignPage from "./component/page/RetrieveCampaignPage";
 import UnderWritingPage from "./component/page/UnderWritingPage";
 import UnderWritingPolicyPage from "./component/page/UnderWritingPolicyPage";
 import RecommendInsurances from "./intra/sellGroup/RecommendInsurances";
-
+import CounselingApply from "./user/customer/CounselingApply";
 
 const App = () => {
   return (
@@ -66,10 +66,9 @@ const App = () => {
         <Route path="/customer" element={<AuthCustomerPage />} />
         <Route path="/" element={<AuthEmployeePage />} />
 
-        
         <Route path="/customer/register" element={<RegisterCustomer />} />
         <Route path="/register" element={<RegisterEmployee />} />
-        
+
         <Route path="/customer/home" element={<CustomerHomePage />} />
         <Route path="/home" element={<EmployeeHomePage />} />
 
@@ -179,6 +178,7 @@ const App = () => {
           element={<UpdateCustomerInformation />}
         />
         <Route path="/recommendInsurances" element={<RecommendInsurances />} />
+        <Route path="/counselingApply" element={<CounselingApply />} />
       </Routes>
     </>
   );

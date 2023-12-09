@@ -36,18 +36,20 @@ const CounselingApply = () => {
         placeholder="상담 희망 시간"
         onChange={(e) => onHandleChangeData(e)}
       />
-      <button
-        onClick={() => {
-          const newData = {
-            customerID: localStorage.getItem("id"),
-            ...data,
-          };
-          setData(newData);
-          onSubmitHandle(newData);
-        }}
-      >
-        저장
-      </button>
+      <Link to={"/customer/home"}>
+        <button
+          onClick={() => {
+            const newData = {
+              customerID: localStorage.getItem("id"),
+              ...data,
+            };
+            setData(newData);
+            onSubmitHandle(newData);
+          }}
+        >
+          신청
+        </button>
+      </Link>
       <div>
         ===============================================================================
       </div>
