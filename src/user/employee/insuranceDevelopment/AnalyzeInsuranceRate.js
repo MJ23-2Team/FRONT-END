@@ -14,6 +14,7 @@ const AnalyzeInsuranceRate = () => {
   const onSubmitHandle = (newData) => {
     if (newData) {
       analyzeInsuranceRate(newData);
+      alert("검증되었습니다");
     } else {
       alert("값을 입력해주세요");
     }

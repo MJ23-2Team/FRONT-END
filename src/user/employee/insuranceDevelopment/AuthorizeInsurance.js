@@ -37,7 +37,7 @@ const AuthorizeInsurance = () => {
             </div>
           );
         })}
-      <Link to={"/"}>
+      <Link to={"/home"}>
         <button
           onClick={() => {
             authorizeInsurance(checked).then((res) => {
