@@ -18,12 +18,12 @@ const DesignInsurance = () => {
 
   return (
     <>
-      <div>설계할 보험 기획안</div>
-      <div>{location.state.planReport}</div>
-      <div>
-        설계할 보험의 이름, 상품 종류, 판매 대상, 가입 조건, 보험료, 보장 내용,
-        개발 예상 비용을 / 로 구분하여 입력해주세요{" "}
-      </div>
+      <header>
+        <h2>상품 개발</h2>
+      </header>
+      <div>설계할 보험 기획안: {location.state.planReport}</div>
+      <div>===================================</div>
+      <div>보험 설계</div>
       <input
         type="text"
         name="insuranceName"
@@ -32,7 +32,7 @@ const DesignInsurance = () => {
       />
       <select name="insuranceType" onChange={(e) => onHandleChangeData(e)}>
         <option value="none" selected disabled>
-          =선택=
+          =종류=
         </option>
         <option value="FIRE">화재</option>
       </select>
@@ -83,9 +83,6 @@ const DesignInsurance = () => {
           저장
         </button>
       </Link>
-      <div>
-        ===============================================================================
-      </div>
     </>
   );
 };

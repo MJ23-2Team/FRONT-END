@@ -19,7 +19,10 @@ const RecommendInfoPage = (data) => {
   });
   return (
     <div>
-      <div>{"보험 가계산: " + fee}</div>
+      <header>
+        <h2>보험 정보</h2>
+      </header>
+      <div>{"보험 가계산: 월 " + fee + "원"}</div>
       <div>{"보험 추천 이유: " + reason}</div>
     </div>
   );

@@ -5,6 +5,9 @@ import CalculateInsuranceFee from "../../intra/sellGroup/CalculateInsuranceFee";
 const SellGroupPage = () => {
   return (
     <div>
+      <header>
+        <h2>보험 판매 그룹</h2>
+      </header>
       <Link to="/sellGroup/getAll">
         <button>판매그룹 목록</button>
       </Link>

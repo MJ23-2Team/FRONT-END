@@ -21,8 +21,10 @@ const AnalyzeInsuranceRate = () => {
   };
   return (
     <>
+      <header>
+        <h2>상품 개발</h2>
+      </header>
       <div>요율 분석</div>
-      <div>위험도를 입력해주세요.</div>
       <input
         type="number"
         name="riskDegree"
@@ -57,9 +59,6 @@ const AnalyzeInsuranceRate = () => {
       >
         설계 완료
       </button>
-      <div>
-        ===============================================================================
-      </div>
     </>
   );
 };

@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 const InsuranceDevelopmentPage = () => {
   return (
     <div>
+      <header>
+        <h2>보험 개발</h2>
+      </header>
       <Link to="/planProductPage">
         <button>상품 기획</button>
       </Link>

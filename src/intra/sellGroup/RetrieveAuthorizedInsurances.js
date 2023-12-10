@@ -14,7 +14,10 @@ const RetrieveAuthorizedInsurances = () => {
 
   return (
     <div>
-      <div>영업 활동 계획을 수립할 보험의 번호를 입력해주세요.</div>
+      <header>
+        <h2>영업 활동 계획</h2>
+      </header>
+      <div>영업 활동 계획을 수립할 보험을 선택해주세요.</div>
       {insurances &&
         insurances.map((insurance, index) => {
           return (
