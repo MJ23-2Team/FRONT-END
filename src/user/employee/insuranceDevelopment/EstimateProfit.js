@@ -18,8 +18,10 @@ const EstimateProfit = () => {
 
   return (
     <>
+      <header>
+        <h2>상품 개발</h2>
+      </header>
       <div>예상 손익 분석</div>
-      <div>예상 손익률 분석값을 입력해주세요. </div>
       <input
         type="number"
         name="estimatedProfitRate"

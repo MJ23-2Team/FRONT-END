@@ -14,7 +14,10 @@ const RetrieveReports = () => {
 
   return (
     <div>
-      <div>수정하거나 삭제할 보험 기획안의 번호를 입력해주세요.</div>
+      <header>
+        <h2>기존 상품 관리</h2>
+      </header>
+      <div>수정하거나 삭제할 보험 기획안을 선택해주세요.</div>
       {insurances &&
         insurances.map((insurance, index) => {
           return (

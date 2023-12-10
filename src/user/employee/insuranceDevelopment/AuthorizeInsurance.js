@@ -17,7 +17,10 @@ const AuthorizeInsurance = () => {
 
   return (
     <div>
-      <div>인가할 보험의 번호를 입력해주세요.</div>
+      <header>
+        <h2>상품 인가</h2>
+      </header>
+      <div>인가할 보험을 선택해주세요.</div>
       {insurances &&
         insurances.map((insurance, index) => {
           return (

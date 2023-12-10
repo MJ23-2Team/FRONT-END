@@ -16,12 +16,14 @@ const RecommendInsurances = () => {
 
   return (
     <div>
-      <div>추천 보험 리스트</div>
+      <header>
+        <h2>대면 상담</h2>
+      </header>
+      <div>**********추천 보험 리스트**********</div>
       {insurances &&
         insurances.map((insurance, index) => {
           return (
             <div key={index}>
-              <div>===============================</div>
               <div>{"추천 보험 상품: " + insurance.insuranceName}</div>
               <button
                 onClick={() => {
@@ -30,6 +32,7 @@ const RecommendInsurances = () => {
               >
                 상세 정보
               </button>
+              <div>===============================</div>
               {modalOpen && (
                 <Modal closeModal={() => setModalOpen(!modalOpen)}>
                   <RecommendInfoPage id={insurance.insuranceID} />

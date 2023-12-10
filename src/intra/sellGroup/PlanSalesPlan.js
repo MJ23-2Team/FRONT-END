@@ -11,6 +11,7 @@ const PlanSalesPlan = () => {
   const onSubmitHandle = (newData) => {
     if (newData) {
       planSalesPlan(newData);
+      alert("완료되었습니다");
     } else {
       alert("값을 입력해주세요");
     }
@@ -18,9 +19,11 @@ const PlanSalesPlan = () => {
 
   return (
     <>
+      <header>
+        <h2>영업 활동 계획</h2>
+      </header>
       <div>
-        영업 활동 시작일(20**-**-**), 종료일(20**-**-**), 예상 목표 인원, 판매
-        방식을 /로 구분하여 입력하세요.
+        영업 활동 시작일 / 영업 활동 종료일 / 예상 목표 인원 / 판매 방식
       </div>
       <input
         type="date"
@@ -60,9 +63,6 @@ const PlanSalesPlan = () => {
           저장
         </button>
       </Link>
-      <div>
-        ===============================================================================
-      </div>
     </>
   );
 };

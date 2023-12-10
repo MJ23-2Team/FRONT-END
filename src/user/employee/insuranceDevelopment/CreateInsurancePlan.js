@@ -17,12 +17,14 @@ const CreateInsurancePlan = () => {
 
   return (
     <>
-      <div>새상품 기획</div>
+      <header>
+        <h2>새 상품 기획</h2>
+      </header>
       <div>고객니즈 및 경쟁사의 동향 분석 보고서를 작성하세요 </div>
       <input
         type="text"
         name="report"
-        placeholder="report"
+        placeholder="보고서"
         onChange={(e) => onHandleChangeData(e)}
       />
       <Link to="/home">

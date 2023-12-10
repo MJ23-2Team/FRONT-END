@@ -18,7 +18,10 @@ const RetrievePlannedInsurances = () => {
 
   return (
     <div>
-      <div>설계할 보험 기획안의 번호를 입력해주세요.</div>
+      <header>
+        <h2>상품 개발</h2>
+      </header>
+      <div>설계할 보험 기획안을 선택해주세요.</div>
       {insurances &&
         insurances.map((insurance, index) => {
           return (
