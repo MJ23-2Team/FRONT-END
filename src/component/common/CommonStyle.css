@@ -1,0 +1,54 @@
+.banner-div {
+    border-radius: 40px;
+    background-color: rgb(255, 72, 0);
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+}
+
+.banner-text {
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+}
+
+.main-div {
+    display: flex;
+}
+
+.teamGroup-div {
+    border: 2px solid rgb(182, 182, 182);
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+    width: 25%;
+    padding: 10px;
+}
+
+.customer-div {
+    border: 2px solid rgb(182, 182, 182);
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+    width: 33.3%;
+    padding: 10px;
+}
+
+.teamGroup-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.customer-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer{
+	bottom: 0px;
+	position: absolute;
+    text-align: right;
+    border-top: 1px solid gray;
+    width: 99%;
+    font-size: 13px;
+}

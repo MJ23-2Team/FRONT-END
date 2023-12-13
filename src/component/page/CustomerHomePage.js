@@ -6,6 +6,7 @@ import { getById } from "../../user/employee/adviceNote/AdviceNote";
 
 import "../common/TableStyle.css";
 import "../common/ButtonStyle.css";
+import "../common/CommonStyle.css";
 
 const CustomerHomePage = () => {
   let existAdviceNote = false;
@@ -25,64 +26,36 @@ const CustomerHomePage = () => {
   return (
     <div>
       <header>
-        <div>홈페이지</div>
-        <Link to="/operationPolicy">
-          <button>운영방침</button>
-        </Link>
-        <Link to="/counselingApply">
-          <button>상담신청</button>
-        </Link>
-        <input
-          type="button"
-          value="팝업"
-          className="blueBtn"
-          onClick={() => setAdviceModalOpen(!adviceModalOpen)}
-        />
-        {adviceModalOpen && (
-          <Modal closeModal={() => setAdviceModalOpen(!adviceModalOpen)}>
-            만기된 계약이 있습니다.
-          </Modal>
-        )}
-        <Link to="/sellGroup">
-          <button>판매 그룹 페이지</button>
-        </Link>
-        <Link to="/getAllCustomer">
-          <button>고객 정보 불러오기</button>
-        </Link>
-        <Link to="/registerInsurance">
-          <button>보험 가입</button>
-        </Link>
-        <Link to="/campaignPage">
-          <button>캠페인</button>
-        </Link>
-        <Link to="/underwritingPage">
-          <button>인수 심사</button>
-        </Link>
-        <Link to="/underwritingpolicyPage">
-          <button>인수 정책</button>
-        </Link>
-        <Link to="/educationPage">
-          <button> 교육 </button>
-        </Link>
-        <Link to="/educationStudentPage">
-          <button> 교육 학생 </button>
-        </Link>
-        <Link to="/paymentPage">
-          <button> 납부 </button>
-        </Link>
-        <Link to="/contractManagementPolicyPage">
-          <button> 계약 관리 정책</button>
-        </Link>
-        <Link to="/employeeRewardPage">
-          <button> 직원 보상 목록 </button>
-        </Link>
-        <Link to="/customerRewardPage">
-          <button> 고객 보상 목록 </button>
-        </Link>
-        <Link to="/insuranceDevelopmentPage">
-          <button>보험 개발</button>
-        </Link>
+        <div class="banner-div">
+          <span class="banner-text"> 1조 보험사 </span>
+        </div>
       </header>
+
+      <div class="main-div"> 
+        <div class="customer-div">
+          <p class="customer-title"> 보험 상담 </p>
+          <Link to="/counselingApply">
+            <button class="pageBtn">상담신청</button>
+          </Link>
+        </div>
+        <div class="customer-div">
+          <p class="customer-title"> 보험 가입 </p>
+          <Link to="/registerInsurance">
+            <button class="pageBtn">보험 가입</button>
+          </Link>
+        </div>
+        <div class="customer-div">
+          <p class="customer-title"> 보상 신청 </p>
+          <Link to="/customerRewardPage">
+            <button class="pageBtn"> 보상 확인 </button>
+          </Link>
+        </div>
+      </div>
+
+      <footer>
+        <p> 고객 전용 페이지입니다.</p>
+        <p> 1조 보험사 페이지_분산프로그래밍II</p>
+      </footer>
     </div>
   );
 };

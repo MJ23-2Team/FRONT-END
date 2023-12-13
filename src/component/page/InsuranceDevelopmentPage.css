@@ -1,0 +1,24 @@
+.insuranceDevelopment-div {
+    display: flex;
+}
+
+.insuranceDevelopment-button {
+    border: 3px solid gray;
+    width: 30%;
+    background-color: lightgray;
+    border-radius: 10px;
+    text-align: center;
+    margin: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.insuranceDevelopment-button:hover {
+    background-color: rgb(155, 155, 155);
+}
+
+.insuranceDevelopment-button-text {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
