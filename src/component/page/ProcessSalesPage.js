@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 const ProcessSalesPage = () => {
   return (
     <div>
+      <header>
+        <h2>영업 활동</h2>
+      </header>
       <Link to="/salesPlanPage">
         <button>영업 활동 계획</button>
       </Link>

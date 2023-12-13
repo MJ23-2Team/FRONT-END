@@ -16,7 +16,10 @@ const RetrieveUserPersonas = () => {
 
   return (
     <div>
-      <div>수정하거나 삭제할 보험 기획안의 번호를 입력해주세요.</div>
+      <header>
+        <h2>영업 활동 계획</h2>
+      </header>
+      <div>유저 퍼소나 목록</div>
       {insurances &&
         insurances.map((insurance, index) => {
           return (

@@ -14,12 +14,14 @@ const RetrieveAcceptedApplyCounselingCustomers = () => {
 
   return (
     <div>
-      <div>*************** 대면 상담 ***************</div>
+      <header>
+        <h2>대면 상담</h2>
+      </header>
+      <div>*************** 예정된 대면 상담 ***************</div>
       {customers &&
         customers.map((customer, index) => {
           return (
             <div key={index}>
-              <div>===============================</div>
               <input
                 type="radio"
                 id={customer.insuranceID}
@@ -31,6 +33,7 @@ const RetrieveAcceptedApplyCounselingCustomers = () => {
               {"이름: " + customer.customerName}
               {" / 날짜: " + customer.counselingDate}
               {" /  시간: " + customer.counselingTime}
+              <div>=================================</div>
             </div>
           );
         })}

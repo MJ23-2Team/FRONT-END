@@ -20,12 +20,14 @@ const RetrieveCustomerCounselingsByCustomerID = () => {
 
   return (
     <div>
+      <header>
+        <h2>상담 일정 수립</h2>
+      </header>
       <div>*************** 상담 일정 ***************</div>
       {counselings &&
         counselings.map((counseling, index) => {
           return (
             <div key={index}>
-              <div>===============================</div>
               <input
                 type="radio"
                 id={counseling.counselingID}
@@ -36,6 +38,7 @@ const RetrieveCustomerCounselingsByCustomerID = () => {
               />
               {"장소: " + counseling.counselingPlace + " / "}
               {"시간: " + counseling.counselingTime}
+              <div>===============================</div>
             </div>
           );
         })}

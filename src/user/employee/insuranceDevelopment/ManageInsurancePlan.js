@@ -18,7 +18,9 @@ const ManageInsurancePlan = () => {
 
   return (
     <>
-      <div>기존 상품 기획</div>
+      <header>
+        <h2>기존 상품 기획</h2>
+      </header>
       <div>고객니즈 및 경쟁사의 동향 분석 보고서를 작성하세요 </div>
       <input
         type="text"

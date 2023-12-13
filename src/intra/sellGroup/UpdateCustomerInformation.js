@@ -28,10 +28,10 @@ const UpdateCustomerInformation = () => {
 
   return (
     <>
-      <div>
-        고객 이름, 나이, 성별, 연락처, 소득 수준, 계좌번호, 계좌 비밀번호를 /로
-        구분하여 입력하세요.
-      </div>
+      <header>
+        <h2>대면 상담</h2>
+      </header>
+      <div>고객님의 정보를 입력해주세요.</div>
       <input
         type="text"
         name="name"
@@ -46,7 +46,7 @@ const UpdateCustomerInformation = () => {
       />
       <select name="sex" onChange={(e) => onHandleChangeData(e)}>
         <option value="none" selected disabled>
-          =선택=
+          =성별=
         </option>
         <option value="MALE">남성</option>
         <option value="FEMALE">여성</option>
@@ -88,9 +88,6 @@ const UpdateCustomerInformation = () => {
           저장
         </button>
       </Link>
-      <div>
-        ===============================================================================
-      </div>
     </>
   );
 };

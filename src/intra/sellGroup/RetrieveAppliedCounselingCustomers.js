@@ -14,7 +14,10 @@ const RetrieveAppliedCounselingCustomers = () => {
 
   return (
     <div>
-      <div>*************** 상담 일정 ***************</div>
+      <header>
+        <h2>상담 일정 수립</h2>
+      </header>
+      <div>상담 예정 고객</div>
       {customers &&
         customers.map((customer, index) => {
           return (
