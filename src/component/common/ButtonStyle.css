@@ -1,3 +1,48 @@
-button {
-    
+.cancelBtn {
+    background-color: red;
+    color: white;
+    width: 5%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    border-color: lightgray;
+    margin: 5px;
 }
+
+.okBtn {
+    background-color: green;
+    color: white;
+    width: 5%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    border-color: lightgray;
+    margin: 5px;
+}
+
+.defaultBtn {
+    color: black;
+}
+
+.pageBtn {
+    font-size: 15px;
+    width: 40%;
+    height: 30%;
+    margin: 20px;
+    border-radius: 20px;
+    border-width: 0px;
+    border-color: gray;
+    background-color: lightgray;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.pageBtn:hover {
+    background-color: rgb(161, 161, 161);
+}
+

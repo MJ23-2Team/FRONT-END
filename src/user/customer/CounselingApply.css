@@ -1,0 +1,33 @@
+.counseling-main-div {
+    text-align: center;
+}
+.counseling-title {
+    font-size: 30px;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    font-weight: bold;
+}
+.counseling-content-div {
+    margin: 10px;
+}
+.counseling-place-input {
+    font-size: 15px;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 10%;
+}
+.counseling-date-input {
+    font-size: 15px;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 10%;
+}
+.counseling-time-input {
+    font-size: 15px;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 10%;
+}
