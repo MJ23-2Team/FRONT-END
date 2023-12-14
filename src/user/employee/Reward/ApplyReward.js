@@ -21,7 +21,7 @@ const ApplyReward = (res) => {
       data.customerid &&
       data.identifyProfile
     ) {
-      create(data).then((res) => alert(res.data.message));
+      create(data);
       navigate("/customer/home");
     } else {
       alert("Input Data");

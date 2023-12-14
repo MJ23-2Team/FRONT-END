@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { GoogleLogin } from 'react-google-login';
 import { gapi } from 'gapi-script';
-import { login, getInfo } from "../../user/customer/Customer";
+import { login, retrieveInfo } from "../../user/customer/Customer";
 import { useNavigate } from 'react-router-dom';
 
 import "./AuthPage.css";
@@ -27,7 +27,7 @@ function AuthEmployeePage() {
       localStorage.clear();
       localStorage.setItem('id', res.data.userId);
       localStorage.setItem('accessToken', res.data.accessToken);
-      getInfo(res.data.userId).then((res) => {
+      retrieveInfo(res.data.userId).then((res) => {
         if(res.data){
           navigate("/register")
         }else{

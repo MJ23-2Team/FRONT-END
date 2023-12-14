@@ -40,5 +40,5 @@ export const authorizeInsurance = async (data) => {
   return await request.put(`insuranceDevelopment/authorize`, data);
 };
 export const retrieveAuthorizedInsurances = async () => {
-  return await request.get(`insuranceDevelopment/authorized`);
+  return await request.get(`sellGroup/authorized`);
 };

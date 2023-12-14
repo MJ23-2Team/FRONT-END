@@ -1,6 +1,6 @@
 import request from "../../component/common/axios";
 
-export const save = async (data) => {
+export const create = async (data) => {
   return await request.post("contractManagementPolicy/add", data);
 };
 

@@ -11,7 +11,6 @@ const CustomerHomePage = () => {
   const [adviceNote, setAdviceNote] = useState([]);
 
   useEffect(() => {
-    localStorage.setItem("id", 1);
     retrieveById(localStorage.getItem("id")).then((res) =>
       setAdviceNote(res.data)
     );

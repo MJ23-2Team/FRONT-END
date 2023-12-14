@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import EstablishOperationPolicy from "../../intra/operationPolicy/EstablishOperationPolicy";
-import RetrieveRecommandOperationPolicy from "../../intra/operationPolicy/RetrieveRecommandOperationPolicy";
+import RetrieveRecommendOperationPolicy from "../../intra/operationPolicy/RetrieveRecommendOperationPolicy";
 
 const OperationPolicyPage = () => {
   return (
@@ -9,7 +9,7 @@ const OperationPolicyPage = () => {
       <Link to="/operationPolicy/suggested">
         <button>건의된 정책 목록</button>
       </Link>
-      <RetrieveRecommandOperationPolicy />
+      <RetrieveRecommendOperationPolicy />
     </div>
   );
 };
