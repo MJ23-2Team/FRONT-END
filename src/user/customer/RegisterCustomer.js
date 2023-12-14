@@ -43,7 +43,9 @@ const RegisterCustomer = () => {
         onChange={(e) => onHandleChangedata(e)}
       />
       <select onChange={(e) => onHandleChangedata(e)}>
-        <option vlaue="none" selected disabled></option>
+        <option vlaue="none" selected disabled>
+          성별 선택
+        </option>
         <option value="MALE">MALE</option>
         <option value="FEMALE">FEMALE</option>
       </select>
