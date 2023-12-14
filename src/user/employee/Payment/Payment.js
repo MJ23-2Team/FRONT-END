@@ -1,21 +1,21 @@
 import request from "../../../component/common/axios";
 
-export const save = async (data) => {
-    return await request.post( 'payment/add' );
+export const create = async (data) => {
+  return await request.post("payment/create", data);
 };
 
-export const getAll = async () => {
-    return await request.get( 'payment/getAll' );
-}
+export const retrieveAll = async () => {
+  return await request.get("payment/retrieveAll");
+};
 
-export const getAllExpired = async () => {
-    return await request.get( 'payment/getAllExpired' );
-}
+export const retrieveAllExpired = async () => {
+  return await request.get("payment/retrieveAllExpired");
+};
 
-export const getById = async (id) => {
-    return await request.get( 'payment/getById', id );
-}
+export const retrieveById = async (id) => {
+  return await request.get("payment/retrieveById", id);
+};
 
 export const checkValidate = async () => {
-    return await request.get( "payment/checkValidate" );
-}
+  return await request.get("payment/checkValidate");
+};

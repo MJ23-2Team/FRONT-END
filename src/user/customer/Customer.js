@@ -10,10 +10,10 @@ export const loginUser = async (data) => {
 export const createUser = async (data) => {
   return await request.post(`register`, data);
 };
-export const getAllUsers = async () => {
-  return await request.get(`customer/getAll`);
+export const retrieveAllUsers = async () => {
+  return await request.get(`customer/retrieveAll`);
 };
-export const getInfo = async (data) => {
+export const retrieveInfo = async (data) => {
   return await request.get(`customermanage/Info?id=${data}`);
 };
 
@@ -24,7 +24,6 @@ export const counselingApply = async (data) => {
   return await request.post(`customerCounseling`, data);
 };
 export const updateCustomerInformation = async (data) => {
-  console.log(data);
   return await request.put(`customer/information`, data);
 };
 export const registerInsurance = async (customerID, insuranceID) => {

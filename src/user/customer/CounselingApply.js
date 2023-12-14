@@ -1,6 +1,6 @@
 import { counselingApply } from "./Customer";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import "../../component/common/TableStyle.css";
 import "../../component/common/ButtonStyle.css";
@@ -9,7 +9,6 @@ import "./CounselingApply.css";
 
 const CounselingApply = () => {
   const [data, setData] = useState({});
-  const navigate = useNavigate();
 
   const onHandleChangeData = (e) => {
     setData((prevData) => ({ ...prevData, [e.target.name]: e.target.value }));
@@ -72,7 +71,7 @@ const CounselingApply = () => {
           </button>
         </Link>
       </div>
-      
+
       <div>
         ===============================================================================
       </div>

@@ -1,17 +1,17 @@
 import request from "../../component/common/axios";
 
-export const save = async (data) => {
-    return await request.post( 'educationStudent', data );
+export const create = async (data) => {
+  return await request.post("educationStudent", data);
 };
 
-export const getAll = async () => {
-    return await request.get( 'educationStudent/getAll');
+export const retrieveAll = async () => {
+  return await request.get("educationStudent/retrieveAll");
 };
 
-export const getById = async (id) => {
-    return await request.get( 'educationStudent/getById?id='+id );
-}
+export const retrieveById = async (id) => {
+  return await request.get("educationStudent/retrieveById?id=" + id);
+};
 
-export const getEducationStudentByEducationID = async (id) => {
-    return await request.get( 'educationStudent/getByEducationId?id=' + id );
-}
+export const retrieveEducationStudentByEducationID = async (id) => {
+  return await request.get("educationStudent/retrieveByEducationId?id=" + id);
+};

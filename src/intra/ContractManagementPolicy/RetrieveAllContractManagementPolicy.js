@@ -1,12 +1,12 @@
 import { useState, useEffect, useMemo } from "react";
-import { getAll } from "./ContractManagemetPolicy";
+import { retrieveAll } from "./ContractManagemetPolicy";
 import { Link } from "react-router-dom";
 
-const GetAllContractMangementPolicy = () => {
+const RetrieveAllContractMangementPolicy = () => {
   const [policys, setPolicys] = useState([]);
 
   useEffect(() => {
-    getAll().then((res) => {
+    retrieveAll().then((res) => {
       setPolicys(res.data);
     });
   }, []);
@@ -50,4 +50,4 @@ const GetAllContractMangementPolicy = () => {
     </table>
   );
 };
-export default GetAllContractMangementPolicy;
+export default RetrieveAllContractMangementPolicy;

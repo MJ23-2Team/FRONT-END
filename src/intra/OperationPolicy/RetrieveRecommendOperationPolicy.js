@@ -1,20 +1,18 @@
-import React, { useEffect, useState } from "react";
-import { getAllUsers } from "./Customer";
-
-const GetAllCustomer = () => {
-  const [users, setUsers] = useState([]);
+import { useState, useEffect } from "react";
+import { retriveRecommended } from "./OperationPolicy";
+const RetrieveRecommendOperationPolicy = () => {
+  const [policys, setPolicys] = useState([]);
 
   useEffect(() => {
-    getAllUsers().then((res) => {
-      setUsers(res.data);
+    retriveRecommended().then((res) => {
+      setPolicys(res.data);
     });
   }, []);
-
   return (
     <div>
-      <div>고객 전체 조회</div>
-      {users &&
-        users.map((user, index) => {
+      <div>정책 정보 불러오기</div>
+      {policys &&
+        policys.map((user, index) => {
           return (
             <div key={index}>
               <div>
@@ -30,4 +28,4 @@ const GetAllCustomer = () => {
     </div>
   );
 };
-export default GetAllCustomer;
+export default RetrieveRecommendOperationPolicy;

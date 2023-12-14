@@ -1,14 +1,10 @@
-import GetEducationStudent from "../../intra/educationStudent/GetEducationStudent";
-import { useLocation } from "react-router-dom";
+import RetrieveEducationStudent from "../../intra/educationStudent/RetrieveEducationStudent";
 
 const AboutEducationStudentPage = () => {
-    const location = useLocation();
-    const student = location.state.student;
-    
-    return (
-        <div>
-            <GetEducationStudent />
-        </div>
-    );
+  return (
+    <div>
+      <RetrieveEducationStudent />
+    </div>
+  );
 };
 export default AboutEducationStudentPage;
