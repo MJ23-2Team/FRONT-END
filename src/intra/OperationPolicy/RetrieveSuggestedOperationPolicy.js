@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { retriveSuggested, pass, recommend } from "./OperationPolicy";
 const RetrieveSuggestedOperationPolicy = () => {
-  const [policys, setPolicys] = useState([]);
+  const [policies, setPolicies] = useState([]);
 
   useEffect(() => {
     retriveSuggested().then((res) => {
-      setPolicys(res.data);
+      setPolicies(res.data);
     });
   }, []);
 
@@ -18,8 +18,8 @@ const RetrieveSuggestedOperationPolicy = () => {
   return (
     <div>
       <div>건의된 정책 정보 불러오기</div>
-      {policys &&
-        policys.map((user, index) => {
+      {policies &&
+        policies.map((user, index) => {
           return (
             <div key={index}>
               <div>
