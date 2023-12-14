@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { setInfo } from "../customer/Customer";
+import "../../component/common/Register.css";
+
   const RegisterEmployee = () => {
 
   const navigate = useNavigate();
@@ -25,7 +27,7 @@ import { setInfo } from "../customer/Customer";
   };
 
   return (
-    <>
+    <div className="page">
       <div>고객 정보 등록</div>
       <input type="text" name="address" placeholder="address" onChange={(e) => onHandleChangedata(e)} />
       <input type="text" name="age" placeholder="age" onChange={(e) => onHandleChangedata(e)} />
@@ -41,7 +43,7 @@ import { setInfo } from "../customer/Customer";
       <button onClick={() => {onSubmitHandle();}}>
         등록하기
       </button>
-    </>
+    </div>
   );
 };
 export default RegisterEmployee;
