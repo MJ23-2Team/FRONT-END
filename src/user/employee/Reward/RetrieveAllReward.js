@@ -13,15 +13,15 @@ const GetAllRewards = () => {
   const headers = [
     {
       text: "신청자",
-      value: "customer_name",
+      value: "customerName",
     },
     {
       text: "신청 날짜",
-      value: "appli_date",
+      value: "appliDate",
     },
     {
       text: "상태",
-      value: "appli_result",
+      value: "appliResult",
     },
     {
       text: "내용",
