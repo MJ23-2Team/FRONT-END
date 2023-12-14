@@ -65,8 +65,28 @@ const EmployeeHomePage = () => {
             <button class="pageBtn"> 직원 보상 목록 </button>
           </Link>
         </div>
-      </div>
 
+      </div>
+      <div class="main-div">
+      <div class="teamGroup-div">
+          <p class="teamGroup-title"> 캠페인 관리</p>
+          <Link to="/campaignPage">
+            <button class="pageBtn"> 캠페인 목록 </button>
+          </Link>
+        </div>
+        <div class="teamGroup-div">
+          <p class="teamGroup-title"> 인수심사 관리</p>
+          <Link to="/underwritingPage">
+            <button class="pageBtn"> 인수심사 </button>
+          </Link>
+        </div>
+        <div class="teamGroup-div">
+          <p class="teamGroup-title"> 인수심사 정책 관리</p>
+          <Link to="/underwritingPolicyPage">
+            <button class="pageBtn"> 인수심사 정책 </button>
+          </Link>
+        </div>
+      </div>
       <footer>
         <p> 직원 전용 페이지입니다.</p>
         <p> 1조 보험사 페이지_분산프로그래밍II</p>
