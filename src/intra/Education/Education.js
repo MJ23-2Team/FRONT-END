@@ -1,13 +1,13 @@
 import request from "../../component/common/axios";
 
-export const save = async (data) => {
-    return await request.post( 'education/add', data );
+export const create = async (data) => {
+  return await request.post("education/create", data);
 };
 
-export const getByEducationId = async (id) => {
-    return await request.get( 'education/getById?id='+id );
-}
- 
-export const getAll = async () => {
-    return await request.get( 'education/getAll' );
+export const retrieveByEducationId = async (id) => {
+  return await request.get("education/retrieveById?id=" + id);
+};
+
+export const retrieveAll = async () => {
+  return await request.get("education/retrieveAll");
 };

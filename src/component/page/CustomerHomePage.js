@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import Modal from "../common/Modal";
-import AdviceNoteModal from "./AdviceNoteModal";
-import { getById } from "../../user/employee/adviceNote/AdviceNote";
+import { retrieveById } from "../../user/employee/adviceNote/AdviceNote";
 
 import "../common/TableStyle.css";
 import "../common/ButtonStyle.css";
@@ -14,11 +12,12 @@ const CustomerHomePage = () => {
 
   useEffect(() => {
     localStorage.setItem("id", 1);
-    getById(localStorage.getItem("id")).then((res) => setAdviceNote(res.data));
+    retrieveById(localStorage.getItem("id")).then((res) =>
+      setAdviceNote(res.data)
+    );
     if (adviceNote.length != 0) {
       existAdviceNote = true;
     }
-    console.log(adviceNote);
   }, []);
 
   const [adviceModalOpen, setAdviceModalOpen] = useState(existAdviceNote);
@@ -31,7 +30,7 @@ const CustomerHomePage = () => {
         </div>
       </header>
 
-      <div class="main-div"> 
+      <div class="main-div">
         <div class="customer-div">
           <p class="customer-title"> 보험 상담 </p>
           <Link to="/counselingApply">

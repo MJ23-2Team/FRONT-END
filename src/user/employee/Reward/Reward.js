@@ -1,20 +1,22 @@
 import request from "../../../component/common/axios";
 
-export const save = async (data) => {
-    return await request.post( 'reward/add', data );
+export const create = async (data) => {
+  return await request.post("reward/create", data);
 };
-export const getAll = async () => {
-    return await request.get( 'reward/getAll' );
+export const retrieveAll = async () => {
+  return await request.get("reward/retrieveAll");
 };
-export const getByCustomerId = async ( customerId ) => {
-    return await request.get( 'reward/getByCustomerId?id='+customerId );
+export const retrieveByCustomerId = async (customerId) => {
+  return await request.get("reward/retrieveByCustomerId?id=" + customerId);
 };
-export const getContractByCustomerId = async ( customerId ) => {
-    return await request.get( 'contract/getContractByCustomerId?customerId='+customerId );
-}
+export const retrieveContractByCustomerId = async (customerId) => {
+  return await request.get(
+    "contract/retrieveContractByCustomerId?customerId=" + customerId
+  );
+};
 export const approve = async () => {
-    return await request.get( 'reward/approve', true );
+  return await request.get("reward/approve", true);
 };
 export const deny = async () => {
-    return await request.get( 'reward/approve', false );
-}
+  return await request.get("reward/approve", false);
+};

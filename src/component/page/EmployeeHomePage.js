@@ -1,15 +1,10 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
-import Modal from "../common/Modal";
-import AdviceNoteModal from "./AdviceNoteModal";
 
 import "../common/TableStyle.css";
 import "../common/ButtonStyle.css";
 import "../common/CommonStyle.css";
 
 const EmployeeHomePage = () => {
-  const [adviceModalOpen, setAdviceModalOpen] = useState(false);
-
   return (
     <div>
       <header>
@@ -43,7 +38,7 @@ const EmployeeHomePage = () => {
             <button class="pageBtn"> 납부 </button>
           </Link>
         </div>
-      </div> 
+      </div>
 
       <div class="main-div">
         <div class="teamGroup-div">
@@ -54,7 +49,7 @@ const EmployeeHomePage = () => {
         </div>
         <div class="teamGroup-div">
           <p class="teamGroup-title"> 고객 관리 </p>
-          <Link to="/getAllCustomer">
+          <Link to="/retrieveAllCustomer">
             <button class="pageBtn">고객 정보 불러오기</button>
           </Link>
         </div>

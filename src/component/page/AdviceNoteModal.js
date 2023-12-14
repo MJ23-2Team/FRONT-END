@@ -1,18 +1,16 @@
-import CreateAdviceNote from "../../user/employee/adviceNote/CreateAdviceNote";
-import GetAdviceNote from "../../user/employee/adviceNote/GetAdviceNote";
+import RetrieveAdviceNote from "../../user/employee/adviceNote/RetrieveAdviceNote";
 
+const AdviceNoteModal = (setAdviceModalOpen) => {
+  const closeModal = () => {
+    setAdviceModalOpen(false);
+  };
 
-const AdviceNoteModal = ( setAdviceModalOpen ) => {
-    const closeModal = () => {
-        setAdviceModalOpen( false );
-    }
-    
-      return (
-        <div>
-            tmp
-            <GetAdviceNote />
-        </div>
-      );
+  return (
+    <div>
+      tmp
+      <RetrieveAdviceNote />
+    </div>
+  );
 };
 
 export default AdviceNoteModal;

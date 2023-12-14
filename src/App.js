@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 
 import OperationPolicyPage from "./component/page/OperationPolicyPage";
 import SellGroupPage from "./component/page/SellGroupPage";
-import GetAllSellGroup from "./intra/sellGroup/GetAllSellGroup";
+import RetrieveAllSellGroup from "./intra/sellGroup/RetrieveAllSellGroup";
 import EducationPage from "./component/page/EducationPage";
 import EducationStudentPage from "./component/page/EducationStudentPage";
 import PaymentPage from "./component/page/PaymentPage";
@@ -15,7 +15,7 @@ import AboutEducationPage from "./component/page/AboutEducationPage";
 import AboutEducationStudentPage from "./component/page/AboutEducationStudentPage";
 import ManageInsurancePlan from "./user/employee/insuranceDevelopment/ManageInsurancePlan";
 import DesignInsurance from "./user/employee/insuranceDevelopment/DesignInsurance";
-import GetAllCustomer from "./user/customer/GetAllCustomer";
+import RetrieveAllCustomer from "./user/customer/RetrieveAllCustomer";
 import CreateCampaignPlan from "./user/employee/marketing/CreateCampaignPlan";
 import RetrievePlanCampaign from "./user/employee/marketing/RetrievePlanCampaign";
 import RetrieveRunCampaign from "./user/employee/marketing/RetrieveRunCampaign";
@@ -42,7 +42,7 @@ import RetrieveAppliedCounselingCustomers from "./intra/sellGroup/RetrieveApplie
 import RetrieveCustomerCounselingsByCustomerID from "./intra/sellGroup/RetrieveCustomerCounselingsByCustomerID";
 import RetrieveAcceptedApplyCounselingCustomers from "./intra/sellGroup/RetrieveAcceptedApplyCounselingCustomers";
 import UpdateCustomerInformation from "./intra/sellGroup/UpdateCustomerInformation";
-import GetSuggestedOperationPolicy from "./intra/operationPolicy/GetSuggestedOperationPolicy";
+import RetrieveSuggestedOperationPolicy from "./intra/operationPolicy/RetrieveSuggestedOperationPolicy";
 import RecommendInsurance from "./intra/sellGroup/RecommendInsurance";
 
 import EmployeeHomePage from "./component/page/EmployeeHomePage";
@@ -75,12 +75,15 @@ const App = () => {
         <Route path="/operationPolicy" element={<OperationPolicyPage />} />
         <Route
           path="/operationPolicy/suggested"
-          element={<GetSuggestedOperationPolicy />}
+          element={<RetrieveSuggestedOperationPolicy />}
         />
         <Route path="/register" element={<Register />} />
-        <Route path="/getAllCustomer" element={<GetAllCustomer />} />
+        <Route path="/retrieveAllCustomer" element={<RetrieveAllCustomer />} />
         <Route path="/sellGroup" element={<SellGroupPage />} />
-        <Route path="/sellGroup/getAll" element={<GetAllSellGroup />} />
+        <Route
+          path="/sellGroup/retrieveAll"
+          element={<RetrieveAllSellGroup />}
+        />
         <Route path="/sellGroup/recommend" element={<RecommendInsurance />} />
 
         <Route path="/educationPage" element={<EducationPage />} />

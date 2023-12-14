@@ -8,7 +8,7 @@ const SellGroupPage = () => {
       <header>
         <h2>보험 판매 그룹</h2>
       </header>
-      <Link to="/sellGroup/getAll">
+      <Link to="/sellGroup/retrieveAll">
         <button>판매그룹 목록</button>
       </Link>
       <Link to="/sellGroup/recommend">

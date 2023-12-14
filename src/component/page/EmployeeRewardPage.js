@@ -1,14 +1,9 @@
-import GetAllRewards from "../../user/employee/reward/GetAllReward";
-import { useState } from "react";
-import Modal from "../common/Modal";
-
+import RetrieveAllRewards from "../../user/employee/reward/RetrieveAllReward";
 const EmployeeRewardPage = () => {
-    const [ modalOpen, setModalOpen ] = useState( false );
-
-    return (
-        <div>
-            <GetAllRewards />
-        </div>
-    );
+  return (
+    <div>
+      <RetrieveAllRewards />
+    </div>
+  );
 };
 export default EmployeeRewardPage;
