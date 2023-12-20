@@ -1,6 +1,7 @@
-# MJU-insurance / FRONT-END
+# MJU-insuranceSystem / FRONT-END
 ## Insurance System Application.
 ### MJU 23-2 Dispersion 2
+명지대 학교 분산 프로그래밍 2 보험사 시스템
 
 ### 개발 환경
 ```
