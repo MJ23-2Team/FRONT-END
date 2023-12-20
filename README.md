@@ -12,7 +12,7 @@ DBMS : MySQL(RDS) + Redis
 ```
 ![image](https://github.com/MJ23-2Team/InsuranceSystem-Front/assets/62841992/660a92af-35f8-4b17-a8fa-ded458ffab41)
 
-### Team (전원 풀스택)
+### Team
 [황재웅(팀장)](https://github.com/wodnd0131),
 [임현우](https://github.com/woowal),
 [심규창](https://github.com/gyuchangShim),
